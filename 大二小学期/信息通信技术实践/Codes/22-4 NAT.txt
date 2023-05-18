@@ -1,0 +1,18 @@
+R2's configure:
+(con) ip access-list standard R2NAT
+(conacl) permit 192.168.10.0 0.0.0.255
+(conacl) permit 192.168.20.0 0.0.0.255
+(conacl) permit 192.168.30.0 0.0.0.255
+(con) ip nat pool R2POOL 209.165.202.129 209.165.202.129 netmask 255.255.255.252
+(con) ip nat inside source list R2NAT pool R2POOL overload
+(con) ip nat inside source static 192.168.20.254 209.165.202.130
+(con) interface s0/1/0
+(conif) ip nat outside
+(conif) interface s0/0/0
+(conif) ip nat inside
+(conif) interface s0/0/1
+(conif) ip nat inside
+(conif) interface f0/0
+(conif) ip nat inside
+# copy running-config startup-config
+# show ip nat translations

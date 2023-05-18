@@ -1,0 +1,60 @@
+SW1's configure:
+(con) vlan 100
+(conv) name Native
+(con) vlan 999
+(conv) name BlackHole
+(con) interface range g0/1-2
+(conif) switchport mode trunk
+(conif) switchport nonegotiate
+(conif) switchport trunk native vlan 100
+(conif) ip dhcp snooping trust
+(con) interface range f0/3-9
+(conif) switchport mode acc
+(conif) switchport acc vlan 999
+(conif) shutdown
+(con) interface range f0/11-23
+(conif) switchport mode acc
+(conif) switchport acc vlan 999
+(conif) shutdown
+(con) interface range f0/1-2
+(conif) switchport mode acc
+(conif) switchport port-sec
+(conif) switchport port-sec max 4
+(conif) switchport port-sec mac-add sticky
+(conif) switchport port-sec violation restrict
+(conif) ip dhcp snooping limit rate 5
+(conif) spanning-tree portfast
+(conif) spanning-tree bpdug en
+(con) interface f0/1
+(conif) switchport port-sec mac-add 0010.11E8.3CBB
+(con) interface range f0/10
+(conif) switchport mode acc
+(conif) switchport port-sec
+(conif) switchport port-sec max 4
+(conif) switchport port-sec mac-add sticky
+(conif) switchport port-sec violation restrict
+(conif) ip dhcp snooping limit rate 5
+(conif) spanning-tree portfast
+(conif) spanning-tree bpdug en
+(con) interface range f0/24
+(conif) switchport mode acc
+(conif) switchport port-sec
+(conif) switchport port-sec max 4
+(conif) switchport port-sec mac-add sticky
+(conif) switchport port-sec violation restrict
+(conif) ip dhcp snooping limit rate 5
+(conif) spanning-tree portfast
+(conif) spanning-tree bpdug en
+
+SW2's configure:
+(con) vlan 100
+(conv) name Native
+(con) vlan 999
+(conv) name BlackHole
+(con) interface range g0/1-2
+(conif) switchport mode trunk
+(conif) switchport nonegotiate
+(conif) switchport trunk native vlan 100
+(con) ip dhcp snooping
+(con) ip dhcp snooping vlan 10,20,99
+(con) spanning-tree portfast default

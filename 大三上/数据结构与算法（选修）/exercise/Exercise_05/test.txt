@@ -1,0 +1,5 @@
+This is a test of the speel checker. How many of these
+words can this little spell checker actualy catch?  Heree is
+a channce to find out.  Myabe it catches all of them,
+mybe it catches none of tem.  There is no way to fnid out except to
+try.

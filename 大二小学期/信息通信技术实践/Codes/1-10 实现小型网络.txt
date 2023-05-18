@@ -1,0 +1,76 @@
+PS: # 在特权模式下，(con) 在全局配置下，(conl) 在线路配置下，(conif) 在线路配置下。
+
+Router's configure:
+# config t
+(con) hostname RTA
+(con) interface g0/0
+(conif) description Link to SW1
+(conif) ip address 10.10.10.1 255.255.255.0
+(conif) no shutdown
+(conif) exit
+
+# config t
+(con) interface g0/1
+(conif) description Link to SW2
+(conif) ip address 10.10.20.1 255.255.255.0
+(conif) no shutdown
+(conif) exit
+
+# config t
+(con) line console 0
+(conl) password Ciscolinepa55
+(conl) login
+(conl) exit
+
+# config t
+(con) line vty 0
+(conl) password Ciscolinepa55
+(conl) login
+(conl) exit
+
+# config t
+(con) enable secret Ciscoenpa55
+(con) service password-encryption
+(con) exit
+
+#config t
+(con) banner motd "Fuck You"
+(con) exit
+
+# copy running-config startup-config
+
+
+Switch's configure:
+# config t
+(con) interface vlan 1
+(conif) ip address 10.10.10.2 255.255.255.0
+(conif) no shutdown
+(conif) exit
+
+# config t
+(con) ip default-gateway 10.10.10.1
+(con) exit
+
+# config t
+(con) line console 0
+(conl) password Ciscolinepa55
+(conl) login
+(conl) exit
+
+# config t
+(con) line vty 0
+(conl) password Ciscolinepa55
+(conl) login
+(conl) exit
+
+# config t
+(con) enable secret Ciscoenpa55
+(con) service password-encryption
+(con) exit
+
+# copy running-config startup-config
+
+host's configure:
+ip: 10.10.10.3
+mask: 255.255.255.0
+def-gw: 10.10.10.1 (the same as the router's ip)

@@ -1,0 +1,9 @@
+选择，判断，简答
+memory access time
+peterson 进程同步 并发进程 
+磁盘调度算法 look, scan, clook, csan
+CPU调度算法
+优先级调度 抢占式，非抢占式
+死锁 银行家算法
+页置换算法
+小作业 小练习以外的内容（新的PPT）

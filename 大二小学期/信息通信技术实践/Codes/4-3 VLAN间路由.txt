@@ -1,0 +1,53 @@
+S1's configure:
+(con) vlan 10
+(conv) name Faculty/Staff
+(conv) vlan 20
+(conv) name Students
+(conv) vlan 30
+(conv) name Guest(Default)
+(conv) vlan 88
+(conv) name Native
+(conv) vlan 99
+(conv) name Management
+(con) interface range f0/11 - 17
+(conif) switchport mode acc
+(conif) switchport acc vlan 10
+(conif) interface range f0/18 - 24
+(conif) switchport mode acc
+(conif) switchport acc vlan 20
+(conif) interface range f0/6 - 10
+(conif) switchport mode acc
+(conif) switchport acc vlan 30
+(con) interface vlan 99
+(conif) ip add 172.17.99.10 255.255.255.0
+(conif) no shutdown
+(con) ip default-gateway 172.17.99.1
+(con) interface g0/1
+(conif) switchport mode trunk
+(conif) switchport trunk native vlan 88
+(con) interface range f0/1 - 5
+(conif) shutdown
+(conif) interface g0/2
+(conif) shutdown
+
+R1's configure:
+(con) interface g0/0
+(conif) ip 172.17.25.2 255.255.255.252
+(conif) no shutdown
+(con) interface g0/1
+(conif) no shutdown
+(conif) interface g0/1.10
+(conif) encapsulation dot1q 10
+(conif) ip add 172.17.10.1 255.255.255.0
+(conif) interface g0/1.20
+(conif) encapsulation dot1q 20
+(conif) ip add 172.17.20.1 255.255.255.0
+(conif) interface g0/1.30
+(conif) encapsulation dot1q 30
+(conif) ip add 172.17.30.1 255.255.255.0
+(conif) interface g0/1.88
+(conif) encapsulation dot1q 88 native
+(conif) ip add 172.17.88.1 255.255.255.0
+(conif) interface g0/1.99
+(conif) encapsulation dot1q 99
+(conif) ip add 172.17.99.1 255.255.255.0

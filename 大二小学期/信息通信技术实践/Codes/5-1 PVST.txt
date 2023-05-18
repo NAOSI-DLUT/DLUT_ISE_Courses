@@ -1,0 +1,80 @@
+S1's configure:
+(con) interface f0/6
+(conif) no shutdown
+(con) vlan 10
+(conv) vlan 20
+(conv) vlan 30
+(conv) vlan 40
+(conv) vlan 50
+(conv) vlan 60
+(conv) vlan 70
+(conv) vlan 80
+(conv) vlan 99
+(con) interface f0/6
+(conif) switchport mode acc
+(conif) switchport acc vlan 30
+(conif) interface range f0/1 - 4
+(conif) switchport mode trunk
+(conif) switchport trunk native vlan 99
+(conif) interface vlan 99
+(conif) ip add 172.31.99.1 255.255.255.0
+(conif) no shutdown
+(conif) spanning-tree mode pvst
+(conif) spanning-tree vlan 1,10,30,50,70 root primary
+(conif) interface f0/6
+(conif) spanning-tree portfast
+(conif) spanning-tree bpduguard enable
+
+S2's configure:
+(con) interface f0/18
+(conif) no shutdown
+(con) vlan 10
+(conv) vlan 20
+(conv) vlan 30
+(conv) vlan 40
+(conv) vlan 50
+(conv) vlan 60
+(conv) vlan 70
+(conv) vlan 80
+(conv) vlan 99
+(con) interface f0/18
+(conif) switchport mode acc
+(conif) switchport acc vlan 20
+(conif) interface range f0/1 - 4
+(conif) switchport mode trunk
+(conif) switchport trunk native vlan 99
+(conif) interface vlan 99
+(conif) ip add 172.31.99.2 255.255.255.0
+(conif) no shutdown
+(conif) spanning-tree mode pvst
+(conif) spanning-tree vlan 1,10,20,30,40,50,60,70,80,99 root secondary
+(conif) interface f0/18
+(conif) spanning-tree portfast
+(conif) spanning-tree bpduguard enable
+
+S3's configure:
+(con) interface f0/11
+(conif) no shutdown
+(con) vlan 10
+(conv) vlan 20
+(conv) vlan 30
+(conv) vlan 40
+(conv) vlan 50
+(conv) vlan 60
+(conv) vlan 70
+(conv) vlan 80
+(conv) vlan 99
+(con) interface f0/11
+(conif) switchport mode acc
+(conif) switchport acc vlan 10
+(conif) interface range f0/1 - 4
+(conif) switchport mode trunk
+(conif) switchport trunk native vlan 99
+(conif) interface vlan 99
+(conif) ip add 172.31.99.3 255.255.255.0
+(conif) no shutdown
+(conif) spanning-tree mode pvst
+(conif) spanning-tree vlan 20,40,60,80,99 root primary
+(conif) interface f0/11
+(conif) spanning-tree portfast
+(conif) spanning-tree bpduguard enable
