@@ -1,0 +1,83 @@
+VLAN 25: 
+network 192.168.1.128, 255.255.255.192
+range: 192.168.1.129 ~ 192.168.1.190
+
+R1's configure:
+(con) ipv6 unicast-routing
+(con) username R2 password cisco
+(con) interface s0/0/0
+(conif) encaps ppp
+(conif) ppp authen chap
+(con) ip route 0.0.0.0 0.0.0.0 s0/0/1
+(con) ipv6 route ::/0 s0/0/1
+(con) router ospf 1
+(conrt) router-id 1.1.1.1
+(conrt) default-information originate
+(conrt) network 10.1.1.0 0.0.0.3 area 0
+(conrt) network 209.165.200.224 0.0.0.3 area 0
+(conrt) ipv6 router ospf 1
+(conrt) router-id 1.1.1.1
+(conrt) interface s0/0/0-1
+(conrt) ipv6 ospf 1 area 0
+
+R2's configure:
+(con) ipv6 unicast-routing
+(con) interface g0/0.1
+(conif) encaps dot1q 1
+(conif) ip add 192.168.1.192 255.255.255.224
+(conif) interface g0/0.15
+(conif) encaps dot1q 15
+(conif) ip add 192.168.1.0 255.255.255.128
+(conif) interface g0/0.25
+(conif) encaps dot1q 25
+(conif) ip add 192.168.1.128 255.255.255.192
+(conif) ipv6 add 2001:db8:a:25::1/64
+(conif) ipv6 add fe80::2 link-local
+(conif) interface g0/0.99
+(conif) encaps dot1q 99 native
+(conif) ip add 192.168.1.224 255.255.255.224
+(conif) interface g0/0
+(conif) no shutdown
+(con) username R1 password cisco
+(con) interface s0/0/0
+(conif) encaps ppp
+(conif) ppp authen chap
+(con) ipv6 route ::/0 s0/0/0
+(con) router ospf 1
+(conrt) router-id 2.2.2.2
+(conrt) network 10.1.1.0 0.0.0.3 area 0
+(conrt) network 192.168.1.0 0.0.0.255 area 0
+(conrt) ipv6 router ospf 1
+(conrt) router-id 2.2.2.2
+(conrt) interface s0/0/0
+(conif) ipv6 ospf 1 area 0
+(conrt) interface g0/0.1
+(conif) ipv6 ospf 1 area 0
+(conrt) interface g0/0.15
+(conif) ipv6 ospf 1 area 0
+(conrt) interface g0/0.25
+(conif) ipv6 ospf 1 area 0
+(conrt) interface g0/0.99
+(conif) ipv6 ospf 1 area 0
+
+S1's configure:
+(con) vlan 86
+(conv) name BlackHole
+(con) interface f0/1
+(conif) switchport mode trunk
+(conif) switchport nonegotiate
+(conif) switchport trunk native vlan 99
+(conif) interface range f0/7-18
+(conif) switchport mode acc
+(conif) switchport acc vlan 15
+(conif) interface range f0/19-24
+(conif) switchport mode acc
+(conif) switchport acc vlan 25
+(conif) interface range g0/1-2,f0/2-6
+(conif) switchport mode acc
+(conif) switchport acc vlan 86
+(conif) shutdown
+
+
+PC25, L25's configure:
+input ipv4, ipv6, and default gateway

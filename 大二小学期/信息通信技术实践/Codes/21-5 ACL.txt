@@ -1,0 +1,22 @@
+HQ's configure:
+(con) access-list 101 deny tcp any host 192.168.1.70 eq ftp
+(con) access-list 101 deny icmp any 192.168.1.0 0.0.0.63
+(con) access-list 101 permit ip any any
+(con) interface s0/1/0
+(conif) access-group 101 in
+(con) access-list 111 deny ip any host 192.168.2.45
+(con) access-list 111 permit ip any any
+(conif) interface g0/0/0
+(conif) access-group 111 in
+(con) ip access-list standard vty_block
+(conacl) permit 192.168.1.64 0.0.0.7
+(con) line vty 0 15
+(conline) access-class vty_block in
+
+Branch's configure:
+(con) ip access-list extended branch_to_hq
+(con) deny ip 192.168.2.0 0.0.0.31 192.168.1.0 0.0.0.63
+(con) deny ip 192.168.2.32 0.0.0.15 192.168.1.0 0.0.0.63
+(con) permit ip any any
+(con) interface s0/1/1
+(conif) access-group branch_to_hq out

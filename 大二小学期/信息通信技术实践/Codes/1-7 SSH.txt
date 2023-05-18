@@ -1,0 +1,15 @@
+command prompt:
+telnet 10.10.10.2
+
+# conf t
+(con) service password-cryption
+(con) ip domain-name netacad.pka
+(con) crypto key generate rsa (1024)
+(con) username administrator secret cisco
+(con) line vty 0 15
+(conl) transport input ssh
+(conl) login local
+删除vty密码: (conl) no password cisco
+(conl) exit
+(con) ip ssh version 2
+(con) exit

@@ -1,0 +1,86 @@
+SWA's configure:
+(con) vlan 10
+(conv) name Admin
+(conv) vlan 20
+(conv) name Accounts
+(conv) vlan 30
+(conv) name HR
+(conv) vlan 40
+(conv) name Voice 
+(conv) vlan 99
+(conv) name Management
+(conv) vlan 100
+(conv) name Native
+(con) interface vlan 99
+(conif) ip address 192.168.99.252 255.255.255.0
+(conif) no shutdown
+(con) interface g0/1
+(conif) switchport mode trunk
+(conif) switchport nonegotiate
+(conif) switchport trunk native vlan 100
+(con) interface g0/2
+(conif) switchport mode dyn des
+(conif) switchport trunk native vlan 100
+
+SWB's configure:
+(con) vlan 10
+(conv) name Admin
+(conv) vlan 20
+(conv) name Accounts
+(conv) vlan 30
+(conv) name HR
+(conv) vlan 40
+(conv) name Voice 
+(conv) vlan 99
+(conv) name Management
+(conv) vlan 100
+(conv) name Native
+(con) interface vlan 99
+(conif) ip address 192.168.99.253 255.255.255.0
+(conif) no shutdown
+(con) interface f0/1
+(conif) switchport mode access
+(conif) switchport access vlan 10
+(con) interface f0/2
+(conif) switchport mode access
+(conif) switchport access vlan 20
+(con) interface f0/3
+(conif) switchport mode access
+(conif) switchport access vlan 30
+(con) interface g0/1
+(conif) switchport mode trunk
+(conif) switchport nonegotiate
+(conif) switchport trunk native vlan 100
+
+SWC's configure:
+(con) vlan 10
+(conv) name Admin
+(conv) vlan 20
+(conv) name Accounts
+(conv) vlan 30
+(conv) name HR
+(conv) vlan 40
+(conv) name Voice 
+(conv) vlan 99
+(conv) name Management
+(conv) vlan 100
+(conv) name Native
+(con) interface vlan 99
+(conif) ip address 192.168.99.254 255.255.255.0
+(conif) no shutdown
+(con) interface f0/1
+(conif) switchport mode access
+(conif) switchport access vlan 10
+(con) interface f0/2
+(conif) switchport mode access
+(conif) switchport access vlan 20
+(con) interface f0/3
+(conif) switchport mode access
+(conif) switchport access vlan 30
+(con) interface f0/4
+(conif) switchport mode access
+(conif) switchport access vlan 10
+(conif) mls qos trust cos
+(conif) switchport voice vlan 40
+(con) interface g0/2
+(conif) switchport trunk native vlan 100

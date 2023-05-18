@@ -1,0 +1,35 @@
+MLS's configure:
+(con) ip routing
+(con) ipv6 unicast-routing
+(con) interface g0/2
+(conif) no switchport
+(conif) ip add 209.165.200.225
+(conif) ipv6 add 2001:db8:acad:a::1/64
+(conif) no shutdown
+(con) vlan 10
+(conv) name Staff
+(conv) vlan 20
+(conv) name Student
+(conv) vlan 30
+(conv) name Faculty
+(con) interface vlan 10
+(conif) ip add 192.168.10.254 255.255.255.0
+(conif) ipv6 add 2001:db8:acad:10::1/64
+(conif) no shutdown
+(conif) interface vlan 20
+(conif) ip add 192.168.20.254 255.255.255.0
+(conif) ipv6 add 2001:db8:acad:20::1/64
+(conif) no shutdown
+(conif) interface vlan 30
+(conif) ip add 192.168.30.254 255.255.255.0
+(conif) ipv6 add 2001:db8:acad:30::1/64
+(conif) no shutdown
+(con) interface g0/1
+(conif) switchport mode trunk
+(conif) switchport trunk native vlan 99
+(conif) switchport trunk encapsulation dot1q
+
+S1's configure:
+(con) interface g0/1
+(conif) switchport mode trunk
+(conif) switchport trunk native vlan 99

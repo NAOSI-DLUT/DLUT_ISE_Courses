@@ -1,0 +1,26 @@
+R2's configure:
+(con) ip dhcp excluded-add 192.168.10.1 192.168.10.10
+(con) ip dhcp excluded-add 192.168.30.1 192.168.30.10
+(con) ip dhcp pool R1-LAN
+(condhcp) network 192.168.10.0 255.255.255.0
+(condhcp) default-router 192.168.10.1
+(condhcp) dns-server 192.168.20.254
+(con) ip dhcp pool R3-LAN
+(condhcp) network 192.168.30.0 255.255.255.0
+(condhcp) default-router 192.168.30.1
+(condhcp) dns-server 192.168.20.254
+(con) interface g0/1
+(conif) ip add dhcp
+(conif) no shutdown
+# show ip dhcp binding
+
+R1's configure:
+(con) interface g0/0
+(conif) ip helper-add 10.1.1.2（R2作为dhcp服务器，连接S0/0/0口）
+
+R3's configure:
+(con) interface g0/0
+(conif) ip helper-add 10.2.2.2
+
+PC's configure:
+switch to DHCP mode
