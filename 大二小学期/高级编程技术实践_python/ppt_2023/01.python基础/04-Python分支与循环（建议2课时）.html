@@ -1,0 +1,756 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>04-Python分支与循环（建议2课时） · python_neuedu</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="neuedu">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="05-Python列表和元组（建议3课时）.html" />
+    
+    
+    <link rel="prev" href="03-Python-运算符（建议1课时）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.neuedu.com/" target="_blank" class="custom-link">东软睿道</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Python基础教学目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                <a href="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                    
+                    01-Python简介及开发环境搭建（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                <a href="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                    
+                    02-Python变量标识符关键字-（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03-Python-运算符（建议1课时）.html">
+            
+                <a href="03-Python-运算符（建议1课时）.html">
+            
+                    
+                    03-Python-运算符（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="04-Python分支与循环（建议2课时）.html">
+            
+                <a href="04-Python分支与循环（建议2课时）.html">
+            
+                    
+                    04-Python分支与循环（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05-Python列表和元组（建议3课时）.html">
+            
+                <a href="05-Python列表和元组（建议3课时）.html">
+            
+                    
+                    05-Python列表和元组（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06-Python字符串（建议2课时）.html">
+            
+                <a href="06-Python字符串（建议2课时）.html">
+            
+                    
+                    06-Python字符串（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07-Python字典和集合（建议3课时）.html">
+            
+                <a href="07-Python字典和集合（建议3课时）.html">
+            
+                    
+                    07-Python字典和集合（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08-Python之对变量的再认识（建议1课时）.html">
+            
+                <a href="08-Python之对变量的再认识（建议1课时）.html">
+            
+                    
+                    08-Python之对变量的再认识（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09-Python之函数（建议9课时）.html">
+            
+                <a href="09-Python之函数（建议9课时）.html">
+            
+                    
+                    09-Python之函数（建议9课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10-Python面向对象编程（建议12课时）.html">
+            
+                <a href="10-Python面向对象编程（建议12课时）.html">
+            
+                    
+                    10-Python面向对象编程（建议12课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11-Python异常处理（建议2课时）.html">
+            
+                <a href="11-Python异常处理（建议2课时）.html">
+            
+                    
+                    11-Python异常处理（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                <a href="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                    
+                    12-Python文件操作与字符编码（建议4课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13-Python模块与包（建议1课时）.html">
+            
+                <a href="13-Python模块与包（建议1课时）.html">
+            
+                    
+                    13-Python模块与包（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14-Python常用模块（建议5学时）.html">
+            
+                <a href="14-Python常用模块（建议5学时）.html">
+            
+                    
+                    14-Python常用模块（建议5学时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >04-Python分支与循环（建议2课时）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-pagetop-navbar"><ul><ul><li><span class="title-icon "></span><a href="#&#x6761;&#x4EF6;&#x8BED;&#x53E5;"><b>1.1. </b>&#x6761;&#x4EF6;&#x8BED;&#x53E5;</a></li><ul><li><span class="title-icon "></span><a href="#if-&#x8BED;&#x53E5;&#x7684;&#x57FA;&#x672C;&#x5F62;&#x5F0F;"><b>1.1.1. </b>if &#x8BED;&#x53E5;&#x7684;&#x57FA;&#x672C;&#x5F62;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;"><b>1.1.2. </b>if &#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x5224;&#x65AD;"><b>1.1.3. </b>if &#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x5224;&#x65AD;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><b>1.2. </b>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;</a></li><ul><li><span class="title-icon "></span><a href="#while-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><b>1.2.1. </b>While &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</a></li><li><span class="title-icon "></span><a href="#for-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><b>1.2.2. </b>for &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</a></li><li><span class="title-icon "></span><a href="#&#x5D4C;&#x5957;&#x5FAA;&#x73AF;"><b>1.2.3. </b>&#x5D4C;&#x5957;&#x5FAA;&#x73AF;</a></li></ul><li><span class="title-icon "></span><a href="#&#x968F;&#x673A;&#x6570;&#x7684;&#x5904;&#x7406;"><b>1.3. </b>&#x968F;&#x673A;&#x6570;&#x7684;&#x5904;&#x7406;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x6761;&#x4EF6;&#x8BED;&#x53E5;"><a name="&#x6761;&#x4EF6;&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#&#x6761;&#x4EF6;&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x6761;&#x4EF6;&#x8BED;&#x53E5;</h2>
+<p>Python &#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x8DDF;&#x5176;&#x4ED6;&#x8BED;&#x8A00;&#x57FA;&#x672C;&#x4E00;&#x81F4;&#x7684;&#xFF0C;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x6761;&#x6216;&#x591A;&#x6761;&#x8BED;&#x53E5;&#x7684;&#x6267;&#x884C;&#x7ED3;&#x679C;&#xFF08; True &#x6216;&#x8005; False &#xFF09;&#x6765;&#x51B3;&#x5B9A;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x3002;</p>
+<p>Python &#x7A0B;&#x5E8F;&#x8BED;&#x8A00;&#x6307;&#x5B9A;&#x4EFB;&#x4F55;&#x975E; 0 &#x548C;&#x975E;&#x7A7A;&#xFF08;None&#xFF09;&#x503C;&#x4E3A; True&#xFF0C;0 &#x6216;&#x8005; None&#x4E3A; False&#x3002;</p>
+<h3 id="if-&#x8BED;&#x53E5;&#x7684;&#x57FA;&#x672C;&#x5F62;&#x5F0F;"><a name="if-&#x8BED;&#x53E5;&#x7684;&#x57FA;&#x672C;&#x5F62;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#if-&#x8BED;&#x53E5;&#x7684;&#x57FA;&#x672C;&#x5F62;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. if &#x8BED;&#x53E5;&#x7684;&#x57FA;&#x672C;&#x5F62;&#x5F0F;</h3>
+<p>Python &#x4E2D;&#xFF0C;if &#x8BED;&#x53E5;&#x7684;&#x57FA;&#x672C;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">if</span> &#x5224;&#x65AD;&#x6761;&#x4EF6;&#xFF1A;
+    &#x6267;&#x884C;&#x8BED;&#x53E5;&#x2026;&#x2026;
+<span class="token keyword">else</span>&#xFF1A;
+    &#x6267;&#x884C;&#x8BED;&#x53E5;&#x2026;&#x2026;
+</code></pre>
+<p>&#x524D;&#x9762;&#x4E5F;&#x63D0;&#x5230;&#x8FC7;&#xFF0C;Python &#x8BED;&#x8A00;&#x6709;&#x7740;&#x4E25;&#x683C;&#x7684;&#x7F29;&#x8FDB;&#x8981;&#x6C42;&#xFF0C;&#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x4E5F;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7F29;&#x8FDB;&#xFF0C;&#x4E5F;&#x4E0D;&#x8981;&#x5C11;&#x5199;&#x4E86;&#x5192;&#x53F7; <code>:</code> &#x3002;</p>
+<p>if &#x8BED;&#x53E5;&#x7684;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x53EF;&#x4EE5;&#x7528;&gt;&#xFF08;&#x5927;&#x4E8E;&#xFF09;&#x3001;&lt;(&#x5C0F;&#x4E8E;)&#x3001;==&#xFF08;&#x7B49;&#x4E8E;&#xFF09;&#x3001;&gt;=&#xFF08;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#xFF09;&#x3001;&lt;=&#xFF08;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;&#xFF09;&#x6765;&#x8868;&#x793A;&#x5176;&#x5173;&#x7CFB;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># -*-coding:utf-8-*-</span>
+
+results<span class="token operator">=</span><span class="token number">59</span>
+
+<span class="token keyword">if</span> results<span class="token operator">&gt;=</span><span class="token number">60</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;&#x53CA;&#x683C;&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span> <span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;&#x4E0D;&#x53CA;&#x683C;&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code>&#x4E0D;&#x53CA;&#x683C;
+</code></pre><p>&#x4E0A;&#x9762;&#x4E5F;&#x8BF4;&#x9053;&#xFF0C;&#x975E;&#x96F6;&#x6570;&#x503C;&#x3001;&#x975E;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x975E;&#x7A7A; list &#x7B49;&#xFF0C;&#x5224;&#x65AD;&#x4E3A;True&#xFF0C;&#x5426;&#x5219;&#x4E3A;False&#x3002;&#x56E0;&#x6B64;&#x4E5F;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5199;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">num <span class="token operator">=</span> <span class="token number">6</span>
+<span class="token keyword">if</span> num <span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;Hello Python&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;"><a name="if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. if &#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x7684;&#x5F62;&#x5F0F;</h3>
+<p>&#x6709;&#x4E9B;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x7684;&#x5224;&#x65AD;&#x8BED;&#x53E5;&#x4E0D;&#x53EF;&#x80FD;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x6709;&#x4E9B;&#x65F6;&#x5019;&#x9700;&#x8981;&#x591A;&#x4E2A;&#xFF0C;&#x6BD4;&#x5982;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x4E2D;&#x5927;&#x4E8E; 60 &#x7684;&#x4E3A;&#x53CA;&#x683C;&#xFF0C;&#x90A3;&#x6211;&#x4EEC;&#x8FD8;&#x8981;&#x5224;&#x65AD;&#x5927;&#x4E8E; 90 &#x7684;&#x4E3A;&#x4F18;&#x79C0;&#xFF0C;&#x5728; 80 &#x5230; 90 &#x4E4B;&#x95F4;&#x7684;&#x826F;&#x597D;&#x5462;&#xFF1F;</p>
+<p>&#x8FD9;&#x65F6;&#x5019;&#x9700;&#x8981;&#x7528;&#x5230; if &#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#xFF0C;</p>
+<p>&#x7528;&#x4F2A;&#x4EE3;&#x7801;&#x6765;&#x8868;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">if</span> &#x5224;&#x65AD;&#x6761;&#x4EF6;<span class="token number">1</span><span class="token punctuation">:</span>
+    &#x6267;&#x884C;&#x8BED;&#x53E5;<span class="token number">1</span>&#x2026;&#x2026;
+<span class="token keyword">elif</span> &#x5224;&#x65AD;&#x6761;&#x4EF6;<span class="token number">2</span><span class="token punctuation">:</span>
+    &#x6267;&#x884C;&#x8BED;&#x53E5;<span class="token number">2</span>&#x2026;&#x2026;
+<span class="token keyword">elif</span> &#x5224;&#x65AD;&#x6761;&#x4EF6;<span class="token number">3</span><span class="token punctuation">:</span>
+    &#x6267;&#x884C;&#x8BED;&#x53E5;<span class="token number">3</span>&#x2026;&#x2026;
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+    &#x6267;&#x884C;&#x8BED;&#x53E5;<span class="token number">4</span>&#x2026;&#x2026;
+</code></pre>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># -*-coding:utf-8-*-</span>
+
+results <span class="token operator">=</span> <span class="token number">89</span>
+
+<span class="token keyword">if</span> results <span class="token operator">&gt;</span> <span class="token number">90</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x4F18;&#x79C0;&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> results <span class="token operator">&gt;</span> <span class="token number">80</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x826F;&#x597D;&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">elif</span> results <span class="token operator">&gt;</span> <span class="token number">60</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;&#x53CA;&#x683C;&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span> <span class="token punctuation">:</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;&#x4E0D;&#x53CA;&#x683C;&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>&#x826F;&#x597D;
+</code></pre><h3 id="if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x5224;&#x65AD;"><a name="if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#if-&#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. if &#x8BED;&#x53E5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x5224;&#x65AD;</h3>
+<p>Python &#x4E0D;&#x50CF; Java &#x6709; switch &#x8BED;&#x53E5;&#xFF0C;&#x6240;&#x4EE5;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF0C;&#x53EA;&#x80FD;&#x7528; elif &#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4F46;&#x662F;&#x6709;&#x65F6;&#x5019;&#x9700;&#x8981;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x9700;&#x540C;&#x65F6;&#x5224;&#x65AD;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; or &#xFF08;&#x6216;&#xFF09;&#xFF0C;&#x8868;&#x793A;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x6709;&#x4E00;&#x4E2A;&#x6210;&#x7ACB;&#x65F6;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x6210;&#x529F;&#xFF1B;&#x4F7F;&#x7528; and &#xFF08;&#x4E0E;&#xFF09;&#x65F6;&#xFF0C;&#x8868;&#x793A;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x6761;&#x4EF6;&#x540C;&#x65F6;&#x6210;&#x7ACB;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5224;&#x65AD;&#x6761;&#x4EF6;&#x624D;&#x6210;&#x529F;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># -*-coding:utf-8-*-</span>
+
+java <span class="token operator">=</span> <span class="token number">86</span>
+python <span class="token operator">=</span> <span class="token number">68</span>
+
+<span class="token keyword">if</span> java <span class="token operator">&gt;</span> <span class="token number">80</span> <span class="token keyword">and</span>  python <span class="token operator">&gt;</span> <span class="token number">80</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x4F18;&#x79C0;&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">else</span> <span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x4E0D;&#x4F18;&#x79C0;&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>&#x4E0D;&#x4F18;&#x79C0;
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;if &#x6709;&#x591A;&#x4E2A;&#x6761;&#x4EF6;&#x65F6;&#x53EF;&#x4F7F;&#x7528;&#x62EC;&#x53F7;&#x6765;&#x533A;&#x5206;&#x5224;&#x65AD;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#xFF0C;&#x62EC;&#x53F7;&#x4E2D;&#x7684;&#x5224;&#x65AD;&#x4F18;&#x5148;&#x6267;&#x884C;&#xFF0C;&#x6B64;&#x5916; and &#x548C; or &#x7684;&#x4F18;&#x5148;&#x7EA7;&#x4F4E;&#x4E8E; &gt;&#xFF08;&#x5927;&#x4E8E;&#xFF09;&#x3001;&lt;&#xFF08;&#x5C0F;&#x4E8E;&#xFF09;&#x7B49;&#x5224;&#x65AD;&#x7B26;&#x53F7;&#xFF0C;&#x5373;&#x5927;&#x4E8E;&#x548C;&#x5C0F;&#x4E8E;&#x5728;&#x6CA1;&#x6709;&#x62EC;&#x53F7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x6BD4;&#x4E0E;&#x6216;&#x8981;&#x4F18;&#x5148;&#x5224;&#x65AD;&#x3002;</p>
+<pre class="language-"><code class="lang-python">java <span class="token operator">=</span> <span class="token number">86</span>
+python <span class="token operator">=</span> <span class="token number">68</span>
+
+<span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token number">80</span> <span class="token operator">&lt;=</span> java <span class="token operator">&lt;</span> <span class="token number">90</span><span class="token punctuation">)</span> <span class="token keyword">or</span> <span class="token punctuation">(</span><span class="token number">80</span> <span class="token operator">&lt;=</span> python <span class="token operator">&lt;</span> <span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x826F;&#x597D;&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>&#x826F;&#x597D;
+</code></pre><p><strong><em>&#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;1</em></strong></p>
+<pre class="language-"><code>&#x6211;&#x60F3;&#x4E70;&#x8F66;&#xFF0C;&#x4E70;&#x4EC0;&#x4E48;&#x8F66;&#x51B3;&#x5B9A;&#x4E8E;&#x6211;&#x5728;&#x94F6;&#x884C;&#x6709;&#x591A;&#x5C11;&#x5B58;&#x6B3E;
+&#x5982;&#x679C;&#x6211;&#x7684;&#x5B58;&#x6B3E;&#x8D85;&#x8FC7;500&#x4E07;&#xFF0C;&#x6211;&#x5C31;&#x4E70;&#x8DEF;&#x864E;
+&#x5426;&#x5219;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x7684;&#x5B58;&#x6B3E;&#x8D85;&#x8FC7;100&#x4E07;&#xFF0C;&#x6211;&#x5C31;&#x4E70;&#x5B9D;&#x9A6C;
+&#x5426;&#x5219;&#xFF0C; &#x5982;&#x679C;&#x6211;&#x7684;&#x5B58;&#x6B3E;&#x8D85;&#x8FC7;50&#x4E07;&#xFF0C;&#x6211;&#x5C31;&#x4E70;&#x8FC8;&#x817E;
+&#x5426;&#x5219;&#xFF0C; &#x5982;&#x679C;&#x6211;&#x7684;&#x5B58;&#x6B3E;&#x8D85;&#x8FC7;10&#x4E07;&#xFF0C;&#x6211;&#x5C31;&#x4E70;&#x798F;&#x7279;
+&#x5426;&#x5219;&#xFF0C; &#x5982;&#x679C;&#x6211;&#x7684;&#x5B58;&#x6B3E;10&#x4E07;&#x4EE5;&#x4E0B; &#xFF0C;&#x6211;&#x4E70;&#x6BD4;&#x4E9A;&#x8FEA;
+</code></pre><p><strong><em>&#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;2</em></strong></p>
+<pre class="language-"><code>&#x8F93;&#x5165;&#x5C0F;&#x660E;&#x7684;&#x8003;&#x8BD5;&#x6210;&#x7EE9;&#xFF0C;&#x663E;&#x793A;&#x6240;&#x83B7;&#x5956;&#x52B1;
+&#x6210;&#x7EE9;==100&#x5206;&#xFF0C;&#x7238;&#x7238;&#x7ED9;&#x4ED6;&#x4E70;&#x8F86;&#x8F66;
+&#x6210;&#x7EE9;&gt;=90&#x5206;&#xFF0C;&#x5988;&#x5988;&#x7ED9;&#x4ED6;&#x4E70;MP4
+90&#x5206;&gt;&#x6210;&#x7EE9;&gt;=60&#x5206;&#xFF0C;&#x5988;&#x5988;&#x7ED9;&#x4ED6;&#x4E70;&#x672C;&#x53C2;&#x8003;&#x4E66;
+&#x6210;&#x7EE9;&lt;60&#x5206;&#xFF0C;&#x4EC0;&#x4E48;&#x90FD;&#x4E0D;&#x4E70;
+</code></pre><h2 id="&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><a name="&#x5FAA;&#x73AF;&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</h2>
+<p>&#x4E00;&#x822C;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x90FD;&#x6709;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#xFF0C;&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x5141;&#x8BB8;&#x6211;&#x4EEC;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x8BED;&#x53E5;&#x6216;&#x8BED;&#x53E5;&#x7EC4;&#x591A;&#x6B21;&#x3002;</p>
+<p>&#x5FAA;&#x73AF;&#x8BED;&#x53E5;&#x7684;&#x4E00;&#x822C;&#x5F62;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2136918-eaaae2fbfec3330f?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>Python &#x63D0;&#x4F9B;&#x4E86; for &#x5FAA;&#x73AF;&#x548C; while &#x5FAA;&#x73AF;&#xFF0C;&#x5F53;&#x7136;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x63A7;&#x5236;&#x5FAA;&#x73AF;&#x7684;&#x8BED;&#x53E5;&#xFF1A;</p>
+<table>
+<thead>
+<tr>
+<th>&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x8BED;&#x53E5;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break</td>
+<td>&#x5728;&#x8BED;&#x53E5;&#x5757;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7EC8;&#x6B62;&#x5FAA;&#x73AF;&#xFF0C;&#x5E76;&#x4E14;&#x8DF3;&#x51FA;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>&#x5728;&#x8BED;&#x53E5;&#x5757;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7EC8;&#x6B62;&#x5F53;&#x524D;&#x5FAA;&#x73AF;&#xFF0C;&#x8DF3;&#x51FA;&#x8BE5;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x6267;&#x884C;&#x4E0B;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;</td>
+</tr>
+<tr>
+<td>pass</td>
+<td>pass &#x662F;&#x7A7A;&#x8BED;&#x53E5;&#xFF0C;&#x662F;&#x4E3A;&#x4E86;&#x4FDD;&#x6301;&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#x7684;&#x5B8C;&#x6574;&#x6027;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="while-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><a name="while-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#while-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. While &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</h3>
+<pre class="language-"><code class="lang-python">count <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> count <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">:</span>
+    <span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token builtin">sum</span> <span class="token operator">+</span> count
+    count <span class="token operator">=</span> count <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>5050
+</code></pre><p>&#x5F53;&#x7136; while &#x8BED;&#x53E5;&#x65F6;&#x8FD8;&#x6709;&#x53E6;&#x5916;&#x4E24;&#x4E2A;&#x91CD;&#x8981;&#x7684;&#x547D;&#x4EE4; continue&#xFF0C;break &#x6765;&#x8DF3;&#x8FC7;&#x5FAA;&#x73AF;&#xFF0C;continue &#x7528;&#x4E8E;&#x8DF3;&#x8FC7;&#x8BE5;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;break &#x5219;&#x662F;&#x7528;&#x4E8E;&#x8DF3;&#x51FA;&#x672C;&#x5C42;&#x5FAA;&#x73AF;</p>
+<p>&#x6BD4;&#x5982;&#xFF0C;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#x662F;&#x8BA1;&#x7B97; 1 &#x5230; 100 &#x6240;&#x6709;&#x6574;&#x6570;&#x7684;&#x548C;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5224;&#x65AD; sum &#x5927;&#x4E8E; 1000 &#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x5728;&#x76F8;&#x52A0;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x5230; break &#xFF0C;&#x9000;&#x51FA;&#x6574;&#x4E2A;&#x5FAA;&#x73AF;</p>
+<pre class="language-"><code class="lang-python">count <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span>  count <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">:</span>
+    <span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token builtin">sum</span> <span class="token operator">+</span> count
+    <span class="token keyword">if</span>  <span class="token builtin">sum</span> <span class="token operator">&gt;</span> <span class="token number">1000</span><span class="token punctuation">:</span>  <span class="token comment">#&#x5F53; sum &#x5927;&#x4E8E; 1000 &#x7684;&#x65F6;&#x5019;&#x9000;&#x51FA;&#x5FAA;&#x73AF;</span>
+        <span class="token keyword">break</span>
+    count <span class="token operator">=</span> count <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>1035
+</code></pre><p>&#x6709;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x60F3;&#x7EDF;&#x8BA1; 1 &#x5230; 100 &#x4E4B;&#x95F4;&#x7684;&#x5947;&#x6570;&#x548C;&#xFF0C;&#x90A3;&#x4E48;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x5F53; count &#x662F;&#x5076;&#x6570;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x53CC;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x8DF3;&#x51FA;&#x5F53;&#x6B21;&#x7684;&#x5FAA;&#x73AF;&#xFF0C;&#x4E0D;&#x60F3;&#x52A0;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x53EF;&#x4EE5;&#x7528;&#x5230; continue</p>
+<pre class="language-"><code class="lang-python">count <span class="token operator">=</span> <span class="token number">1</span>
+<span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span>  count <span class="token operator">&lt;=</span> <span class="token number">100</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> count <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>  <span class="token comment"># &#x53CC;&#x6570;&#x65F6;&#x8DF3;&#x8FC7;&#x8F93;&#x51FA;</span>
+        count <span class="token operator">=</span> count <span class="token operator">+</span> <span class="token number">1</span>
+        <span class="token keyword">continue</span>
+    <span class="token builtin">sum</span> <span class="token operator">=</span> <span class="token builtin">sum</span> <span class="token operator">+</span> count
+    count <span class="token operator">=</span> count <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">sum</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x8BED;&#x53E5;&#xFF1A;</p>
+<pre class="language-"><code>2500
+</code></pre><p>&#x5728; Python &#x7684; while &#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; else &#x8BED;&#x53E5;&#xFF0C;while &#x2026; else &#x5728;&#x5FAA;&#x73AF;&#x6761;&#x4EF6;&#x4E3A; false &#x65F6;&#x6267;&#x884C; else &#x8BED;&#x53E5;&#x5757;</p>
+<p>&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> count <span class="token operator">&lt;</span> <span class="token number">5</span><span class="token punctuation">:</span>
+   <span class="token keyword">print</span> <span class="token punctuation">(</span>count<span class="token punctuation">)</span>
+   count <span class="token operator">=</span> count <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">else</span><span class="token punctuation">:</span>
+   <span class="token keyword">print</span> <span class="token punctuation">(</span>count<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>0
+1
+2
+3
+4
+5
+</code></pre><h3 id="for-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><a name="for-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;" class="anchor-navigation-ex-anchor" href="#for-&#x5FAA;&#x73AF;&#x8BED;&#x53E5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. for &#x5FAA;&#x73AF;&#x8BED;&#x53E5;</h3>
+<p>for&#x5FAA;&#x73AF;&#x53EF;&#x4EE5;&#x904D;&#x5386;&#x4EFB;&#x4F55;&#x5E8F;&#x5217;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x5982;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;</p>
+<p>&#x5B83;&#x7684;&#x6D41;&#x7A0B;&#x56FE;&#x57FA;&#x672C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2136918-a0728c1c488238af?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<p>&#x57FA;&#x672C;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">for</span> iterating_var <span class="token keyword">in</span> sequence<span class="token punctuation">:</span>
+   statements<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5B9E;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">for</span> letter <span class="token keyword">in</span> <span class="token string">&apos;www.neuedu.com&apos;</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>letter<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>w
+w
+w
+.
+n
+e
+u
+e
+d
+u
+.
+c
+o
+m
+</code></pre><p><code>range()&#x51FD;&#x6570;</code></p>
+<p>Python&#x51FD;&#x6570;<code>range()</code>&#x8BA9;&#x4F60;&#x80FD;&#x591F;&#x8F7B;&#x677E;&#x5730;&#x751F;&#x6210;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x6570;&#x5B57;&#x3002;&#x4F8B;&#x5982;&#xFF0C;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#x4F7F;&#x7528;&#x51FD;&#x6570;<code>range()</code>&#x6765;&#x6253;&#x5370;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x6570;&#x5B57;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">    <span class="token keyword">for</span> value <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x597D;&#x50CF;&#x5E94;&#x8BE5;&#x6253;&#x5370;&#x6570;&#x5B57;1~5&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x4E0A;&#x5B83;&#x4E0D;&#x4F1A;&#x6253;&#x5370;&#x6570;&#x5B57;5&#xFF1A;</p>
+<pre class="language-"><code>    1
+    2
+    3
+    4
+</code></pre><p>&#x5728;&#x8FD9;&#x4E2A;&#x793A;&#x4F8B;&#x4E2D;&#xFF0C;<code>range()</code>&#x53EA;&#x662F;&#x6253;&#x5370;&#x6570;&#x5B57;1~4&#xFF0C;&#x8FD9;&#x662F;&#x4F60;&#x5728;&#x7F16;&#x7A0B;&#x8BED;&#x8A00;&#x4E2D;&#x7ECF;&#x5E38;&#x770B;&#x5230;&#x7684;&#x5DEE;&#x4E00;&#x884C;&#x4E3A;&#x7684;&#x7ED3;&#x679C;&#x3002;&#x51FD;&#x6570;<code>range()</code>&#x8BA9;Python&#x4ECE;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x503C;&#x5F00;&#x59CB;&#x6570;&#xFF0C;&#x5E76;&#x5728;&#x5230;&#x8FBE;&#x4F60;&#x6307;&#x5B9A;&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#x540E;&#x505C;&#x6B62;&#xFF0C;&#x56E0;&#x6B64;&#x8F93;&#x51FA;&#x4E0D;&#x5305;&#x542B;&#x7B2C;&#x4E8C;&#x4E2A;&#x503C;&#xFF08;&#x8FD9;&#x91CC;&#x4E3A;5&#xFF09;&#x3002;</p>
+<p>&#x8981;&#x6253;&#x5370;&#x6570;&#x5B57;1~5&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>range(1,6)</code>&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">    <span class="token keyword">for</span> value <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x6837;&#xFF0C;&#x8F93;&#x51FA;&#x5C06;&#x4ECE;1&#x5F00;&#x59CB;&#xFF0C;&#x5230;5&#x7ED3;&#x675F;&#xFF1A;</p>
+<pre class="language-"><code>    1
+    2
+    3
+    4
+    5
+</code></pre><h3 id="&#x5D4C;&#x5957;&#x5FAA;&#x73AF;"><a name="&#x5D4C;&#x5957;&#x5FAA;&#x73AF;" class="anchor-navigation-ex-anchor" href="#&#x5D4C;&#x5957;&#x5FAA;&#x73AF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. &#x5D4C;&#x5957;&#x5FAA;&#x73AF;</h3>
+<p>Python &#x8BED;&#x8A00;&#x5141;&#x8BB8;&#x5728;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x4F53;&#x91CC;&#x9762;&#x5D4C;&#x5165;&#x53E6;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x3002;&#x4E0A;&#x9762;&#x7684;&#x5B9E;&#x4F8B;&#x4E5F;&#x662F;&#x4F7F;&#x7528;&#x4E86;&#x5D4C;&#x5957;&#x5FAA;&#x73AF;&#x7684;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x7684;&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>for &#x5FAA;&#x73AF;&#x5D4C;&#x5957;&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">for</span> iterating_var <span class="token keyword">in</span> sequence<span class="token punctuation">:</span>
+   <span class="token keyword">for</span> iterating_var <span class="token keyword">in</span> sequence<span class="token punctuation">:</span>
+      statements<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+   statements<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+</code></pre>
+<p><strong>while &#x5FAA;&#x73AF;&#x5D4C;&#x5957;&#x8BED;&#x6CD5;</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">while</span> expression<span class="token punctuation">:</span>
+   <span class="token keyword">while</span> expression<span class="token punctuation">:</span>
+      statement<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+   statement<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x5FAA;&#x73AF;&#x4F53;&#x5185;&#x5D4C;&#x5165;&#x5176;&#x4ED6;&#x7684;&#x5FAA;&#x73AF;&#x4F53;&#xFF0C;&#x5982;&#x5728; while &#x5FAA;&#x73AF;&#x4E2D;&#x53EF;&#x4EE5;&#x5D4C;&#x5165; for &#x5FAA;&#x73AF;&#xFF0C; &#x53CD;&#x4E4B;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x5728; for &#x5FAA;&#x73AF;&#x4E2D;&#x5D4C;&#x5165; while &#x5FAA;&#x73AF;</p>
+<p>&#x6709; while &#x2026; else &#x8BED;&#x53E5;&#xFF0C;&#x5F53;&#x7136;&#x4E5F;&#x6709; for &#x2026; else &#x8BED;&#x53E5;&#x5566;&#xFF0C;for &#x4E2D;&#x7684;&#x8BED;&#x53E5;&#x548C;&#x666E;&#x901A;&#x7684;&#x6CA1;&#x6709;&#x533A;&#x522B;&#xFF0C;else &#x4E2D;&#x7684;&#x8BED;&#x53E5;&#x4F1A;&#x5728;&#x5FAA;&#x73AF;&#x6B63;&#x5E38;&#x6267;&#x884C;&#x5B8C;&#xFF08;&#x5373; for &#x4E0D;&#x662F;&#x901A;&#x8FC7; break &#x8DF3;&#x51FA;&#x800C;&#x4E2D;&#x65AD;&#x7684;&#xFF09;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6267;&#x884C;&#xFF0C;while &#x2026; else &#x4E5F;&#x662F;&#x4E00;&#x6837;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">for</span> num <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># &#x8FED;&#x4EE3; 10 &#x5230; 20 &#x4E4B;&#x95F4;&#x7684;&#x6570;&#x5B57;</span>
+   <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># &#x6839;&#x636E;&#x56E0;&#x5B50;&#x8FED;&#x4EE3;</span>
+      <span class="token keyword">if</span> num<span class="token operator">%</span>i <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>      <span class="token comment"># &#x786E;&#x5B9A;&#x7B2C;&#x4E00;&#x4E2A;&#x56E0;&#x5B50;</span>
+         j<span class="token operator">=</span>num<span class="token operator">/</span>i          <span class="token comment"># &#x8BA1;&#x7B97;&#x7B2C;&#x4E8C;&#x4E2A;&#x56E0;&#x5B50;</span>
+         <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;%d &#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6570;&apos;</span> <span class="token operator">%</span> num<span class="token punctuation">)</span>
+         <span class="token keyword">break</span>            <span class="token comment"># &#x8DF3;&#x51FA;&#x5F53;&#x524D;&#x5FAA;&#x73AF;</span>
+   <span class="token keyword">else</span><span class="token punctuation">:</span>                  <span class="token comment"># &#x5FAA;&#x73AF;&#x7684; else &#x90E8;&#x5206;</span>
+      <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&apos;%d &#x662F;&#x4E00;&#x4E2A;&#x8D28;&#x6570;&apos;</span> <span class="token operator">%</span> num<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>10 &#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6570;
+11 &#x662F;&#x4E00;&#x4E2A;&#x8D28;&#x6570;
+12 &#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6570;
+13 &#x662F;&#x4E00;&#x4E2A;&#x8D28;&#x6570;
+14 &#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6570;
+15 &#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6570;
+16 &#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6570;
+17 &#x662F;&#x4E00;&#x4E2A;&#x8D28;&#x6570;
+18 &#x662F;&#x4E00;&#x4E2A;&#x5408;&#x6570;
+19 &#x662F;&#x4E00;&#x4E2A;&#x8D28;&#x6570;
+</code></pre><p><strong>&#x8BFE;&#x4E0A;&#x6848;&#x4F8B;</strong>
+&#x6253;&#x5370;&#x4E5D;&#x4E5D;&#x4E58;&#x6CD5;&#x8868;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x6253;&#x5370;&#x4E5D;&#x4E5D;&#x4E58;&#x6CD5;&#x8868;</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;{}x{}={}\t&apos;</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> j<span class="token punctuation">,</span> i<span class="token operator">*</span>j<span class="token punctuation">)</span><span class="token punctuation">,</span> end<span class="token operator">=</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-"><code>1x1=1   
+2x1=2   2x2=4   
+3x1=3   3x2=6   3x3=9   
+4x1=4   4x2=8   4x3=12  4x4=16  
+5x1=5   5x2=10  5x3=15  5x4=20  5x5=25  
+6x1=6   6x2=12  6x3=18  6x4=24  6x5=30  6x6=36  
+7x1=7   7x2=14  7x3=21  7x4=28  7x5=35  7x6=42  7x7=49  
+8x1=8   8x2=16  8x3=24  8x4=32  8x5=40  8x6=48  8x7=56  8x8=64  
+9x1=9   9x2=18  9x3=27  9x4=36  9x5=45  9x6=54  9x7=63  9x8=72  9x9=81
+</code></pre><h2 id="&#x968F;&#x673A;&#x6570;&#x7684;&#x5904;&#x7406;"><a name="&#x968F;&#x673A;&#x6570;&#x7684;&#x5904;&#x7406;" class="anchor-navigation-ex-anchor" href="#&#x968F;&#x673A;&#x6570;&#x7684;&#x5904;&#x7406;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x968F;&#x673A;&#x6570;&#x7684;&#x5904;&#x7406;</h2>
+<ul>
+<li>&#x5728; <code>Python</code> &#x4E2D;&#xFF0C;&#x8981;&#x4F7F;&#x7528;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x9996;&#x5148;&#x9700;&#x8981;&#x5BFC;&#x5165; <strong>&#x968F;&#x673A;&#x6570;</strong> &#x7684; <strong>&#x6A21;&#x5757;</strong> &#x2014;&#x2014; &#x201C;&#x5DE5;&#x5177;&#x5305;&#x201D;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> random
+</code></pre>
+<ul>
+<li><p>&#x5BFC;&#x5165;&#x6A21;&#x5757;&#x540E;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728; <strong>&#x6A21;&#x5757;&#x540D;&#x79F0;</strong> &#x540E;&#x9762;&#x6572;&#x4E00;&#x4E2A; <code>.</code> &#xFF0C;&#x4F1A;&#x63D0;&#x793A;&#x8BE5;&#x6A21;&#x5757;&#x4E2D;&#x5305;&#x542B;&#x7684;&#x6240;&#x6709;&#x51FD;&#x6570;</p>
+</li>
+<li><p><code>random.randint(a, b)</code> &#xFF0C;&#x8FD4;&#x56DE; <code>[a, b]</code> &#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;&#xFF0C;&#x5305;&#x542B; <code>a</code> &#x548C; <code>b</code></p>
+</li>
+<li>&#x4F8B;&#x5982;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python">random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>  <span class="token comment"># &#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x6570;n: 12 &lt;= n &lt;= 20   </span>
+random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span>  <span class="token comment"># &#x7ED3;&#x679C;&#x6C38;&#x8FDC;&#x662F; 20   </span>
+random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># &#x8BE5;&#x8BED;&#x53E5;&#x662F;&#x9519;&#x8BEF;&#x7684;&#xFF0C;&#x4E0B;&#x9650;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x4E0A;&#x9650;</span>
+</code></pre>
+<p><strong>&#x7EFC;&#x5408;&#x7EC3;&#x4E60;---&#x731C;&#x6570;&#x5B57;</strong></p>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x8981;&#x6C42;&#x7528;&#x6237;&#x8F93;&#x5165;&#x6570;&#x503C;&#x8303;&#x56F4;&#x7684;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;&#x3002;&#x8BA1;&#x7B97;&#x673A;&#x968F;&#x540E;&#x201C;&#x601D;&#x8003;&#x201D;&#x51FA;&#x5728;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#x4E4B;&#x5185;&#x7684;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x91CD;&#x590D;&#x5730;&#x8981;&#x6C42;&#x7528;&#x6237;&#x731C;&#x6D4B;&#x8FD9;&#x4E2A;&#x6570;&#xFF0C;&#x76F4;&#x5230;&#x7528;&#x6237;&#x731C;&#x5BF9;&#x4E86;&#x3002;&#x5728;&#x7528;&#x6237;&#x6BCF;&#x6B21;&#x8FDB;&#x884C;&#x731C;&#x6D4B;&#x4E4B;&#x540E;&#xFF0C;&#x8BA1;&#x7B97;&#x673A;&#x90FD;&#x4F1A;&#x7ED9;&#x51FA;&#x4E00;&#x4E2A;&#x63D0;&#x793A;&#xFF0C;&#x5E76;&#x4E14;&#x4F1A;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x7684;&#x6700;&#x540E;&#x663E;&#x793A;&#x51FA;&#x603B;&#x7684;&#x731C;&#x6D4B;&#x6B21;&#x6570;&#x3002;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x5305;&#x542B;&#x4E86;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x6211;&#x4EEC;&#x5B66;&#x8FC7;&#x7684; Python &#x8BED;&#x53E5;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x8F93;&#x5165;&#x8BED;&#x53E5;&#x3001;&#x8F93;&#x51FA;&#x8BED;&#x53E5;&#x3001;&#x8D4B;&#x503C;&#x8BED;&#x53E5;&#x3001;&#x5FAA;&#x73AF;&#x548C;&#x6761;&#x4EF6;&#x8BED;&#x53E5;&#x3002;</p>
+<p>&#x4E00;&#x4E2A;&#x53EF;&#x80FD;&#x7684;&#x6E38;&#x620F;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>Enter the smaller number: 1
+Enter the larger number: 20
+Enter your guess: 5
+Too small
+Enter your guess: 9
+Too small
+Enter your guess: 15
+Too small
+Enter your guess: 17
+Too large
+Enter your guess: 16
+You&apos;ve got it in 5 tries!
+</code></pre><pre class="language-"><code class="lang-python"><span class="token keyword">import</span> random
+
+smaller <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter the smaller number: &quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+larger <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter the larger number: &quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+myNumber <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span>smaller<span class="token punctuation">,</span> larger<span class="token punctuation">)</span>
+count <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    count <span class="token operator">+=</span> <span class="token number">1</span>
+    userNumber <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;Enter your guess: &quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">if</span> userNumber <span class="token operator">&lt;</span> myNumber<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Too small&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">elif</span> userNumber <span class="token operator">&gt;</span> myNumber<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Too large&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;You&apos;ve got it in&quot;</span><span class="token punctuation">,</span> count<span class="token punctuation">,</span> <span class="token string">&quot;tries!&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="03-Python-运算符（建议1课时）.html" class="navigation navigation-prev " aria-label="Previous page: 03-Python-运算符（建议1课时）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="05-Python列表和元组（建议3课时）.html" class="navigation navigation-next " aria-label="Next page: 05-Python列表和元组（建议3课时）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"04-Python分支与循环（建议2课时）","level":"1.5","depth":1,"next":{"title":"05-Python列表和元组（建议3课时）","level":"1.6","depth":1,"path":"05-Python列表和元组（建议3课时）.md","ref":"05-Python列表和元组（建议3课时）.md","articles":[]},"previous":{"title":"03-Python-运算符（建议1课时）","level":"1.4","depth":1,"path":"03-Python-运算符（建议1课时）.md","ref":"03-Python-运算符（建议1课时）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","anchor-navigation-ex","-sharing","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"pageTop","multipleH1":true,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"fontsettings":{"theme":"white","family":"serif","size":2},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false}},"theme":"default","author":"neuedu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python_neuedu","language":"zh-hans","links":{"sidebar":{"东软睿道":"http://www.neuedu.com/"}},"gitbook":"3.2.3","description":"http://www.neuedu.com/"},"file":{"path":"04-Python分支与循环（建议2课时）.md","mtime":"2019-05-22T02:32:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T07:05:03.760Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

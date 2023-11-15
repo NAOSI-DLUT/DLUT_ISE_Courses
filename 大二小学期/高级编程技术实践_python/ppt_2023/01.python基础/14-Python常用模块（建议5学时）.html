@@ -1,0 +1,1256 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>14-Python常用模块（建议5学时） · python_neuedu</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="neuedu">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="13-Python模块与包（建议1课时）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.neuedu.com/" target="_blank" class="custom-link">东软睿道</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Python基础教学目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                <a href="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                    
+                    01-Python简介及开发环境搭建（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                <a href="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                    
+                    02-Python变量标识符关键字-（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03-Python-运算符（建议1课时）.html">
+            
+                <a href="03-Python-运算符（建议1课时）.html">
+            
+                    
+                    03-Python-运算符（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04-Python分支与循环（建议2课时）.html">
+            
+                <a href="04-Python分支与循环（建议2课时）.html">
+            
+                    
+                    04-Python分支与循环（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05-Python列表和元组（建议3课时）.html">
+            
+                <a href="05-Python列表和元组（建议3课时）.html">
+            
+                    
+                    05-Python列表和元组（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06-Python字符串（建议2课时）.html">
+            
+                <a href="06-Python字符串（建议2课时）.html">
+            
+                    
+                    06-Python字符串（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07-Python字典和集合（建议3课时）.html">
+            
+                <a href="07-Python字典和集合（建议3课时）.html">
+            
+                    
+                    07-Python字典和集合（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08-Python之对变量的再认识（建议1课时）.html">
+            
+                <a href="08-Python之对变量的再认识（建议1课时）.html">
+            
+                    
+                    08-Python之对变量的再认识（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09-Python之函数（建议9课时）.html">
+            
+                <a href="09-Python之函数（建议9课时）.html">
+            
+                    
+                    09-Python之函数（建议9课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10-Python面向对象编程（建议12课时）.html">
+            
+                <a href="10-Python面向对象编程（建议12课时）.html">
+            
+                    
+                    10-Python面向对象编程（建议12课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11-Python异常处理（建议2课时）.html">
+            
+                <a href="11-Python异常处理（建议2课时）.html">
+            
+                    
+                    11-Python异常处理（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                <a href="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                    
+                    12-Python文件操作与字符编码（建议4课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13-Python模块与包（建议1课时）.html">
+            
+                <a href="13-Python模块与包（建议1课时）.html">
+            
+                    
+                    13-Python模块与包（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="14-Python常用模块（建议5学时）.html">
+            
+                <a href="14-Python常用模块（建议5学时）.html">
+            
+                    
+                    14-Python常用模块（建议5学时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >14-Python常用模块（建议5学时）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-pagetop-navbar"><ul><ul><li><span class="title-icon "></span><a href="#&#x65F6;&#x95F4;&#x5904;&#x7406;&#x6A21;&#x5757;"><b>1.1. </b>&#x65F6;&#x95F4;&#x5904;&#x7406;&#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#timetime"><b>1.1.1. </b>time.time()</a></li><li><span class="title-icon "></span><a href="#datetimedatetime"><b>1.1.2. </b>datetime.datetime</a></li><li><span class="title-icon "></span><a href="#datetime&#x7C7B;&#x65B9;&#x6CD5;"><b>1.1.3. </b>datetime&#x7C7B;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#datetime&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;"><b>1.1.4. </b>datetime&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#datetimetimedelta"><b>1.1.5. </b>datetime.timedelta</a></li><li><span class="title-icon "></span><a href="#strftime-&#x548C;-strptime"><b>1.1.6. </b>strftime() &#x548C; strptime()</a></li></ul><li><span class="title-icon "></span><a href="#&#x76EE;&#x5F55;&#x64CD;&#x4F5C;&#x6A21;&#x5757;"><b>1.2. </b>&#x76EE;&#x5F55;&#x64CD;&#x4F5C;&#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;"><b>1.2.1. </b>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;"><b>1.2.2. </b>&#x83B7;&#x53D6;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x5F84;&#x62FC;&#x63A5;"><b>1.2.3. </b>&#x8DEF;&#x5F84;&#x62FC;&#x63A5;</a></li><li><span class="title-icon "></span><a href="#&#x8DEF;&#x5F84;&#x62C6;&#x5206;"><b>1.2.4. </b>&#x8DEF;&#x5F84;&#x62C6;&#x5206;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;"><b>1.2.5. </b>&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;</a></li><li><span class="title-icon "></span><a href="#&#x5220;&#x9664;&#x6587;&#x4EF6;"><b>1.2.6. </b>&#x5220;&#x9664;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x590D;&#x5236;&#x6587;&#x4EF6;"><b>1.2.7. </b>&#x590D;&#x5236;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x904D;&#x5386;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;"><b>1.2.8. </b>&#x904D;&#x5386;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;"><b>1.2.9. </b>&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;</a></li><li><span class="title-icon "></span><a href="#&#x5224;&#x65AD;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;"><b>1.2.10. </b>&#x5224;&#x65AD;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;</a></li></ul><li><span class="title-icon "></span><a href="#&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;"><b>1.3. </b>&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><b>1.3.1. </b>&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</a></li></ul><li><span class="title-icon "></span><a href="#collections&#x6A21;&#x5757;"><b>1.4. </b>Collections&#x6A21;&#x5757;</a></li><ul><li><span class="title-icon "></span><a href="#defaultdict"><b>1.4.1. </b>defaultdict</a></li><li><span class="title-icon "></span><a href="#counter"><b>1.4.2. </b>counter</a></li><li><span class="title-icon "></span><a href="#deque"><b>1.4.3. </b>deque</a></li><li><span class="title-icon "></span><a href="#namedtuple"><b>1.4.4. </b>namedtuple</a></li><li><span class="title-icon "></span><a href="#ordereddict"><b>1.4.5. </b>OrderedDict</a></li></ul><li><span class="title-icon "></span><a href="#pickle&#x6A21;&#x5757;"><b>1.5. </b>pickle&#x6A21;&#x5757;</a></li><li><span class="title-icon "></span><a href="#&#x7EFC;&#x5408;&#x5B9E;&#x4F8B;---&#x731C;&#x6570;&#x6E38;&#x620F;"><b>1.6. </b>&#x7EFC;&#x5408;&#x5B9E;&#x4F8B;---&#x731C;&#x6570;&#x6E38;&#x620F;</a></li></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x65F6;&#x95F4;&#x5904;&#x7406;&#x6A21;&#x5757;"><a name="&#x65F6;&#x95F4;&#x5904;&#x7406;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x65F6;&#x95F4;&#x5904;&#x7406;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x65F6;&#x95F4;&#x5904;&#x7406;&#x6A21;&#x5757;</h2>
+<h3 id="timetime"><a name="timetime" class="anchor-navigation-ex-anchor" href="#timetime"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. time.time()</h3>
+<p>time time() &#x8FD4;&#x56DE;&#x5F53;&#x524D;&#x65F6;&#x95F4;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF08;1970&#x7EAA;&#x5143;&#x540E;&#x7ECF;&#x8FC7;&#x7684;&#x6D6E;&#x70B9;&#x79D2;&#x6570;&#xFF09;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> time
+<span class="token keyword">print</span><span class="token punctuation">(</span>time<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;&#xFF1A;</p>
+<pre class="language-"><code>1556846505.9781783
+</code></pre><p>&#x5728;Python&#x7684;&#x65F6;&#x95F4;&#x5904;&#x7406;&#x6A21;&#x5757;&#x4E2D;&#xFF0C;<code>time</code>&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x4E3B;&#x8981;&#x4FA7;&#x91CD;&#x4E8E;&#x65F6;&#x95F4;&#x6233;&#x683C;&#x5F0F;&#x7684;&#x5904;&#x7406;&#xFF0C;&#x800C;<code>datetime</code>&#x5219;&#x76F8;&#x5F53;&#x4E8E;<code>time</code>&#x6A21;&#x5757;&#x7684;&#x9AD8;&#x7EA7;&#x5C01;&#x88C5;&#xFF0C;&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x591A;&#x5173;&#x4E8E;&#x65E5;&#x671F;&#x5904;&#x7406;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x5E76;&#x4E14;<code>datetime</code>&#x7684;&#x63A5;&#x53E3;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x66F4;&#x52A0;&#x7684;&#x76F4;&#x89C2;&#xFF0C;&#x65B9;&#x4FBF;&#x3002;</p>
+<p><code>datetime</code>&#x4E3B;&#x8981;&#x7531;&#x4E94;&#x4E2A;&#x6A21;&#x5757;&#x7EC4;&#x6210;&#xFF1A;</p>
+<ul>
+<li><strong>datetime.date</strong>&#xFF1A;&#x8868;&#x793A;&#x65E5;&#x671F;&#x7684;&#x7C7B;&#x3002;&#x5E38;&#x7528;&#x7684;&#x5C5E;&#x6027;&#x6709;year, month, day&#x3002;</li>
+<li><strong>datetime.time</strong>&#xFF1A;&#x8868;&#x793A;&#x65F6;&#x95F4;&#x7684;&#x7C7B;&#x3002;&#x5E38;&#x7528;&#x7684;&#x5C5E;&#x6027;&#x6709;hour, minute, second, microsecond&#x3002;</li>
+<li><strong>datetime.datetime</strong>&#xFF1A;&#x8868;&#x793A;&#x65E5;&#x671F;+&#x65F6;&#x95F4;&#x3002;</li>
+<li><strong>datetime.timedelta</strong>&#xFF1A;&#x8868;&#x793A;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#xFF0C;&#x5373;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x957F;&#x5EA6;&#xFF0C;&#x5E38;&#x5E38;&#x7528;&#x6765;&#x505A;&#x65F6;&#x95F4;&#x7684;&#x52A0;&#x51CF;&#x3002;</li>
+<li><strong>datetime.tzinfo</strong>&#xFF1A;&#x4E0E;&#x65F6;&#x533A;&#x6709;&#x5173;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x3002;</li>
+</ul>
+<p>&#x5728;<code>datetime</code>&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x6700;&#x591A;&#x7684;&#x5C31;&#x662F;<code>datetime.datetime</code>&#x6A21;&#x5757;&#xFF0C;&#x800C;<code>datetime.timedelta</code>&#x5E38;&#x5E38;&#x88AB;&#x7528;&#x6765;&#x4FEE;&#x6539;&#x65F6;&#x95F4;&#x3002;</p>
+<h3 id="datetimedatetime"><a name="datetimedatetime" class="anchor-navigation-ex-anchor" href="#datetimedatetime"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. datetime.datetime</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">class</span> <span class="token class-name">datetime</span><span class="token punctuation">.</span>datetime<span class="token punctuation">(</span>year<span class="token punctuation">,</span> month<span class="token punctuation">,</span> day<span class="token punctuation">,</span> hour<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> minute<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> second<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> microsecond<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> tzinfo<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token operator">*</span><span class="token punctuation">,</span> fold<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>MINYEAR &lt;= year &lt;= MAXYEAR</li>
+<li>1 &lt;= month &lt;= 12</li>
+<li>1 &lt;= day &lt;= number of days in the given month and year</li>
+<li>0 &lt;= hour &lt; 24</li>
+<li>0 &lt;= minute &lt; 60</li>
+<li>0 &lt;= second &lt; 60</li>
+<li>0 &lt;= microsecond &lt; 1000000</li>
+</ul>
+<p>&#x8FD9;&#x662F;<code>datetime.datetime</code>&#x53C2;&#x6570;&#x7684;&#x53D6;&#x503C;&#x8303;&#x56F4;&#xFF0C;&#x5982;&#x679C;&#x8BBE;&#x5B9A;&#x7684;&#x503C;&#x8D85;&#x8FC7;&#x8FD9;&#x4E2A;&#x8303;&#x56F4;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x629B;&#x51FA;<code>ValueError</code>&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x5176;&#x4E2D;<code>year</code>&#xFF0C;<code>month</code>&#xFF0C;<code>day</code>&#x662F;&#x5FC5;&#x987B;&#x53C2;&#x6570;&#x3002;</p>
+<pre class="language-"><code>In [1]: import datetime
+
+In [2]: datetime.datetime(year=2000, month=1, day=1, hour=12)
+Out[2]: datetime.datetime(2000, 1, 1, 12, 0)
+</code></pre><h3 id="datetime&#x7C7B;&#x65B9;&#x6CD5;"><a name="datetime&#x7C7B;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#datetime&#x7C7B;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. datetime&#x7C7B;&#x65B9;&#x6CD5;</h3>
+<p>&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x5927;&#x591A;&#x6570;&#x7528;&#x6765;&#x751F;&#x6210;&#x4E00;&#x4E2A;<code>datetime</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<ul>
+<li><p>classmethod datetime.<strong>today()</strong></p>
+<p>&#x83B7;&#x53D6;&#x4ECA;&#x5929;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>today<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">17</span><span class="token punctuation">,</span> <span class="token number">127663</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>classmethod datetime.<strong>now(tz=None)</strong></p>
+<p>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">593801</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>classmethod datetime.<strong>fromtimestamp(timestamp, tz=None)</strong></p>
+<p>&#x7528;&#x4E00;&#x4E2A;&#x65F6;&#x95F4;&#x6233;&#x6765;&#x751F;&#x6210;<code>datetime</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<p><strong>&#x6CE8;&#xFF1A;&#x65F6;&#x95F4;&#x6233;&#x9700;&#x8981;&#x4E3A;10&#x4F4D;&#x7684;</strong></p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>fromtimestamp<span class="token punctuation">(</span><span class="token number">1530515475.18224</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">11</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">182240</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="datetime&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;"><a name="datetime&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#datetime&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. datetime&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;</h3>
+<p>&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x5927;&#x591A;&#x662F;&#x4E00;&#x4E2A;<code>datetime</code>&#x5BF9;&#x8C61;&#x80FD;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x3002;</p>
+<ul>
+<li><p>datetime.<strong>date()</strong> &#x548C; datetime.<strong>time()</strong></p>
+<p>&#x83B7;&#x53D6;<code>datetime</code>&#x5BF9;&#x8C61;&#x7684;&#x65E5;&#x671F;&#x6216;&#x8005;&#x65F6;&#x95F4;&#x90E8;&#x5206;&#x3002;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>date<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>date<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>time<span class="token punctuation">(</span><span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">24</span><span class="token punctuation">,</span> <span class="token number">37</span><span class="token punctuation">,</span> <span class="token number">355514</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>datetime.<strong>replace(year=self.year, month=self.month, day=self.day, hour=self.hour, minute=self.minute, second=self.second, microsecond=self.microsecond, tzinfo=self.tzinfo, * fold=0)</strong></p>
+<p>&#x66FF;&#x6362;<code>datetime</code>&#x5BF9;&#x8C61;&#x7684;&#x6307;&#x5B9A;&#x6570;&#x636E;&#x3002;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> now <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> now
+Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">116239</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> now<span class="token punctuation">.</span>replace<span class="token punctuation">(</span>year<span class="token operator">=</span><span class="token number">2000</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">116239</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+<li><p>datetime.<code>timestamp()</code></p>
+<p>&#x8F6C;&#x6362;&#x6210;&#x65F6;&#x95F4;&#x6233;&#x3002;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>timestamp<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1530515994.798248</span>
+</code></pre>
+</li>
+<li><p>datetime.<strong>weekday()</strong></p>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x65E5;&#x671F;&#x4E3A;&#x661F;&#x671F;&#x51E0;&#x3002;0&#x4E3A;&#x661F;&#x671F;&#x4E00;&#xFF0C;6&#x4E3A;&#x661F;&#x671F;&#x5929;&#x3002;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>weekday<span class="token punctuation">(</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token number">1</span>
+</code></pre>
+</li>
+</ul>
+<h3 id="datetimetimedelta"><a name="datetimetimedelta" class="anchor-navigation-ex-anchor" href="#datetimetimedelta"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. datetime.timedelta</h3>
+<p>&#x5728;&#x5B9E;&#x9645;&#x7684;&#x4F7F;&#x7528;&#x4E2D;&#xFF0C;&#x5E38;&#x5E38;&#x4F1A;&#x9047;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x9700;&#x6C42;&#xFF1A;&#x9700;&#x8981;&#x7ED9;&#x67D0;&#x4E2A;&#x65F6;&#x95F4;&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;&#x4E00;&#x5929;&#xFF0C;&#x751A;&#x81F3;&#x662F;&#x589E;&#x52A0;&#x6216;&#x51CF;&#x5C11;&#x4E00;&#x5929;&#x4E09;&#x5C0F;&#x65F6;&#x4E8C;&#x5341;&#x5206;&#x949F;&#x3002;</p>
+<p>&#x90A3;&#x4E48;&#x5728;&#x9047;&#x5230;&#x8FD9;&#x6837;&#x7684;&#x9700;&#x6C42;&#x65F6;&#xFF0C;&#x53BB;&#x8BA1;&#x7B97;&#x65F6;&#x95F4;&#x6233;&#x662F;&#x975E;&#x5E38;&#x7684;&#x9EBB;&#x70E6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;<code>datetime.timedelta</code>&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x4F7F;&#x80FD;&#x591F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x5BF9;&#x65F6;&#x95F4;&#x505A;&#x52A0;&#x51CF;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">class</span> <span class="token class-name">datetime</span><span class="token punctuation">.</span>timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> seconds<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> microseconds<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> milliseconds<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> minutes<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> hours<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> weeks<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
+<p><code>datetime</code>&#x662F;&#x5BF9;&#x67D0;&#x4E9B;&#x8FD0;&#x7B97;&#x7B26;&#x8FDB;&#x884C;&#x4E86;&#x91CD;&#x8F7D;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x5982;&#x4E0B;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token keyword">from</span> datetime <span class="token keyword">import</span> timedelta
+
+In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> now
+Out<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">116239</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> now <span class="token operator">-</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">116239</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> now <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">116239</span><span class="token punctuation">)</span>
+
+In <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> now <span class="token operator">+</span> timedelta<span class="token punctuation">(</span>days<span class="token operator">=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2018</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">26</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">116239</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="strftime-&#x548C;-strptime"><a name="strftime-&#x548C;-strptime" class="anchor-navigation-ex-anchor" href="#strftime-&#x548C;-strptime"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. strftime() &#x548C; strptime()</h3>
+<p><code>datetime</code>&#x4E2D;&#x63D0;&#x4F9B;&#x4E86;&#x4E24;&#x4E2A;&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x628A;<code>datetime</code>&#x5BF9;&#x8C61;&#x8F6C;&#x6362;&#x6210;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x628A;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;<code>datetime</code>&#x5BF9;&#x8C61;&#x3002;</p>
+<ul>
+<li><p>&#x7531;<code>datetime</code>&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#xFF1A;<strong>datetime.strftime()</strong></p>
+<p><code>strftime()</code>&#x662F;datetime&#x5BF9;&#x8C61;&#x7684;&#x5B9E;&#x4F8B;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">&apos;%Y-%m-%d %H:%M:%S %f&apos;</span><span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token string">&apos;2018-07-02 15:26:45 116239&apos;</span>
+</code></pre>
+</li>
+<li><p>&#x7531;&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x6362;&#x6210;<code>datetime</code>&#xFF1A;<strong>datetime.datetime.strptime()</strong></p>
+<p><code>strptime()</code>&#x5219;&#x662F;&#x4E00;&#x4E2A;&#x7C7B;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">In <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span> newsTime<span class="token operator">=</span><span class="token string">&apos;Sun, 23 Apr 2017 05:15:05 GMT&apos;</span>
+
+In <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">:</span> GMT_FORMAT <span class="token operator">=</span> <span class="token string">&apos;%a, %d %b %Y %H:%M:%S GMT&apos;</span>
+
+In <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>strptime<span class="token punctuation">(</span>newsTime<span class="token punctuation">,</span>GMT_FORMAT<span class="token punctuation">)</span>
+Out<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">:</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">(</span><span class="token number">2017</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+</code></pre>
+</li>
+</ul>
+<p>&#x4EE5;&#x4E0B;&#x662F;&#x683C;&#x5F0F;&#x5316;&#x7684;&#x7B26;&#x53F7;&#xFF1A;</p>
+<ul>
+<li>%y &#x4E24;&#x4F4D;&#x6570;&#x7684;&#x5E74;&#x4EFD;&#x8868;&#x793A;&#xFF08;00-99&#xFF09;</li>
+<li>%Y &#x56DB;&#x4F4D;&#x6570;&#x7684;&#x5E74;&#x4EFD;&#x8868;&#x793A;&#xFF08;000-9999&#xFF09;</li>
+<li>%m &#x6708;&#x4EFD;&#xFF08;01-12&#xFF09;</li>
+<li>%d &#x6708;&#x5185;&#x4E2D;&#x7684;&#x4E00;&#x5929;&#xFF08;0-31&#xFF09;</li>
+<li>%H 24&#x5C0F;&#x65F6;&#x5236;&#x5C0F;&#x65F6;&#x6570;&#xFF08;0-23&#xFF09;</li>
+<li>%I 12&#x5C0F;&#x65F6;&#x5236;&#x5C0F;&#x65F6;&#x6570;&#xFF08;01-12&#xFF09;</li>
+<li>%M &#x5206;&#x949F;&#x6570;&#xFF08;00=59&#xFF09;</li>
+<li>%S &#x79D2;&#xFF08;00-59&#xFF09;</li>
+<li>%a &#x672C;&#x5730;&#x7B80;&#x5316;&#x661F;&#x671F;&#x540D;&#x79F0;</li>
+<li>%A &#x672C;&#x5730;&#x5B8C;&#x6574;&#x661F;&#x671F;&#x540D;&#x79F0;</li>
+<li>%b &#x672C;&#x5730;&#x7B80;&#x5316;&#x7684;&#x6708;&#x4EFD;&#x540D;&#x79F0;</li>
+<li>%B &#x672C;&#x5730;&#x5B8C;&#x6574;&#x7684;&#x6708;&#x4EFD;&#x540D;&#x79F0;</li>
+<li>%c &#x672C;&#x5730;&#x76F8;&#x5E94;&#x7684;&#x65E5;&#x671F;&#x8868;&#x793A;&#x548C;&#x65F6;&#x95F4;&#x8868;&#x793A;</li>
+<li>%j &#x5E74;&#x5185;&#x7684;&#x4E00;&#x5929;&#xFF08;001-366&#xFF09;</li>
+<li>%p &#x672C;&#x5730;A.M.&#x6216;P.M.&#x7684;&#x7B49;&#x4EF7;&#x7B26;</li>
+<li>%U &#x4E00;&#x5E74;&#x4E2D;&#x7684;&#x661F;&#x671F;&#x6570;&#xFF08;00-53&#xFF09;&#x661F;&#x671F;&#x5929;&#x4E3A;&#x661F;&#x671F;&#x7684;&#x5F00;&#x59CB;</li>
+<li>%w &#x661F;&#x671F;&#xFF08;0-6&#xFF09;&#xFF0C;&#x661F;&#x671F;&#x5929;&#x4E3A;&#x661F;&#x671F;&#x7684;&#x5F00;&#x59CB;</li>
+<li>%W &#x4E00;&#x5E74;&#x4E2D;&#x7684;&#x661F;&#x671F;&#x6570;&#xFF08;00-53&#xFF09;&#x661F;&#x671F;&#x4E00;&#x4E3A;&#x661F;&#x671F;&#x7684;&#x5F00;&#x59CB;</li>
+<li>%x &#x672C;&#x5730;&#x76F8;&#x5E94;&#x7684;&#x65E5;&#x671F;&#x8868;&#x793A;</li>
+<li>%X &#x672C;&#x5730;&#x76F8;&#x5E94;&#x7684;&#x65F6;&#x95F4;&#x8868;&#x793A;</li>
+<li>%Z &#x5F53;&#x524D;&#x65F6;&#x533A;&#x7684;&#x540D;&#x79F0;</li>
+<li>%% %&#x53F7;&#x672C;&#x8EAB;</li>
+</ul>
+<h2 id="&#x76EE;&#x5F55;&#x64CD;&#x4F5C;&#x6A21;&#x5757;"><a name="&#x76EE;&#x5F55;&#x64CD;&#x4F5C;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x5F55;&#x64CD;&#x4F5C;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x76EE;&#x5F55;&#x64CD;&#x4F5C;&#x6A21;&#x5757;</h2>
+<ul>
+<li>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</li>
+<li>&#x83B7;&#x53D6;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>&#x8DEF;&#x5F84;&#x62FC;&#x63A5;</li>
+<li>&#x8DEF;&#x5F84;&#x62C6;&#x5206;</li>
+<li>&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;</li>
+<li>&#x5220;&#x9664;&#x6587;&#x4EF6;</li>
+<li>&#x590D;&#x5236;&#x6587;&#x4EF6;</li>
+<li>&#x904D;&#x5386;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;</li>
+<li>&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;</li>
+<li>&#x5224;&#x65AD;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;</li>
+</ul>
+<h3 id="&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;"><a name="&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> sys
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>sys<span class="token punctuation">.</span>path<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x83B7;&#x53D6;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;"><a name="&#x83B7;&#x53D6;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. &#x83B7;&#x53D6;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x4F4D;&#x7F6E;</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x8DEF;&#x5F84;&#x62FC;&#x63A5;"><a name="&#x8DEF;&#x5F84;&#x62FC;&#x63A5;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x5F84;&#x62FC;&#x63A5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. &#x8DEF;&#x5F84;&#x62FC;&#x63A5;</h3>
+<p>&#x7531;&#x4E8E;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x8DEF;&#x5F84;&#x5206;&#x9694;&#x7B26;&#x4E0D;&#x540C;&#xFF0C;&#x56E0;&#x6B64;&#x5728;&#x505A;&#x8DEF;&#x5F84;&#x62FC;&#x63A5;&#x65F6;&#x4E0D;&#x8981;&#x76F4;&#x63A5;&#x62FC;&#x63A5;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x800C;&#x662F;&#x901A;&#x8FC7; <code>os.path.join()</code> &#x51FD;&#x6570;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token string">&apos;/Users/pangao&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;test.txt&apos;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># /Users/pangao/test.txt&apos;</span>
+</code></pre>
+<h3 id="&#x8DEF;&#x5F84;&#x62C6;&#x5206;"><a name="&#x8DEF;&#x5F84;&#x62C6;&#x5206;" class="anchor-navigation-ex-anchor" href="#&#x8DEF;&#x5F84;&#x62C6;&#x5206;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. &#x8DEF;&#x5F84;&#x62C6;&#x5206;</h3>
+<p>&#x540C;&#x7406;&#xFF0C;&#x4F7F;&#x7528; <code>os.path.split()</code> &#x51FD;&#x6570;&#x62C6;&#x5206;&#x8DEF;&#x5F84;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">&apos;/Users/pangao/test.txt&apos;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># (&apos;/Users/pangao/&apos;, &apos;test.txt&apos;)</span>
+</code></pre>
+<p><code>os.path.splitext()</code> &#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x6269;&#x5C55;&#x540D;&#xFF0C;&#x5F88;&#x65B9;&#x4FBF;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>splitext<span class="token punctuation">(</span><span class="token string">&apos;/Users/pangao/test.txt&apos;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># (&apos;/Users/pangao/test&apos;, &apos;.txt&apos;)</span>
+</code></pre>
+<p><strong>&#x8FD9;&#x4E9B;&#x5408;&#x5E76;&#x3001;&#x62C6;&#x5206;&#x8DEF;&#x5F84;&#x7684;&#x51FD;&#x6570;&#x5E76;&#x4E0D;&#x4F1A;&#x68C0;&#x6D4B;&#x76EE;&#x5F55;&#x548C;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x771F;&#x5B9E;&#x5B58;&#x5728;&#xFF0C;&#x4ED6;&#x4EEC;&#x4EC5;&#x4EC5;&#x662F;&#x5BF9;&#x5B57;&#x7B26;&#x4E32;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#x3002;</strong></p>
+<h3 id="&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;"><a name="&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.5. &#x6587;&#x4EF6;&#x91CD;&#x547D;&#x540D;</h3>
+<p>&#x5047;&#x5B9A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E00;&#x4E2A; <code>test.txt</code> &#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>rename<span class="token punctuation">(</span><span class="token string">&apos;test.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;test.py&apos;</span><span class="token punctuation">)</span>    <span class="token comment">#&#x91CD;&#x547D;&#x540D;</span>
+</code></pre>
+<h3 id="&#x5220;&#x9664;&#x6587;&#x4EF6;"><a name="&#x5220;&#x9664;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x5220;&#x9664;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.6. &#x5220;&#x9664;&#x6587;&#x4EF6;</h3>
+<p>&#x5047;&#x5B9A;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x6709;&#x4E00;&#x4E2A; <code>test.txt</code> &#x6587;&#x4EF6;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">&apos;test.txt&apos;</span><span class="token punctuation">)</span>    <span class="token comment">#&#x5220;&#x9664;</span>
+</code></pre>
+<h3 id="&#x590D;&#x5236;&#x6587;&#x4EF6;"><a name="&#x590D;&#x5236;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x590D;&#x5236;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.7. &#x590D;&#x5236;&#x6587;&#x4EF6;</h3>
+<p><code>os</code> &#x6A21;&#x5757;&#x4E2D;&#x6CA1;&#x6709;&#x590D;&#x5236;&#x51FD;&#x6570;&#xFF0C;&#x5E78;&#x8FD0;&#x7684;&#x662F;shutil&#x6A21;&#x5757;&#x63D0;&#x4F9B;&#x4E86;copyfile()&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x5728;shutil&#x6A21;&#x5757;&#x4E2D;&#x627E;&#x5230;&#x5F88;&#x591A;&#x5B9E;&#x7528;&#x51FD;&#x6570;&#xFF0C;&#x5B83;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x662F;os&#x6A21;&#x5757;&#x7684;&#x8865;&#x5145;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> shutil
+
+shutil<span class="token punctuation">.</span>copyfile<span class="token punctuation">(</span><span class="token string">&apos;test.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;test.py&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x904D;&#x5386;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;"><a name="&#x904D;&#x5386;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x904D;&#x5386;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.8. &#x904D;&#x5386;&#x6587;&#x4EF6;&#x5939;&#x4E0B;&#x7684;&#x6587;&#x4EF6;</h3>
+<ul>
+<li>&#x65B9;&#x6CD5;1&#xFF1A;
+ &#x4F7F;&#x7528; <code>os.listdir</code> &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x548C;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+<span class="token keyword">for</span> filename <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span><span class="token string">&apos;./&apos;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>&#x65B9;&#x6CD5;2&#xFF1A;
+ &#x4F7F;&#x7528; <code>glob</code> &#x6A21;&#x5757;&#xFF0C;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x6587;&#x4EF6;&#x8FC7;&#x6EE4;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> glob
+
+<span class="token keyword">for</span> filename <span class="token keyword">in</span> glob<span class="token punctuation">.</span>glob<span class="token punctuation">(</span><span class="token string">&apos;*.py&apos;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>filename<span class="token punctuation">)</span>
+</code></pre>
+<ul>
+<li>&#x65B9;&#x6CD5;3&#xFF1A;
+ &#x901A;&#x8FC7; <code>os.walk</code> &#xFF0C;&#x53EF;&#x4EE5;&#x8BBF;&#x95EE;&#x5B50;&#x6587;&#x4EF6;&#x5939;&#xFF0C;&#x5982;&#x4E0B;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+<span class="token keyword">for</span> fpathe<span class="token punctuation">,</span> dirs<span class="token punctuation">,</span> fs <span class="token keyword">in</span> os<span class="token punctuation">.</span>walk<span class="token punctuation">(</span><span class="token string">&apos;./&apos;</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>fpathe<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>dirs<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>fs<span class="token punctuation">)</span>
+    <span class="token keyword">for</span> f <span class="token keyword">in</span> fs<span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>fpathe<span class="token punctuation">,</span> f<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;"><a name="&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;" class="anchor-navigation-ex-anchor" href="#&#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.9. &#x5224;&#x65AD;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>isfile<span class="token punctuation">(</span><span class="token string">&apos;test.txt&apos;</span><span class="token punctuation">)</span> <span class="token comment"># &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x8FD4;&#x56DE;False</span>
+</code></pre>
+<h3 id="&#x5224;&#x65AD;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;"><a name="&#x5224;&#x65AD;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;" class="anchor-navigation-ex-anchor" href="#&#x5224;&#x65AD;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.10. &#x5224;&#x65AD;&#x76EE;&#x5F55;&#x662F;&#x5426;&#x5B58;&#x5728;</h3>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> os
+
+os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>exists<span class="token punctuation">(</span>directory<span class="token punctuation">)</span> <span class="token comment">#&#x5982;&#x679C;&#x76EE;&#x5F55;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x8FD4;&#x56DE;False</span>
+</code></pre>
+<h2 id="&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;"><a name="&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;</h2>
+<ul>
+<li>random&#x6A21;&#x5757;
+ Python&#x4E2D;&#x4EA7;&#x751F;&#x968F;&#x673A;&#x6570;&#x9700;&#x8981;&#x5BFC;&#x5165;random&#x6A21;&#x5757;&#xFF1A;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> random
+</code></pre>
+<h3 id="&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><a name="&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x5E38;&#x7528;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x5E38;&#x7528;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x968F;&#x673A;&#x6570;&#x6A21;&#x5757;&#x5E38;&#x7528;&#x65B9;&#x6CD5;</h3>
+<ul>
+<li>random.randint(a, b)&#xFF1A;&#x8FD4;&#x56DE;a&#x548C;b&#x4E4B;&#x95F4;&#x7684;&#x968F;&#x673A;&#x6574;&#x6570;&#xFF1B;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">import</span> random
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token number">8</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token number">7</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token number">10</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+<ul>
+<li>random.random()&#xFF1A;&#x8FD4;&#x56DE;&#xFF10;&#x5230;&#xFF11;&#x4E4B;&#x95F4;&#x968F;&#x673A;&#x6570;&#xFF08;&#x4E0D;&#x5305;&#x62EC;1&#xFF09;;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">0.8836361984681352</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">0.013648077769505496</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>random<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token number">0.7267135453127417</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+<ul>
+<li>random.choice(seq)&#xFF1A;&#x5728;&#x4E0D;&#x4E3A;&#x7A7A;&#x7684;&#x5E8F;&#x5217;&#x4E2D;&#x968F;&#x673A;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF1B;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> s <span class="token operator">=</span> <span class="token string">&apos;helloWorld&apos;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+<span class="token string">&apos;o&apos;</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>choice<span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+<span class="token string">&apos;r&apos;</span>
+</code></pre>
+<ul>
+<li>random.sample(population, k)&#xFF1A;&#x5728;&#x4E00;&#x4E2A;&#x5E8F;&#x5217;&#x6216;&#x8005;&#x96C6;&#x5408;&#x4E2D;&#x9009;&#x62E9;k&#x4E2A;&#x968F;&#x673A;&#x5143;&#x7D20;()&#xFF0C;&#x8FD4;&#x56DE;&#x7531;K&#x4E2A;&#x5143;&#x7D20;&#x7EC4;&#x6210;&#x65B0;&#x7684;&#x5217;&#x8868;&#xFF1B;&#xFF08;k&#x7684;&#x503C;&#x5C0F;&#x4E8E;population&#x7684;&#x957F;&#x5EA6;&#xFF09;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>sample<span class="token punctuation">(</span><span class="token string">&apos;12345&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token string">&apos;1&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;2&apos;</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>sample<span class="token punctuation">(</span><span class="token string">&apos;12345&apos;</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span>
+<span class="token punctuation">[</span><span class="token string">&apos;2&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;1&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;3&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;4&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;5&apos;</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>sample<span class="token punctuation">(</span><span class="token string">&apos;12345&apos;</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>    <span class="token comment">#k&#x503C;&#x8D85;&#x51FA;population&#x8303;&#x56F4;&#x5BFC;&#x81F4;&#x7A0B;&#x5E8F;&#x5F02;&#x5E38;</span>
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  File <span class="token string">&quot;&lt;pyshell#41&gt;&quot;</span><span class="token punctuation">,</span> line <span class="token number">1</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+    random<span class="token punctuation">.</span>sample<span class="token punctuation">(</span><span class="token string">&apos;12345&apos;</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span>
+  File <span class="token string">&quot;D:\python36\lib\random.py&quot;</span><span class="token punctuation">,</span> line <span class="token number">317</span><span class="token punctuation">,</span> <span class="token keyword">in</span> sample
+    <span class="token keyword">raise</span> ValueError<span class="token punctuation">(</span><span class="token string">&quot;Sample larger than population or is negative&quot;</span><span class="token punctuation">)</span>
+ValueError<span class="token punctuation">:</span> Sample larger than population <span class="token keyword">or</span> <span class="token keyword">is</span> negative
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+<ul>
+<li>random.uniform(a, b)&#xFF1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x8303;&#x56F4;&#x5185;&#x7684;&#x968F;&#x673A;&#x6D6E;&#x70B9;&#x6570;
+ &#x82E5;a &lt; b&#xFF0C;&#x968F;&#x673A;&#x6570;n&#x8303;&#x56F4;&#xFF1A;a &lt;= n &lt;= b&#xFF1B;
+ &#x82E5;a &gt; b&#xFF0C;&#x968F;&#x673A;&#x6570;n&#x8303;&#x56F4;&#xFF1A;a&lt;= n &lt;= b&#xFF1B;</li>
+</ul>
+<pre class="language-"><code class="lang-python">
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token number">1.9304756617571137</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>uniform<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token number">2.872422460231057</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+<ul>
+<li>random.randrange(start, stop=None, step=1, _int=<class 'int'="">) &#xFF1A;&#x5728;rang(start, stop,step)&#x4E2D;&#x9009;&#x62E9;&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6570;;</class></li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>randrange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>   <span class="token comment">#[1,10)&#x4E4B;&#x95F4;&#x968F;&#x673A;&#x6574;&#x6570;</span>
+<span class="token number">5</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>randrange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token number">2</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>randrange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment">#[1, 100)&#x4E4B;&#x95F4;&#x968F;&#x673A;&#x5947;&#x6570;</span>
+<span class="token number">33</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>randrange<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+<span class="token number">5</span>
+</code></pre>
+<ul>
+<li>random.shuffle(x, random=None)&#xFF1A;&#x5C06;&#x5217;&#x8868;&#x987A;&#x5E8F;&#x6253;&#x4E71;&#xFF1B;</li>
+</ul>
+<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> l <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;C&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;C++&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Java&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;C#&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Python&apos;</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>shuffle<span class="token punctuation">(</span>l<span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> l
+<span class="token punctuation">[</span><span class="token string">&apos;C++&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;C&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Java&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;C#&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Python&apos;</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> random<span class="token punctuation">.</span>shuffle<span class="token punctuation">(</span>l<span class="token punctuation">)</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> l
+<span class="token punctuation">[</span><span class="token string">&apos;C&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Python&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;C++&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;C#&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;Java&apos;</span><span class="token punctuation">]</span>
+<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span>
+</code></pre>
+<h2 id="collections&#x6A21;&#x5757;"><a name="collections&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#collections&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. Collections&#x6A21;&#x5757;</h2>
+<p>&#x8BE5;&#x6A21;&#x5757;&#x5B9E;&#x73B0;&#x4E86;&#x4E13;&#x95E8;&#x7684;&#x5BB9;&#x5668;&#x6570;&#x636E;&#x7C7B;&#x578B;&#xFF0C;&#x4E3A;Python&#x7684;&#x901A;&#x7528;&#x5185;&#x7F6E;&#x5BB9;&#x5668;&#x63D0;&#x4F9B;&#x4E86;&#x66FF;&#x4EE3;&#x65B9;&#x6848;&#x3002;
+&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#x7C7B;&#x578B;&#x7528;&#x7684;&#x5F88;&#x591A;&#xFF1A;</p>
+<ul>
+<li><strong>defaultdict</strong> (dict&#x5B50;&#x7C7B;&#x8C03;&#x7528;&#x5DE5;&#x5382;&#x51FD;&#x6570;&#x6765;&#x63D0;&#x4F9B;&#x7F3A;&#x5931;&#x503C;)</li>
+<li><strong>counter</strong> (&#x7528;&#x4E8E;&#x8BA1;&#x7B97;&#x53EF;&#x54C8;&#x5E0C;&#x5BF9;&#x8C61;&#x7684;dict&#x5B50;&#x7C7B;)</li>
+<li><strong>deque</strong> (&#x7C7B;&#x4F3C;&#x4E8E;&#x5217;&#x8868;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x4E24;&#x7AEF;&#x64CD;&#x4F5C;)</li>
+<li><strong>namedtuple</strong> (&#x7528;&#x4E8E;&#x521B;&#x5EFA;&#x5177;&#x6709;&#x547D;&#x540D;&#x5B57;&#x6BB5;&#x7684;tuple&#x5B50;&#x7C7B;&#x7684;&#x5DE5;&#x5382;&#x51FD;&#x6570;)</li>
+<li><strong>OrderedDict</strong> (&#x8BB0;&#x5F55;&#x8F93;&#x5165;&#x987A;&#x5E8F;&#x7684;dict)</li>
+</ul>
+<h3 id="defaultdict"><a name="defaultdict" class="anchor-navigation-ex-anchor" href="#defaultdict"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.1. defaultdict</h3>
+<p> <strong>&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x67E5;&#x4E0D;&#x5230;key&#x503C;&#x65F6;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;&#x7684;dict</strong></p>
+<p><strong>&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</strong></p>
+<p>&#x9996;&#x5148;&#x6765;&#x770B;&#x4E00;&#x4E2A;&#x7528;&#x6B63;&#x5E38;dict&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x5982;&#x679C;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x53EB;person&#x7684;&#x5B57;&#x5178;&#xFF0C;&#x91CC;&#x9762;&#x5B58;&#x50A8;&#x7684;key&#x503C;&#x4E3A;name&#xFF0C;age&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x65F6;&#x5019;&#x5C1D;&#x8BD5;&#x8C03;&#x7528;person[&apos;city&apos;]&#xFF0C;&#x4F1A;&#x629B;&#x51FA;KeyError&#x9519;&#x8BEF;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;city&#x8FD9;&#x4E2A;&#x952E;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">person <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;xiaobai&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;age&apos;</span><span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">}</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&quot;The value of key  &apos;name&apos; is : &quot;</span><span class="token punctuation">,</span>person<span class="token punctuation">[</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&quot;The value of key  &apos;city&apos; is : &quot;</span><span class="token punctuation">,</span>person<span class="token punctuation">[</span><span class="token string">&apos;city&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+Out<span class="token punctuation">:</span> The value of key  <span class="token string">&apos;name&apos;</span> <span class="token keyword">is</span> <span class="token punctuation">:</span>  xiaobai
+Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  File <span class="token string">&quot;C:\Users\E560\Desktop\test.py&quot;</span><span class="token punctuation">,</span> line <span class="token number">17</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+    <span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&quot;The value of key  &apos;city&apos; is : &quot;</span><span class="token punctuation">,</span>person<span class="token punctuation">[</span><span class="token string">&apos;city&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+KeyError<span class="token punctuation">:</span> <span class="token string">&apos;city&apos;</span>
+</code></pre>
+<p>&#x73B0;&#x5728;&#x5982;&#x679C;&#x7528;defaultdict&#x518D;&#x8BD5;&#x8BD5;&#x5462;&#xFF1F;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
+person <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token keyword">lambda</span> <span class="token punctuation">:</span> <span class="token string">&apos;Key Not found&apos;</span><span class="token punctuation">)</span> <span class="token comment"># &#x521D;&#x59CB;&#x9ED8;&#x8BA4;&#x6240;&#x6709;key&#x5BF9;&#x5E94;&#x7684;value&#x5747;&#x4E3A;&#x2018;Key Not Found&#x2019;</span>
+
+person<span class="token punctuation">[</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&apos;xiaobai&apos;</span>
+person<span class="token punctuation">[</span><span class="token string">&apos;age&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">18</span>
+
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&quot;The value of key  &apos;name&apos; is : &quot;</span><span class="token punctuation">,</span>person<span class="token punctuation">[</span><span class="token string">&apos;name&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">&quot;The value of key  &apos;adress&apos; is : &quot;</span><span class="token punctuation">,</span>person<span class="token punctuation">[</span><span class="token string">&apos;city&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+Out&#xFF1A;The value of key  <span class="token string">&apos;name&apos;</span> <span class="token keyword">is</span> <span class="token punctuation">:</span>  xiaobai
+     The value of key  <span class="token string">&apos;adress&apos;</span> <span class="token keyword">is</span> <span class="token punctuation">:</span>  Key Not found
+</code></pre>
+<p>&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x53D1;&#x73B0;&#xFF0C;&#x8FD9;&#x6B21;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x5176;&#x5B9E;&#x6700;&#x6839;&#x672C;&#x7684;&#x539F;&#x56E0;&#x5728;&#x4E8E;&#x5F53;&#x521B;&#x5EFA;defaultdict&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x4F20;&#x9012;&#x7684;&#x53C2;&#x6570;&#x662F;&#x6240;&#x6709;key&#x7684;&#x9ED8;&#x8BA4;value&#x503C;&#xFF0C;&#x4E4B;&#x540E;&#x6DFB;&#x52A0;name&#xFF0C;age&#x8FDB;&#x53BB;&#x7684;&#x65F6;&#x5019;&#x624D;&#x4F1A;&#x6709;&#x6240;&#x6539;&#x53D8;&#xFF0C;&#x5F53;&#x6700;&#x7EC8;&#x67E5;&#x8BE2;&#x65F6;&#xFF0C;&#x5982;&#x679C;key&#x5B58;&#x5728;&#xFF0C;&#x90A3;&#x5C31;&#x8F93;&#x51FA;&#x5BF9;&#x5E94;&#x7684;value&#x503C;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5C31;&#x4F1A;&#x8F93;&#x51FA;&#x4E8B;&#x5148;&#x89C4;&#x5B9A;&#x597D;&#x7684;&#x503C;&#x2018;Key Not Found&#x2019;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x5229;&#x7528;defaultdict&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x4F20;&#x9012;&#x53C2;&#x6570;&#x4E3A;&#x6240;&#x6709;key&#x9ED8;&#x8BA4;value&#x503C;&#x8FD9;&#x4E00;&#x7279;&#x6027;&#xFF0C;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x5176;&#x4ED6;&#x7684;&#x529F;&#x80FD;,&#x6BD4;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
+d <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;person&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;xiaobai&quot;</span><span class="token punctuation">)</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;city&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;paris&quot;</span><span class="token punctuation">)</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;person&apos;</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">&quot;student&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> d<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+
+Out<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token string">&apos;person&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&apos;xiaobai&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;student&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+     <span class="token punctuation">(</span><span class="token string">&apos;city&apos;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&apos;paris&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E00;&#x4E2A;&#x9053;&#x7406;&#xFF0C;&#x9ED8;&#x8BA4;&#x6240;&#x6709;key&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x4E00;&#x4E2A;list&#xFF0C;&#x81EA;&#x7136;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x8D4B;&#x503C;&#x65F6;&#x4F7F;&#x7528;list&#x7684;append&#x65B9;&#x6CD5;&#x4E86;&#x3002;&#x518D;&#x6BD4;&#x5982;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> defaultdict
+food <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;jack&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;milk&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Ann&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;fruits&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Arham&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;ham&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Ann&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;soda&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;jack&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;dumplings&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Ahmed&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;fried chicken&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+favourite_food <span class="token operator">=</span> defaultdict<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> n<span class="token punctuation">,</span> f <span class="token keyword">in</span> food<span class="token punctuation">:</span>
+    favourite_food<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>favourite_food<span class="token punctuation">)</span>
+
+Out&#xFF1A;defaultdict<span class="token punctuation">(</span><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">&apos;list&apos;</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token punctuation">{</span><span class="token string">&apos;jack&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;milk&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;dumplings&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&apos;Ann&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;fruits&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;soda&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&apos;Arham&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;ham&apos;</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">&apos;Ahmed&apos;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">&apos;fried chicken&apos;</span><span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x9053;&#x7406;&#x548C;&#x4E0A;&#x9762;&#x5DEE;&#x4E0D;&#x591A;&#xFF0C;&#x8FD9;&#x91CC;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x62D3;&#x5C55;&#xFF0C;&#x5C55;&#x5F00;&#x60F3;&#x8C61;&#xFF0C;&#x76F8;&#x4FE1;&#x53EF;&#x80FD;&#x5728;&#x67D0;&#x4E2A;&#x65F6;&#x523B;&#x53EF;&#x4EE5;&#x7528;&#x7684;&#x4E0A;defaultdict&#x8FD9;&#x4E2A;&#x5BB9;&#x5668;</p>
+<h3 id="counter"><a name="counter" class="anchor-navigation-ex-anchor" href="#counter"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.2. counter</h3>
+<p>Counter&#x662F;dict&#x7684;&#x5B50;&#x7C7B;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x65E0;&#x5E8F;&#x96C6;&#x5408;&#xFF0C;&#x5176;&#x4E2D;&#x5143;&#x7D20;&#x53CA;&#x5176;&#x5404;&#x81EA;&#x7684;&#x8BA1;&#x6570;&#x5B58;&#x50A8;&#x4E3A;&#x5B57;&#x5178;&#x3002;</p>
+<p>&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x5668;&#xFF0C;<strong>&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;key&#x5C31;&#x662F;&#x51FA;&#x73B0;&#x7684;&#x5143;&#x7D20;&#xFF0C;value&#x5C31;&#x662F;&#x8BE5;&#x5143;&#x7D20;&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</strong></p>
+<p><strong>&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> Counter
+
+count_list <span class="token operator">=</span> Counter<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;B&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;B&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;A&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;B&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;C&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;A&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;B&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;B&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;A&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;C&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment">#&#x8BA1;&#x6570;list</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span>count_list<span class="token punctuation">)</span>
+
+
+count_tuple <span class="token operator">=</span> Counter<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">#&#x8BA1;&#x6570;tuple</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>count_tuple<span class="token punctuation">)</span>
+
+Out&#xFF1A;Counter<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&apos;B&apos;</span><span class="token punctuation">:</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token string">&apos;A&apos;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">&apos;C&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+     Counter<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<p><strong>Counter&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x7528;&#x4E8E;dict&#x548C;set&#x7684;&#x8BA1;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;dict&#x7684;key&#x662F;&#x552F;&#x4E00;&#x7684;&#xFF0C;&#x800C;set&#x672C;&#x8EAB;&#x5C31;&#x4E0D;&#x80FD;&#x6709;&#x91CD;&#x590D;&#x5143;&#x7D20;</strong></p>
+<p>&#x73B0;&#x5728;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x628A;&#x5728;defaultdict&#x4F8B;&#x5B50;&#x4E2D;&#x7528;&#x8FC7;food&#x5143;&#x7EC4;&#x62FF;&#x6765;&#x8BA1;&#x6570;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> Counter
+food <span class="token operator">=</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;jack&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;milk&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Ann&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;fruits&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Arham&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;ham&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Ann&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;soda&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;jack&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;dumplings&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;Ahmed&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;fried chicken&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">)</span>
+
+favourite_food_count <span class="token operator">=</span> Counter<span class="token punctuation">(</span>n <span class="token keyword">for</span> n<span class="token punctuation">,</span>f <span class="token keyword">in</span> food<span class="token punctuation">)</span>  <span class="token comment">#&#x7EDF;&#x8BA1;name&#x51FA;&#x73B0;&#x7684;&#x6B21;&#x6570;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>favourite_food_count<span class="token punctuation">)</span>
+
+Out<span class="token punctuation">:</span> Counter<span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token string">&apos;jack&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&apos;Ann&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&apos;Arham&apos;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&apos;Ahmed&apos;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="deque"><a name="deque" class="anchor-navigation-ex-anchor" href="#deque"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.3. deque</h3>
+<p>&#x5728;&#x9700;&#x8981;&#x5728;&#x5BB9;&#x5668;&#x4E24;&#x7AEF;&#x7684;&#x66F4;&#x5FEB;&#x7684;&#x6DFB;&#x52A0;&#x548C;&#x79FB;&#x9664;&#x5143;&#x7D20;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;deque.</p>
+<p>deque&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x4E24;&#x5934;&#x64CD;&#x4F5C;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x7C7B;&#x4F3C;list&#x4F46;&#x6BD4;&#x5217;&#x8868;&#x901F;&#x5EA6;&#x66F4;&#x5FEB;</p>
+<p> <strong>&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</strong></p>
+<p>deque&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#xFF0C;&#x5F88;&#x591A;&#x64CD;&#x4F5C;&#x548C;list&#x7C7B;&#x4F3C;&#xFF0C;&#x4E5F;&#x652F;&#x6301;&#x5207;&#x7247;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> deque
+d <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+Out<span class="token punctuation">:</span> <span class="token number">3</span>
+     <span class="token number">1</span>
+     <span class="token number">3</span>
+</code></pre>
+<p>deque&#x6700;&#x5927;&#x7684;&#x7279;&#x70B9;&#x5728;&#x4E8E;&#x53EF;&#x4EE5;&#x4ECE;&#x4E24;&#x7AEF;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">d <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># Output: 5</span>
+
+d<span class="token punctuation">.</span>popleft<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token comment"># &#x5220;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x6700;&#x5DE6;&#x7AEF;&#x7684;&#x5143;&#x7D20;</span>
+<span class="token comment"># Output: 0</span>
+
+d<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>       <span class="token comment"># &#x5220;&#x9664;&#x5E76;&#x8FD4;&#x56DE;&#x6700;&#x53F3;&#x7AEF;&#x7684;&#x5143;&#x7D20;</span>
+<span class="token comment"># Output: 4</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+<span class="token comment"># Output: deque([1, 2, 3])</span>
+
+d<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>  <span class="token comment"># &#x4ECE;&#x6700;&#x53F3;&#x7AEF;&#x6DFB;&#x52A0;&#x5143;&#x7D20;</span>
+
+d<span class="token punctuation">.</span>appendleft<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span> <span class="token comment"># &#x4ECE;&#x6700;&#x5DE6;&#x7AEF;&#x6DFB;&#x52A0;&#x5143;&#x7D20;</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+<span class="token comment"># Output: deque([-100, 1, 2, 3, 100])</span>
+</code></pre>
+<p>&#x9664;&#x4E86;&#x8FD9;&#x4E9B;deque&#x7684;&#x65B9;&#x6CD5;&#x5B9E;&#x5728;&#x592A;&#x591A;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x518D;&#x4E3E;&#x51E0;&#x4E2A;&#x5E38;&#x7528;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x9996;&#x5148;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;deque&#x65F6;&#x53EF;&#x4EE5;&#x89C4;&#x5B9A;&#x5B83;&#x7684;&#x6700;&#x5927;&#x957F;&#x5EA6;&#xFF0C;deque&#x548C;list&#x4E00;&#x6837;&#x4E5F;&#x652F;&#x6301;extend&#x65B9;&#x6CD5;&#xFF0C;&#x65B9;&#x4FBF;&#x5217;&#x8868;&#x62FC;&#x63A5;&#xFF0C;&#x4F46;&#x662F;deque&#x63D0;&#x4F9B;&#x53CC;&#x5411;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> deque
+d <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> maxlen<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span>  <span class="token comment">#&#x8BBE;&#x7F6E;&#x603B;&#x957F;&#x5EA6;&#x4E0D;&#x53D8;</span>
+d<span class="token punctuation">.</span>extendleft<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># &#x4ECE;&#x5DE6;&#x7AEF;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;list</span>
+d<span class="token punctuation">.</span>extend<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span>   <span class="token comment"># &#x4ECE;&#x53F3;&#x7AEF;&#x62D3;&#x5C55;&#x4E00;&#x4E2A;list</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+
+Out&#xFF1A;deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span> maxlen<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x73B0;&#x5728;d&#x5DF2;&#x7ECF;&#x6709;9&#x4E2A;&#x5143;&#x7D20;&#x4E86;&#xFF0C;&#x800C;&#x89C4;&#x5B9A;&#x7684;maxlen=9&#xFF0C;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5982;&#x679C;&#x4ECE;&#x5DE6;&#x8FB9;&#x6DFB;&#x52A0;&#x5143;&#x7D20;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x79FB;&#x9664;&#x6700;&#x53F3;&#x8FB9;&#x7684;&#x5143;&#x7D20;&#xFF0C;&#x53CD;&#x4E4B;&#x4E5F;&#x662F;&#x4E00;&#x6837;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">d<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+d<span class="token punctuation">.</span>appendleft<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+
+Out<span class="token punctuation">:</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span> maxlen<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span>
+     deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span> maxlen<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="namedtuple"><a name="namedtuple" class="anchor-navigation-ex-anchor" href="#namedtuple"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.4. namedtuple</h3>
+<p><strong>&#x57FA;&#x7840;&#x6982;&#x5FF5;</strong></p>
+<p>&#x547D;&#x540D;&#x5143;&#x7EC4;&#x3002;&#x5927;&#x5BB6;&#x4E00;&#x770B;&#x540D;&#x5B57;&#x5C31;&#x4F1A;&#x548C;tuple&#x5143;&#x7EC4;&#x6709;&#x5173;&#xFF0C;&#x6CA1;&#x9519;&#xFF0C;&#x5B83;&#x662F;&#x5143;&#x7EC4;&#x7684;&#x5F3A;&#x5316;&#x7248;&#x3002;namedtuple&#x53EF;&#x4EE5;&#x5C06;&#x5143;&#x7EC4;&#x8F6C;&#x6362;&#x4E3A;&#x65B9;&#x4FBF;&#x7684;&#x5BB9;&#x5668;&#x3002;&#x4F7F;&#x7528;namedtuple&#xFF0C;&#x4E0D;&#x5FC5;&#x4F7F;&#x7528;&#x6574;&#x6570;&#x7D22;&#x5F15;&#x6765;&#x8BBF;&#x95EE;&#x5143;&#x7EC4;&#x7684;&#x6210;&#x5458;&#x3002;</p>
+<p>&#x89C9;&#x5F97;&#x53EF;&#x4EE5;&#x628A;namedtuple &#x89C6;&#x4E3A; <strong>&#x4E0D;&#x53EF;&#x53D8;&#x7684;</strong> &#x5B57;&#x5178;</p>
+<p><strong>&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</strong></p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x8BA9;&#x5148;&#x56DE;&#x987E;&#x4E00;&#x4E0B;&#x666E;&#x901A;&#x5143;&#x7EC4;&#x662F;&#x5982;&#x4F55;&#x8BBF;&#x95EE;&#x6210;&#x5458;&#x7684;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">person <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">&apos;xiaobai&apos;</span><span class="token punctuation">,</span> <span class="token number">18</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+out&#xFF1A;xiaobai
+</code></pre>
+<p>&#x73B0;&#x5728;&#x770B;&#x770B;namedtuple&#xFF08;&#x547D;&#x540D;&#x5143;&#x7EC4;&#xFF09;&#x7684;&#x5F3A;&#x5927;&#x4E4B;&#x5904;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> namedtuple
+
+Person <span class="token operator">=</span> namedtuple<span class="token punctuation">(</span><span class="token string">&apos;Person&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;name age city&apos;</span><span class="token punctuation">)</span>        <span class="token comment"># &#x7C7B;&#x4F3C;&#x4E8E;&#x5B9A;&#x4E49;class</span>
+xiaobai <span class="token operator">=</span> Person<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&quot;xiaobai&quot;</span><span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> city<span class="token operator">=</span><span class="token string">&quot;paris&quot;</span><span class="token punctuation">)</span> <span class="token comment"># &#x7C7B;&#x4F3C;&#x4E8E;&#x65B0;&#x5EFA;&#x5BF9;&#x8C61;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>xiaobai<span class="token punctuation">)</span>
+
+Out&#xFF1A;Person<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">&apos;xiaobai&apos;</span><span class="token punctuation">,</span> age<span class="token operator">=</span><span class="token number">18</span><span class="token punctuation">,</span> city<span class="token operator">=</span><span class="token string">&apos;paris&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x521B;&#x5EFA;namedtuple&#x65F6;&#x975E;&#x5E38;&#x50CF;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;class&#xFF0C;&#x8FD9;&#x91CC;Person&#x597D;&#x6BD4;&#x662F;&#x7C7B;&#x540D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x662F;namedtuple&#x7684;&#x503C;&#x7684;&#x540D;&#x5B57;&#x4E86;&#xFF0C;&#x5F88;&#x50CF;class&#x91CC;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x4E0D;&#x8FC7;&#x8FD9;&#x91CC;&#x4E0D;&#x7528;&#x52A0;&#x9017;&#x53F7;&#x5206;&#x79BB;&#xFF0C;&#x4E0B;&#x9762;&#x8BA9;&#x770B;&#x770B;&#x5982;&#x4F55;&#x8BBF;&#x95EE;namedtuple&#x7684;&#x6210;&#x5458;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">print</span><span class="token punctuation">(</span>xiaobai<span class="token punctuation">.</span>name<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>xiaobai<span class="token punctuation">.</span>age<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>xiaobai<span class="token punctuation">.</span>city<span class="token punctuation">)</span>
+
+out&#xFF1A;xiaobai
+     <span class="token number">18</span>
+     paris
+</code></pre>
+<p>&#x8FD9;&#x79CD;&#x65E0;&#x9650;&#x63A5;&#x8FD1;class&#x8C03;&#x7528;&#x5C5E;&#x6027;&#x7684;&#x65B9;&#x5F0F;&#x8FD8;&#x662F;&#x975E;&#x5E38;&#x4E0D;&#x9519;&#x7684;&#xFF0C;&#x5728;&#x4E00;&#x4E9B;&#x5B9E;&#x9645;&#x573A;&#x666F;&#x5F88;&#x6709;&#x7528;&#x3002;
+&#x6700;&#x540E;&#x8FD8;&#x6709;&#x4E00;&#x70B9;&#x5343;&#x4E07;&#x4E0D;&#x8981;&#x5FD8;&#x4E86;&#xFF0C;&#x4E0D;&#x80FD;&#x4FEE;&#x6539;namedtuple&#x91CC;&#x7684;&#x503C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">xiaobai<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&apos;laobai&apos;</span>
+Out&#xFF1A;Traceback <span class="token punctuation">(</span>most recent call last<span class="token punctuation">)</span><span class="token punctuation">:</span>
+  File <span class="token string">&quot;C:\Users\E560\Desktop\test.py&quot;</span><span class="token punctuation">,</span> line <span class="token number">5</span><span class="token punctuation">,</span> <span class="token keyword">in</span> <span class="token operator">&lt;</span>module<span class="token operator">&gt;</span>
+    xiaobai<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">&apos;laobai&apos;</span>
+AttributeError<span class="token punctuation">:</span> can&apos;t <span class="token builtin">set</span> attribute
+</code></pre>
+<p>&#x518D;&#x770B;&#x4E00;&#x4F8B;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> collections
+<span class="token comment"># &#x5C06;&#x7EB8;&#x724C;&#x5B9A;&#x4E49;&#x4E3A;&#x5177;&#x540D;&#x5143;&#x7EC4;&#xFF0C;&#x6BCF;&#x4E2A;&#x7EB8;&#x724C;&#x90FD;&#x6709;&#x7B49;&#x7EA7;&#x548C;&#x82B1;&#x8272;</span>
+Card <span class="token operator">=</span> collections<span class="token punctuation">.</span>namedtuple<span class="token punctuation">(</span><span class="token string">&apos;Card&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rank suit&apos;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">class</span> <span class="token class-name">FrenchDeck</span><span class="token punctuation">:</span>
+    <span class="token comment"># &#x7B49;&#x7EA7;2-A</span>
+    ranks <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token keyword">for</span> n <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token string">&apos;JQKA&apos;</span><span class="token punctuation">)</span>
+    <span class="token comment"># &#x82B1;&#x8272;&#x7EA2;&#x9ED1;&#x65B9;&#x8349;</span>
+    suits <span class="token operator">=</span> <span class="token string">&apos;spades diamonds clubs hearts&apos;</span><span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token comment"># &#x6784;&#x5EFA;&#x7EB8;&#x724C;</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>cards <span class="token operator">=</span> <span class="token punctuation">[</span>Card<span class="token punctuation">(</span>rank<span class="token punctuation">,</span> suit<span class="token punctuation">)</span> <span class="token keyword">for</span> suit <span class="token keyword">in</span> self<span class="token punctuation">.</span>suits <span class="token keyword">for</span> rank <span class="token keyword">in</span> self<span class="token punctuation">.</span>ranks<span class="token punctuation">]</span>
+
+
+french_deck <span class="token operator">=</span> FrenchDeck<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>french_deck<span class="token punctuation">.</span>cards<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>french_deck<span class="token punctuation">.</span>cards<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>rank<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>french_deck<span class="token punctuation">.</span>cards<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>suit<span class="token punctuation">)</span>
+</code></pre>
+<h3 id="ordereddict"><a name="ordereddict" class="anchor-navigation-ex-anchor" href="#ordereddict"><i class="fa fa-link" aria-hidden="true"></i></a>1.4.5. OrderedDict</h3>
+<p><strong>&#x57FA;&#x7840;&#x6982;&#x5FF5;</strong></p>
+<p>&#x201C;OrderedDict&#x201D; &#x672C;&#x8EAB;&#x5C31;&#x662F;&#x4E00;&#x4E2A;dict&#xFF0C;&#x4F46;&#x662F;&#x5B83;&#x7684;&#x7279;&#x522B;&#x4E4B;&#x5904;&#x5728;&#x4E8E;&#x4F1A;&#x8BB0;&#x5F55;&#x63D2;&#x5165;dict&#x7684;key&#x548C;value&#x7684;&#x987A;&#x5E8F;</p>
+<p><strong>&#x5E94;&#x7528;&#x5B9E;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> OrderedDict
+d <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;b&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;d&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+
+Out<span class="token punctuation">:</span><span class="token punctuation">{</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">&apos;c&apos;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token string">&apos;b&apos;</span><span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token string">&apos;d&apos;</span><span class="token punctuation">:</span> <span class="token number">4</span><span class="token punctuation">}</span>
+</code></pre>
+<p>&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x7684;dict&#xFF0C;&#x56E0;&#x4E3A;&#x65E0;&#x5E8F;&#xFF0C;&#x5373;&#x4F7F;&#x4F9D;&#x6B21;&#x6DFB;&#x52A0;&#x4E86;a,b,c,d &#x56DB;&#x4E2A;&#x952E;&#x5E76;&#x8D4B;&#x4E88;value&#xFF0C;&#x4F46;&#x662F;&#x8F93;&#x51FA;&#x7684;&#x987A;&#x5E8F;&#x5E76;&#x4E0D;&#x53EF;&#x63A7;&#x3002;OrderedDict&#x7684;&#x51FA;&#x73B0;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> OrderedDict
+d <span class="token operator">=</span> OrderedDict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;b&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span>
+d<span class="token punctuation">[</span><span class="token string">&apos;d&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+
+Out&#xFF1A;OrderedDict<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&apos;b&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token string">&apos;d&apos;</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x56DE;&#x8F93;&#x51FA;&#x65F6;&#x597D;&#x591A;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x4F1A;&#x81EA;&#x52A8;&#x8BB0;&#x5F55;&#x63D2;&#x5165;&#x7684;&#x987A;&#x5E8F;&#xFF0C;&#x540C;&#x7406;&#xFF0C;&#x5982;&#x679C;&#x5220;&#x9664;&#x4E00;&#x4E2A;key, OrderedDict&#x7684;&#x987A;&#x5E8F;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> OrderedDict
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Before deleting:\n&quot;</span><span class="token punctuation">)</span>
+od <span class="token operator">=</span> OrderedDict<span class="token punctuation">(</span><span class="token punctuation">)</span>
+od<span class="token punctuation">[</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+od<span class="token punctuation">[</span><span class="token string">&apos;b&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span>
+od<span class="token punctuation">[</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span>
+od<span class="token punctuation">[</span><span class="token string">&apos;d&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">4</span>
+
+<span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> od<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;\nAfter deleting:\n&quot;</span><span class="token punctuation">)</span>
+od<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> od<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;\nAfter re-inserting:\n&quot;</span><span class="token punctuation">)</span>
+od<span class="token punctuation">[</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">3</span>
+<span class="token keyword">for</span> key<span class="token punctuation">,</span> value <span class="token keyword">in</span> od<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> 
+
+
+Out&#xFF1A;Before deleting<span class="token punctuation">:</span>
+
+    <span class="token punctuation">(</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;b&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;d&apos;</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+
+    After deleting<span class="token punctuation">:</span>
+
+    <span class="token punctuation">(</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;b&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;d&apos;</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+
+    After re<span class="token operator">-</span>inserting<span class="token punctuation">:</span>
+
+    <span class="token punctuation">(</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;b&apos;</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;d&apos;</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
+    <span class="token punctuation">(</span><span class="token string">&apos;c&apos;</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="pickle&#x6A21;&#x5757;"><a name="pickle&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#pickle&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. pickle&#x6A21;&#x5757;</h2>
+<p>python&#x5BF9;&#x8C61;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x4E0E;&#x53CD;&#x5E8F;&#x5217;&#x5316;</p>
+<p>&#x7279;&#x70B9;</p>
+<p>1&#x3001;&#x53EA;&#x80FD;&#x5728;python&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x53EA;&#x652F;&#x6301;python&#x7684;&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;&#x3002;</p>
+<p>2&#x3001;&#x53EF;&#x4EE5;&#x5904;&#x7406;&#x590D;&#x6742;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x8BED;&#x6CD5;&#x3002;&#xFF08;&#x4F8B;&#x5982;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x7C7B;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6E38;&#x620F;&#x7684;&#x5B58;&#x6863;&#x7B49;&#xFF09;</p>
+<p> &#x4E00;&#x3001;&#x5185;&#x5B58;&#x4E2D;&#x64CD;&#x4F5C;&#xFF1A;
+dumps&#x65B9;&#x6CD5;&#x5C06;&#x5BF9;&#x8C61;&#x8F6C;&#x6210;&#x5B57;&#x8282;&#xFF08;&#x5E8F;&#x5217;&#x5316;&#xFF09;
+loads&#x65B9;&#x6CD5;&#x5C06;&#x5B57;&#x8282;&#x8FD8;&#x539F;&#x4E3A;&#x5BF9;&#x8C61;&#xFF08;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF09;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pickle
+<span class="token comment">#dumps</span>
+li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">33</span><span class="token punctuation">]</span>
+r <span class="token operator">=</span> pickle<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>li<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+
+
+<span class="token comment">#loads</span>
+result <span class="token operator">=</span> pickle<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>r<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E8C;&#x3001;&#x6587;&#x4EF6;&#x4E2D;&#x64CD;&#x4F5C;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment">#dump&#xFF1A;</span>
+<span class="token keyword">import</span> pickle
+
+li <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">,</span><span class="token number">22</span><span class="token punctuation">,</span><span class="token number">33</span><span class="token punctuation">]</span>
+pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>li<span class="token punctuation">,</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;db&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;wb&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment">#load</span>
+ret <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;db&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>ret<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E09;&#x3001;&#x7EC3;&#x4E60;&#xFF1A;</p>
+<p>pickle&#x7684;&#x5E8F;&#x5217;&#x5316;&#xFF1A;
+&#x683C;&#x5F0F;&#xFF1A;pickle.dumps(&#x5E8F;&#x5217;&#x5316;&#x5BF9;&#x8C61;)</p>
+<pre class="language-"><code class="lang-python">
+<span class="token keyword">import</span> pickle
+
+
+test <span class="token operator">=</span> <span class="token string">r&apos;test.txt&apos;</span>
+
+<span class="token comment">#&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x4EE3;&#x7801;&#x4E2D;&#x4E5F;&#x8981;&#x5B9A;&#x4E49;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x6CA1;&#x9650;&#x5236;</span>
+<span class="token keyword">def</span> <span class="token function">sayhi</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span>
+
+info <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;age&apos;</span><span class="token punctuation">:</span><span class="token number">32</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;func&apos;</span><span class="token punctuation">:</span>sayhi
+<span class="token punctuation">}</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>pickle<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>info<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>test<span class="token punctuation">,</span><span class="token string">&apos;wb&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span> pickle<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>info<span class="token punctuation">)</span> <span class="token punctuation">)</span>
+</code></pre>
+<p>pickle&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF1A;
+&#x683C;&#x5F0F;&#xFF1A;pickle.loads(&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x9010;&#x884C;&#x8BB0;&#x5F55;)</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pickle
+
+test <span class="token operator">=</span> <span class="token string">r&apos;test.txt&apos;</span>
+
+<span class="token comment">#&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x5E8F;&#x5217;&#x5316;&#x4EE3;&#x7801;&#x4E2D;&#x540C;&#x6837;&#x7684;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x6CA1;&#x9650;&#x5236;</span>
+<span class="token keyword">def</span> <span class="token function">sayhi</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hello2&quot;</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>test<span class="token punctuation">,</span><span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>loads<span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;data&gt;&gt;&gt;&apos;</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">&apos;func&apos;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token string">&quot;Alex&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;</p>
+<pre class="language-"><code>data&gt;&gt;&gt; {&apos;&apos;: &apos;&apos;, &apos;age&apos;: 32, &apos;func&apos;: <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>function</span> <span class="token attr-name">sayhi</span> <span class="token attr-name">at</span> <span class="token attr-name">0x000000000231C1E0</span><span class="token punctuation">&gt;</span></span>}
+hello Alex
+hello2 Alex
+None
+</code></pre><p>&#x6CE8;&#x610F;&#xFF1A;
+1&#x3001;</p>
+<pre class="language-"><code>print(data[&apos;func&apos;](&quot;Alex&quot;))
+</code></pre><p>&#x8C03;&#x7528;&#x4E86;pickle&#x7684;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x53D8;&#x91CF;data&#x3002;</p>
+<p>2&#x3001;&#x9700;&#x8981;&#x5728;&#x5E8F;&#x5217;&#x5316;&#x548C;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x5B9A;&#x4E49;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;&#x4F46;&#x5185;&#x5BB9;&#x53EF;&#x4EE5;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x5426;&#x5219;&#x62A5;&#x9519;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>AttributeError: Can&apos;t get attribute &apos;sayhi&apos; on &lt;module &apos;__main__&apos;
+</code></pre><p>&#x5199;&#x5165;&#x6587;&#x4EF6;&#x5E76;&#x5E8F;&#x5217;&#x5316;</p>
+<p>&#x683C;&#x5F0F;&#xFF1A;pickle.dump(&#x5E8F;&#x5217;&#x5BF9;&#x8C61;&#x53D8;&#x91CF;&#xFF0C;&#x6587;&#x4EF6;&#x540D;)</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pickle
+
+
+test <span class="token operator">=</span> <span class="token string">r&apos;test.txt&apos;</span>
+
+<span class="token comment">#&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x4EE3;&#x7801;&#x4E2D;&#x4E5F;&#x8981;&#x5B9A;&#x4E49;&#x76F8;&#x540C;&#x7684;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x6CA1;&#x9650;&#x5236;</span>
+<span class="token keyword">def</span> <span class="token function">sayhi</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span>
+
+info <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">&apos;&apos;</span><span class="token punctuation">:</span><span class="token string">&apos;&apos;</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;age&apos;</span><span class="token punctuation">:</span><span class="token number">32</span><span class="token punctuation">,</span>
+    <span class="token string">&apos;func&apos;</span><span class="token punctuation">:</span>sayhi
+<span class="token punctuation">}</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>pickle<span class="token punctuation">.</span>dumps<span class="token punctuation">(</span>info<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>test<span class="token punctuation">,</span><span class="token string">&apos;wb&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token comment">#f.write( pickle.dumps(info) )</span>
+    pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>info<span class="token punctuation">,</span>f<span class="token punctuation">)</span>  <span class="token comment">#&#x8DDF;&#x4E0A;&#x9762;&#x7684;f.write( pickle.dumps(info) )&#x8BED;&#x610F;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x3002;</span>
+</code></pre>
+<p>&#x4ECE;&#x6587;&#x4EF6;&#x4E2D;&#x8BFB;&#x53D6;&#xFF0C;&#x5E76;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#xFF1A;
+&#x683C;&#x5F0F;&#xFF1A;pickle.load(&#x6587;&#x4EF6;&#x540D;)</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> pickle
+
+test <span class="token operator">=</span> <span class="token string">r&apos;test.txt&apos;</span>
+
+<span class="token comment">#&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x5E8F;&#x5217;&#x5316;&#x4EE3;&#x7801;&#x4E2D;&#x540C;&#x6837;&#x7684;&#x51FD;&#x6570;&#x540D;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x6CA1;&#x9650;&#x5236;</span>
+<span class="token keyword">def</span> <span class="token function">sayhi</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hello&quot;</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;hello2&quot;</span><span class="token punctuation">,</span>name<span class="token punctuation">)</span>
+
+
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>test<span class="token punctuation">,</span><span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token comment"># data = pickle.loads(f.read())</span>
+    data <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span>f<span class="token punctuation">)</span>  <span class="token comment">#&#x8DDF;&#x4E0A;&#x9762;&#x7684;data = pickle.loads(f.read())&#x8BED;&#x610F;&#x5B8C;&#x5168;&#x4E00;&#x6837;&#x3002;</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;data&gt;&gt;&gt;&apos;</span><span class="token punctuation">,</span>data<span class="token punctuation">)</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>data<span class="token punctuation">[</span><span class="token string">&apos;func&apos;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token string">&quot;Alex&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x7EFC;&#x5408;&#x5B9E;&#x4F8B;---&#x731C;&#x6570;&#x6E38;&#x620F;"><a name="&#x7EFC;&#x5408;&#x5B9E;&#x4F8B;---&#x731C;&#x6570;&#x6E38;&#x620F;" class="anchor-navigation-ex-anchor" href="#&#x7EFC;&#x5408;&#x5B9E;&#x4F8B;---&#x731C;&#x6570;&#x6E38;&#x620F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x7EFC;&#x5408;&#x5B9E;&#x4F8B;---&#x731C;&#x6570;&#x6E38;&#x620F;</h2>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> random
+<span class="token keyword">import</span> pickle
+<span class="token keyword">from</span> collections <span class="token keyword">import</span> deque
+
+n <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">)</span>  <span class="token comment"># &#x968F;&#x673A;&#x627E;&#x51FA;0-100&#x4E4B;&#x4E2D;&#x7684;&#x6570;</span>
+history_list <span class="token operator">=</span> deque<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> maxlen<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>  <span class="token comment"># &#x9650;&#x5236;&#x6700;&#x5927;&#x957F;&#x5EA6;</span>
+try_num <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">pk</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> m <span class="token operator">!=</span> n<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> m <span class="token operator">&gt;</span> n<span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5927;&#x4E86;&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5C0F;&#x4E86;&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+    <span class="token keyword">return</span> <span class="token boolean">True</span>
+
+
+<span class="token keyword">def</span> <span class="token function">h_print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token comment"># pickle&#x53D6;</span>
+    ret <span class="token operator">=</span> pickle<span class="token punctuation">.</span>load<span class="token punctuation">(</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;history&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> ret
+
+
+<span class="token keyword">def</span> <span class="token function">history</span><span class="token punctuation">(</span>history_list<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token comment"># pickle&#x5B58;</span>
+    history_list <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span>history_list<span class="token punctuation">)</span>
+    pickle<span class="token punctuation">.</span>dump<span class="token punctuation">(</span>history_list<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;history&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;wb&apos;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+    try_num <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">if</span> try_num <span class="token operator">&gt;</span> <span class="token number">10</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x5C1D;&#x8BD5;&#x6B21;&#x6570;&#x8FC7;&#x591A;&#xFF0C;&#x60A8;&#x5DF2;&#x7ECF;&#x7B28;&#x6B7B;&#x4E86;&#xFF01;&#xFF01;&#xFF01;&quot;</span><span class="token punctuation">)</span>
+        <span class="token keyword">break</span>
+    m <span class="token operator">=</span> <span class="token builtin">input</span><span class="token punctuation">(</span><span class="token string">&quot;&#x8F93;&#x5165;&#x60A8;&#x7684;&#x7B54;&#x6848;:&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>                               <span class="token comment"># &#x5F02;&#x5E38;&#x5904;&#x7406; &#x9632;&#x6B62;&#x7528;&#x6237;&#x8F93;&#x5165;&#x5B57;&#x6BCD;</span>
+        <span class="token comment"># m = input(&quot;&#x8F93;&#x5165;&#x60A8;&#x7684;&#x7B54;&#x6848;:&quot;)</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;not null&quot;</span><span class="token punctuation">)</span>
+        m <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>m<span class="token punctuation">)</span>
+        history_list<span class="token punctuation">.</span>append<span class="token punctuation">(</span>m<span class="token punctuation">)</span>
+        history<span class="token punctuation">(</span>history_list<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> pk<span class="token punctuation">(</span>m<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x4EE5;&#x60A8;&#x7684;&#x667A;&#x5546;&#xFF0C;&#x5C45;&#x7136;TM&#x7B54;&#x5BF9;&#x4E86;&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">break</span>
+    <span class="token keyword">except</span> ValueError<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> m <span class="token operator">==</span> <span class="token string">&quot;h&quot;</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x60A8;&#x731C;&#x6570;&#x7684;&#x5386;&#x53F2;&#x8BB0;&#x5F55;&#xFF1A;&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span>h_print<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;&#x683C;&#x5F0F;&#x6709;&#x8BEF;&#xFF0C;&#x8BF7;&#x8F93;&#x5165;&#x6574;&#x6570;&#x5B57;&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="13-Python模块与包（建议1课时）.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 13-Python模块与包（建议1课时）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"14-Python常用模块（建议5学时）","level":"1.15","depth":1,"previous":{"title":"13-Python模块与包（建议1课时）","level":"1.14","depth":1,"path":"13-Python模块与包（建议1课时）.md","ref":"13-Python模块与包（建议1课时）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","anchor-navigation-ex","-sharing","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"pageTop","multipleH1":true,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"fontsettings":{"theme":"white","family":"serif","size":2},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false}},"theme":"default","author":"neuedu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python_neuedu","language":"zh-hans","links":{"sidebar":{"东软睿道":"http://www.neuedu.com/"}},"gitbook":"3.2.3","description":"http://www.neuedu.com/"},"file":{"path":"14-Python常用模块（建议5学时）.md","mtime":"2019-05-22T02:32:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T07:05:03.760Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

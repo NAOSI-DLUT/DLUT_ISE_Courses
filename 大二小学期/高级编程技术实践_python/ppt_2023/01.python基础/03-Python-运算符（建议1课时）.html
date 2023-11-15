@@ -1,0 +1,714 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>03-Python-运算符（建议1课时） · python_neuedu</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="neuedu">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="04-Python分支与循环（建议2课时）.html" />
+    
+    
+    <link rel="prev" href="02-Python变量_标识符_关键字-（建议2课时）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.neuedu.com/" target="_blank" class="custom-link">东软睿道</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Python基础教学目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                <a href="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                    
+                    01-Python简介及开发环境搭建（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                <a href="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                    
+                    02-Python变量标识符关键字-（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="03-Python-运算符（建议1课时）.html">
+            
+                <a href="03-Python-运算符（建议1课时）.html">
+            
+                    
+                    03-Python-运算符（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04-Python分支与循环（建议2课时）.html">
+            
+                <a href="04-Python分支与循环（建议2课时）.html">
+            
+                    
+                    04-Python分支与循环（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05-Python列表和元组（建议3课时）.html">
+            
+                <a href="05-Python列表和元组（建议3课时）.html">
+            
+                    
+                    05-Python列表和元组（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06-Python字符串（建议2课时）.html">
+            
+                <a href="06-Python字符串（建议2课时）.html">
+            
+                    
+                    06-Python字符串（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07-Python字典和集合（建议3课时）.html">
+            
+                <a href="07-Python字典和集合（建议3课时）.html">
+            
+                    
+                    07-Python字典和集合（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08-Python之对变量的再认识（建议1课时）.html">
+            
+                <a href="08-Python之对变量的再认识（建议1课时）.html">
+            
+                    
+                    08-Python之对变量的再认识（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09-Python之函数（建议9课时）.html">
+            
+                <a href="09-Python之函数（建议9课时）.html">
+            
+                    
+                    09-Python之函数（建议9课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10-Python面向对象编程（建议12课时）.html">
+            
+                <a href="10-Python面向对象编程（建议12课时）.html">
+            
+                    
+                    10-Python面向对象编程（建议12课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11-Python异常处理（建议2课时）.html">
+            
+                <a href="11-Python异常处理（建议2课时）.html">
+            
+                    
+                    11-Python异常处理（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                <a href="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                    
+                    12-Python文件操作与字符编码（建议4课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13-Python模块与包（建议1课时）.html">
+            
+                <a href="13-Python模块与包（建议1课时）.html">
+            
+                    
+                    13-Python模块与包（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14-Python常用模块（建议5学时）.html">
+            
+                <a href="14-Python常用模块（建议5学时）.html">
+            
+                    
+                    14-Python常用模块（建议5学时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >03-Python-运算符（建议1课时）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-pagetop-navbar"><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;"><b>1.1.1. </b>&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x6BD4;&#x8F83;&#xFF08;&#x5173;&#x7CFB;&#xFF09;&#x8FD0;&#x7B97;&#x7B26;"><b>1.1.2. </b>&#x6BD4;&#x8F83;&#xFF08;&#x5173;&#x7CFB;&#xFF09;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><b>1.1.3. </b>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;"><b>1.1.4. </b>&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</a></li><li><span class="title-icon "></span><a href="#&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;"><b>1.1.5. </b>&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x7B97;&#x6570;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<ul>
+<li>&#x662F;&#x5B8C;&#x6210;&#x57FA;&#x672C;&#x7684;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x4F7F;&#x7528;&#x7684;&#x7B26;&#x53F7;&#xFF0C;&#x7528;&#x6765;&#x5904;&#x7406;&#x56DB;&#x5219;&#x8FD0;&#x7B97;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">&#x8FD0;&#x7B97;&#x7B26;</th>
+<th style="text-align:center">&#x63CF;&#x8FF0;</th>
+<th>&#x5B9E;&#x4F8B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+</td>
+<td style="text-align:center">&#x52A0;</td>
+<td>10 + 20 = 30</td>
+</tr>
+<tr>
+<td style="text-align:center">-</td>
+<td style="text-align:center">&#x51CF;</td>
+<td>10 - 20 = -10</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td style="text-align:center">&#x4E58;</td>
+<td>10 * 20 = 200</td>
+</tr>
+<tr>
+<td style="text-align:center">/</td>
+<td style="text-align:center">&#x9664;</td>
+<td>10 / 20 = 0.5</td>
+</tr>
+<tr>
+<td style="text-align:center">//</td>
+<td style="text-align:center">&#x53D6;&#x6574;&#x9664;</td>
+<td>&#x8FD4;&#x56DE;&#x9664;&#x6CD5;&#x7684;&#x6574;&#x6570;&#x90E8;&#x5206;&#xFF08;&#x5546;&#xFF09; 9 // 2 &#x8F93;&#x51FA;&#x7ED3;&#x679C; 4</td>
+</tr>
+<tr>
+<td style="text-align:center">%</td>
+<td style="text-align:center">&#x53D6;&#x4F59;&#x6570;</td>
+<td>&#x8FD4;&#x56DE;&#x9664;&#x6CD5;&#x7684;&#x4F59;&#x6570; 9 % 2 = 1</td>
+</tr>
+<tr>
+<td style="text-align:center">**</td>
+<td style="text-align:center">&#x5E42;</td>
+<td>&#x53C8;&#x79F0;&#x6B21;&#x65B9;&#x3001;&#x4E58;&#x65B9;&#xFF0C;2 ** 3 = 8</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code>&gt;&gt;&gt; a=10
+&gt;&gt;&gt; b=5
+&gt;&gt;&gt; print(a+b)
+15
+&gt;&gt;&gt; print(a-b)
+5
+&gt;&gt;&gt; print(a*b)
+50
+&gt;&gt;&gt; print(a/b)
+2.0
+&gt;&gt;&gt; print(a**b)
+100000
+&gt;&gt;&gt; print(a//b)
+2
+&gt;&gt;&gt; print(a%b)
+0
+</code></pre><h3 id="&#x6BD4;&#x8F83;&#xFF08;&#x5173;&#x7CFB;&#xFF09;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x6BD4;&#x8F83;&#xFF08;&#x5173;&#x7CFB;&#xFF09;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x6BD4;&#x8F83;&#xFF08;&#x5173;&#x7CFB;&#xFF09;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x6BD4;&#x8F83;&#xFF08;&#x5173;&#x7CFB;&#xFF09;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x8FD0;&#x7B97;&#x7B26;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>&#x68C0;&#x67E5;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x662F;&#x5426; <strong>&#x76F8;&#x7B49;</strong>&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x6761;&#x4EF6;&#x6210;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE; True</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>&#x68C0;&#x67E5;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x662F;&#x5426; <strong>&#x4E0D;&#x76F8;&#x7B49;</strong>&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x6761;&#x4EF6;&#x6210;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE; True</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>&#x68C0;&#x67E5;&#x5DE6;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x662F;&#x5426; <strong>&#x5927;&#x4E8E;</strong> &#x53F3;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x6761;&#x4EF6;&#x6210;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE; True</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>&#x68C0;&#x67E5;&#x5DE6;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x662F;&#x5426; <strong>&#x5C0F;&#x4E8E;</strong> &#x53F3;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x6761;&#x4EF6;&#x6210;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE; True</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>&#x68C0;&#x67E5;&#x5DE6;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x662F;&#x5426; <strong>&#x5927;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;</strong> &#x53F3;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x6761;&#x4EF6;&#x6210;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE; True</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>&#x68C0;&#x67E5;&#x5DE6;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x662F;&#x5426; <strong>&#x5C0F;&#x4E8E;&#x6216;&#x7B49;&#x4E8E;</strong> &#x53F3;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x662F;&#xFF0C;&#x5219;&#x6761;&#x4EF6;&#x6210;&#x7ACB;&#xFF0C;&#x8FD4;&#x56DE; True</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code>&gt;&gt;&gt; a=10
+&gt;&gt;&gt; b=20
+&gt;&gt;&gt; a==b
+False
+&gt;&gt;&gt; a!=b
+True
+&gt;&gt;&gt; a&gt;b
+False
+&gt;&gt;&gt; a<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span>
+<span class="token attr-name">True</span>
+<span class="token punctuation">&gt;</span></span>&gt;&gt; a&gt;=b
+False
+&gt;&gt;&gt; a&lt;=b
+True
+</code></pre><h3 id="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<table>
+<thead>
+<tr>
+<th>&#x8FD0;&#x7B97;&#x7B26;</th>
+<th>&#x903B;&#x8F91;&#x8868;&#x8FBE;&#x5F0F;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>and</td>
+<td>x and y</td>
+<td>&#x53EA;&#x6709; x &#x548C; y &#x7684;&#x503C;&#x90FD;&#x4E3A; True&#xFF0C;&#x624D;&#x4F1A;&#x8FD4;&#x56DE; True<br>&#x5426;&#x5219;&#x53EA;&#x8981; x &#x6216;&#x8005; y &#x6709;&#x4E00;&#x4E2A;&#x503C;&#x4E3A; False&#xFF0C;&#x5C31;&#x8FD4;&#x56DE; False</td>
+</tr>
+<tr>
+<td>or</td>
+<td>x or y</td>
+<td>&#x53EA;&#x8981; x &#x6216;&#x8005; y &#x6709;&#x4E00;&#x4E2A;&#x503C;&#x4E3A; True&#xFF0C;&#x5C31;&#x8FD4;&#x56DE; True<br>&#x53EA;&#x6709; x &#x548C; y &#x7684;&#x503C;&#x90FD;&#x4E3A; False&#xFF0C;&#x624D;&#x4F1A;&#x8FD4;&#x56DE; False</td>
+</tr>
+<tr>
+<td>not</td>
+<td>not x</td>
+<td>&#x5982;&#x679C; x &#x4E3A; True&#xFF0C;&#x8FD4;&#x56DE; False<br>&#x5982;&#x679C; x &#x4E3A; False&#xFF0C;&#x8FD4;&#x56DE; True</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code>&gt;&gt;&gt; a=True
+&gt;&gt;&gt; b=False
+&gt;&gt;&gt; a and b
+False
+&gt;&gt;&gt; a or b
+True
+&gt;&gt;&gt; not a
+False
+&gt;&gt;&gt; not -1
+False
+&gt;&gt;&gt; not 0
+True
+</code></pre><h3 id="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;"><a name="&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;" class="anchor-navigation-ex-anchor" href="#&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</h3>
+<ul>
+<li>&#x5728; Python &#x4E2D;&#xFF0C;&#x4F7F;&#x7528; <code>=</code> &#x53EF;&#x4EE5;&#x7ED9;&#x53D8;&#x91CF;&#x8D4B;&#x503C;</li>
+<li>&#x5728;&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x4E3A;&#x4E86;&#x7B80;&#x5316;&#x4EE3;&#x7801;&#x7684;&#x7F16;&#x5199;&#xFF0C;<code>Python</code> &#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x7CFB;&#x5217;&#x7684; &#x4E0E; <strong>&#x7B97;&#x672F;&#x8FD0;&#x7B97;&#x7B26;</strong> &#x5BF9;&#x5E94;&#x7684; <strong>&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</strong></li>
+<li>&#x6CE8;&#x610F;&#xFF1A;<strong>&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;&#x4E2D;&#x95F4;&#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x7A7A;&#x683C;</strong></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x8FD0;&#x7B97;&#x7B26;</th>
+<th>&#x63CF;&#x8FF0;</th>
+<th>&#x5B9E;&#x4F8B;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>&#x7B80;&#x5355;&#x7684;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c = a + b &#x5C06; a + b &#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x8D4B;&#x503C;&#x4E3A; c</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>&#x52A0;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c += a &#x7B49;&#x6548;&#x4E8E; c = c + a</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>&#x51CF;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c -= a &#x7B49;&#x6548;&#x4E8E; c = c - a</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>&#x4E58;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c <em>= a &#x7B49;&#x6548;&#x4E8E; c = c </em> a</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>&#x9664;&#x6CD5;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c /= a &#x7B49;&#x6548;&#x4E8E; c = c / a</td>
+</tr>
+<tr>
+<td>//=</td>
+<td>&#x53D6;&#x6574;&#x9664;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c //= a &#x7B49;&#x6548;&#x4E8E; c = c // a</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>&#x53D6; <strong>&#x6A21;</strong> (&#x4F59;&#x6570;)&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c %= a &#x7B49;&#x6548;&#x4E8E; c = c % a</td>
+</tr>
+<tr>
+<td>**=</td>
+<td>&#x5E42;&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+<td>c <strong>= a &#x7B49;&#x6548;&#x4E8E; c = c </strong> a</td>
+</tr>
+</tbody>
+</table>
+<pre class="language-"><code>&gt;&gt;&gt; a=10
+&gt;&gt;&gt; b=20
+&gt;&gt;&gt; c=0
+&gt;&gt;&gt; c=a+b
+&gt;&gt;&gt; print(c)
+30
+&gt;&gt;&gt; c+=10
+&gt;&gt;&gt; print(c)
+40
+&gt;&gt;&gt; c-=a
+&gt;&gt;&gt; print(c)
+30
+&gt;&gt;&gt; c*=a
+&gt;&gt;&gt; print(c)
+300
+&gt;&gt;&gt; c/=a
+&gt;&gt;&gt; print(c)
+30.0
+&gt;&gt;&gt; c%=a
+&gt;&gt;&gt; print(c)
+0.0
+&gt;&gt;&gt; c=a**5
+&gt;&gt;&gt; print(c)
+100000
+&gt;&gt;&gt; c//=b
+&gt;&gt;&gt; print(c)
+5000
+&gt;&gt;&gt; print(b)
+20
+</code></pre><h3 id="&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;"><a name="&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;" class="anchor-navigation-ex-anchor" href="#&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. &#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x4F18;&#x5148;&#x7EA7;</h3>
+<ul>
+<li>&#x4EE5;&#x4E0B;&#x8868;&#x683C;&#x7684;&#x7B97;&#x6570;&#x4F18;&#x5148;&#x7EA7;&#x7531;&#x9AD8;&#x5230;&#x6700;&#x4F4E;&#x987A;&#x5E8F;&#x6392;&#x5217;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x8FD0;&#x7B97;&#x7B26;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>**</td>
+<td>&#x5E42; (&#x6700;&#x9AD8;&#x4F18;&#x5148;&#x7EA7;)</td>
+</tr>
+<tr>
+<td>* / % //</td>
+<td>&#x4E58;&#x3001;&#x9664;&#x3001;&#x53D6;&#x4F59;&#x6570;&#x3001;&#x53D6;&#x6574;&#x9664;</td>
+</tr>
+<tr>
+<td>+ -</td>
+<td>&#x52A0;&#x6CD5;&#x3001;&#x51CF;&#x6CD5;</td>
+</tr>
+<tr>
+<td>&lt;= &lt; &gt; &gt;=</td>
+<td>&#x6BD4;&#x8F83;&#x8FD0;&#x7B97;&#x7B26;</td>
+</tr>
+<tr>
+<td>== !=</td>
+<td>&#x7B49;&#x4E8E;&#x8FD0;&#x7B97;&#x7B26;</td>
+</tr>
+<tr>
+<td>= %= /= //= -= += <em>= *</em>=</td>
+<td>&#x8D4B;&#x503C;&#x8FD0;&#x7B97;&#x7B26;</td>
+</tr>
+<tr>
+<td>not or and</td>
+<td>&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="02-Python变量_标识符_关键字-（建议2课时）.html" class="navigation navigation-prev " aria-label="Previous page: 02-Python变量标识符关键字-（建议2课时）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="04-Python分支与循环（建议2课时）.html" class="navigation navigation-next " aria-label="Next page: 04-Python分支与循环（建议2课时）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"03-Python-运算符（建议1课时）","level":"1.4","depth":1,"next":{"title":"04-Python分支与循环（建议2课时）","level":"1.5","depth":1,"path":"04-Python分支与循环（建议2课时）.md","ref":"04-Python分支与循环（建议2课时）.md","articles":[]},"previous":{"title":"02-Python变量标识符关键字-（建议2课时）","level":"1.3","depth":1,"path":"02-Python变量_标识符_关键字-（建议2课时）.md","ref":"02-Python变量_标识符_关键字-（建议2课时）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","anchor-navigation-ex","-sharing","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"pageTop","multipleH1":true,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"fontsettings":{"theme":"white","family":"serif","size":2},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false}},"theme":"default","author":"neuedu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python_neuedu","language":"zh-hans","links":{"sidebar":{"东软睿道":"http://www.neuedu.com/"}},"gitbook":"3.2.3","description":"http://www.neuedu.com/"},"file":{"path":"03-Python-运算符（建议1课时）.md","mtime":"2019-05-22T02:32:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T07:05:03.760Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
