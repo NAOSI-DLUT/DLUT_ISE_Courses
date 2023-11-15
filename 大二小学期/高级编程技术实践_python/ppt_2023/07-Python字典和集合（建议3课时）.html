@@ -1,0 +1,963 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>07-Python字典和集合（建议3课时） · python_neuedu</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="neuedu">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="08-Python之对变量的再认识（建议1课时）.html" />
+    
+    
+    <link rel="prev" href="06-Python字符串（建议2课时）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.neuedu.com/" target="_blank" class="custom-link">东软睿道</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Python基础教学目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                <a href="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                    
+                    01-Python简介及开发环境搭建（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                <a href="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                    
+                    02-Python变量标识符关键字-（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03-Python-运算符（建议1课时）.html">
+            
+                <a href="03-Python-运算符（建议1课时）.html">
+            
+                    
+                    03-Python-运算符（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04-Python分支与循环（建议2课时）.html">
+            
+                <a href="04-Python分支与循环（建议2课时）.html">
+            
+                    
+                    04-Python分支与循环（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05-Python列表和元组（建议3课时）.html">
+            
+                <a href="05-Python列表和元组（建议3课时）.html">
+            
+                    
+                    05-Python列表和元组（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06-Python字符串（建议2课时）.html">
+            
+                <a href="06-Python字符串（建议2课时）.html">
+            
+                    
+                    06-Python字符串（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="07-Python字典和集合（建议3课时）.html">
+            
+                <a href="07-Python字典和集合（建议3课时）.html">
+            
+                    
+                    07-Python字典和集合（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08-Python之对变量的再认识（建议1课时）.html">
+            
+                <a href="08-Python之对变量的再认识（建议1课时）.html">
+            
+                    
+                    08-Python之对变量的再认识（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09-Python之函数（建议9课时）.html">
+            
+                <a href="09-Python之函数（建议9课时）.html">
+            
+                    
+                    09-Python之函数（建议9课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10-Python面向对象编程（建议12课时）.html">
+            
+                <a href="10-Python面向对象编程（建议12课时）.html">
+            
+                    
+                    10-Python面向对象编程（建议12课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11-Python异常处理（建议2课时）.html">
+            
+                <a href="11-Python异常处理（建议2课时）.html">
+            
+                    
+                    11-Python异常处理（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                <a href="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                    
+                    12-Python文件操作与字符编码（建议4课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13-Python模块与包（建议1课时）.html">
+            
+                <a href="13-Python模块与包（建议1课时）.html">
+            
+                    
+                    13-Python模块与包（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14-Python常用模块（建议5学时）.html">
+            
+                <a href="14-Python常用模块（建议5学时）.html">
+            
+                    
+                    14-Python常用模块（建议5学时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >07-Python字典和集合（建议3课时）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-pagetop-navbar"><ul><ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x5178;"><b>1.1. </b>&#x5B57;&#x5178;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x5178;&#x5B9A;&#x4E49;"><b>1.1.1. </b>&#x5B57;&#x5178;&#x5B9A;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x5178;&#x7684;&#x521B;&#x5EFA;"><b>1.1.2. </b>&#x5B57;&#x5178;&#x7684;&#x521B;&#x5EFA;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x8BFB;&#x53D6;"><b>1.1.3. </b>&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x8BFB;&#x53D6;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;"><b>1.1.4. </b>&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x5178;&#x5220;&#x9664;"><b>1.1.5. </b>&#x5B57;&#x5178;&#x5220;&#x9664;</a></li><li><span class="title-icon "></span><a href="#&#x5224;&#x65AD;&#x4E00;&#x4E2A;key&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;"><b>1.1.6. </b>&#x5224;&#x65AD;&#x4E00;&#x4E2A;key&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;</a></li><li><span class="title-icon "></span><a href="#&#x904D;&#x5386;&#x5B57;&#x5178;"><b>1.1.7. </b>&#x904D;&#x5386;&#x5B57;&#x5178;</a></li><li><span class="title-icon "></span><a href="#&#x6709;&#x5E8F;&#x5B57;&#x5178;"><b>1.1.8. </b>&#x6709;&#x5E8F;&#x5B57;&#x5178;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;"><b>1.1.9. </b>&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;"><b>1.2. </b>&#x96C6;&#x5408;</a></li><ul><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x5B9A;&#x4E49;"><b>1.2.1. </b>&#x96C6;&#x5408;&#x5B9A;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x7684;&#x521B;&#x5EFA;"><b>1.2.2. </b>&#x96C6;&#x5408;&#x7684;&#x521B;&#x5EFA;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x7684;&#x5220;&#x9664;"><b>1.2.3. </b>&#x96C6;&#x5408;&#x7684;&#x5220;&#x9664;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x589E;&#x52A0;&#x4E0E;&#x5220;&#x9664;"><b>1.2.4. </b>&#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x589E;&#x52A0;&#x4E0E;&#x5220;&#x9664;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x64CD;&#x4F5C;"><b>1.2.5. </b>&#x96C6;&#x5408;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;"><b>1.2.6. </b>&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x7EFC;&#x5408;&#x7EC3;&#x4E60;"><b>1.3. </b>&#x7EFC;&#x5408;&#x7EC3;&#x4E60;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7EDF;&#x8BA1;&#x5355;&#x8BCD;&#x51FA;&#x73B0;&#x6B21;&#x6570;"><b>1.3.1. </b>&#x7EDF;&#x8BA1;&#x5355;&#x8BCD;&#x51FA;&#x73B0;&#x6B21;&#x6570;</a></li><li><span class="title-icon "></span><a href="#&#x5965;&#x8FD0;&#x4F1A;&#x8DB3;&#x7403;&#x5206;&#x7EC4;"><b>1.3.2. </b>&#x5965;&#x8FD0;&#x4F1A;&#x8DB3;&#x7403;&#x5206;&#x7EC4;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x5B57;&#x5178;"><a name="&#x5B57;&#x5178;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5B57;&#x5178;</h2>
+<h3 id="&#x5B57;&#x5178;&#x5B9A;&#x4E49;"><a name="&#x5B57;&#x5178;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x5B57;&#x5178;&#x5B9A;&#x4E49;</h3>
+<p>&#x5B57;&#x5178;(dictionary)&#x662F;&#x5305;&#x542B;&#x82E5;&#x5E72;&#x201C;&#x952E;&#xFF1A;&#x503C;&#x201D;&#x5143;&#x7D20;&#x7684;&#x65E0;&#x5E8F;&#x53EF;&#x53D8;&#x5E8F;&#x5217;&#xFF0C;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x5305;&#x542B;&#x201C;&#x952E;&#x201D;&#x548C;&#x201C;&#x503C;&#x201D;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x5B9A;&#x4E49;&#x5B57;&#x5178;&#x65F6;&#xFF0C;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x952E;&#x548C;&#x503C;&#x7528;&#x5192;&#x53F7;&#x5206;&#x9694;&#xFF0C;&#x5143;&#x7D20;&#x4E4B;&#x95F4;&#x7528;&#x9017;&#x53F7;&#x5206;&#x9694;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x5143;&#x7D20;&#x653E;&#x5728;&#x4E00;&#x5BF9;&#x5927;&#x62EC;&#x53F7;&#x201C;&#xFF5B;&#xFF5D;&#x201D;&#x4E2D;&#x3002;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x952E;&#x53EF;&#x4EE5;&#x4E3A;&#x4EFB;&#x610F;&#x4E0D;&#x53EF;&#x53D8;&#x6570;&#x636E;&#xFF0C;&#x6BD4;&#x5982;&#x6574;&#x6570;&#x3001;&#x5B9E;&#x6570;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5143;&#x7EC4;&#x7B49;&#x7B49;&#x3002;</p>
+<h3 id="&#x5B57;&#x5178;&#x7684;&#x521B;&#x5EFA;"><a name="&#x5B57;&#x5178;&#x7684;&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;&#x7684;&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x5B57;&#x5178;&#x7684;&#x521B;&#x5EFA;</h3>
+<p><strong>&#x521B;&#x5EFA;</strong>
+&#x4F7F;&#x7528;&#x201C;=&#x201D;&#x5C06;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x8D4B;&#x503C;&#x7ED9;&#x4E00;&#x4E2A;&#x53D8;&#x91CF;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a_dict = {&apos;server&apos;: &apos;db.neuedu.com&apos;, &apos;database&apos;: &apos;mysql&apos;}
+
+&gt;&gt;&gt; a_dict
+
+{&apos;database&apos;: &apos;mysql&apos;, &apos;server&apos;: &apos;db.neuedu.com&apos;}
+
+&gt;&gt;&gt; x = {}                     #&#x7A7A;&#x5B57;&#x5178;
+
+&gt;&gt;&gt; x
+
+{}
+</code></pre><p>&#x4F7F;&#x7528;dict()&#x5229;&#x7528;&#x5DF2;&#x6709;&#x6570;&#x636E;&#x521B;&#x5EFA;&#x5B57;&#x5178;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; keys = [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;]
+
+&gt;&gt;&gt; values = [1, 2, 3, 4]
+
+&gt;&gt;&gt; dictionary = dict(zip(keys, values))
+
+&gt;&gt;&gt; dictionary
+
+{&apos;a&apos;: 1, &apos;c&apos;: 3, &apos;b&apos;: 2, &apos;d&apos;: 4}
+
+&gt;&gt;&gt; x = dict() #&#x7A7A;&#x5B57;&#x5178;
+
+&gt;&gt;&gt; x
+
+{}
+</code></pre><p>&#x4F7F;&#x7528;dict()&#x6839;&#x636E;&#x7ED9;&#x5B9A;&#x7684;&#x952E;&#x3001;&#x503C;&#x521B;&#x5EFA;&#x5B57;&#x5178;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; d = dict(name=&apos;Dong&apos;, age=37)
+
+&gt;&gt;&gt; d
+
+{&apos;age&apos;: 37, &apos;name&apos;: &apos;Dong&apos;}
+</code></pre><p>&#x4EE5;&#x7ED9;&#x5B9A;&#x5185;&#x5BB9;&#x4E3A;&#x952E;&#xFF0C;&#x521B;&#x5EFA;&#x503C;&#x4E3A;&#x7A7A;&#x7684;&#x5B57;&#x5178;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; adict = dict.fromkeys([&apos;name&apos;, &apos;age&apos;, &apos;sex&apos;])
+
+&gt;&gt;&gt; adict
+
+{&apos;age&apos;: None, &apos;name&apos;: None, &apos;sex&apos;: None}
+</code></pre><h3 id="&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x8BFB;&#x53D6;"><a name="&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x8BFB;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x8BFB;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x8BFB;&#x53D6;</h3>
+<ul>
+<li>&#x4EE5;&#x952E;&#x4F5C;&#x4E3A;&#x4E0B;&#x6807;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;&#x5B57;&#x5178;&#x5143;&#x7D20;&#xFF0C;&#x82E5;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; aDict = {&apos;name&apos;:&apos;Dong&apos;, &apos;sex&apos;:&apos;male&apos;, &apos;age&apos;:37}
+
+&gt;&gt;&gt; aDict[&apos;name&apos;]
+
+&apos;Dong&apos;
+
+&gt;&gt;&gt; aDict[&apos;tel&apos;]                                 #&#x952E;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x629B;&#x51FA;&#x5F02;&#x5E38;
+
+Traceback (most recent call last):
+
+  File &quot;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>pyshell#53</span><span class="token punctuation">&gt;</span></span>&quot;, line 1, in <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>module</span><span class="token punctuation">&gt;</span></span>
+
+    aDict[&apos;tel&apos;]
+
+KeyError: &apos;tel&apos;
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x5BF9;&#x8C61;&#x7684;get&#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x952E;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x952E;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x65F6;&#x5019;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; print(aDict.get(&apos;address&apos;))
+
+None
+
+&gt;&gt;&gt; print(aDict.get(&apos;address&apos;, &apos;SDIBT&apos;))
+
+SDIBT
+
+&gt;&gt;&gt; aDict[&apos;score&apos;] = aDict.get(&apos;score&apos;,[])
+
+&gt;&gt;&gt; aDict[&apos;score&apos;].append(98)
+
+&gt;&gt;&gt; aDict[&apos;score&apos;].append(97)
+
+&gt;&gt;&gt; aDict
+
+{&apos;age&apos;: 37, &apos;score&apos;: [98, 97], &apos;name&apos;: &apos;Dong&apos;, &apos;sex&apos;: &apos;male&apos;}
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x5BF9;&#x8C61;&#x7684;items()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5B57;&#x5178;&#x7684;&#x952E;&#x3001;&#x503C;&#x5BF9;&#x5217;&#x8868;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; aDict={&apos;name&apos;:&apos;Dong&apos;, &apos;sex&apos;:&apos;male&apos;, &apos;age&apos;:37}
+
+&gt;&gt;&gt; for item in aDict.items():         #&#x8F93;&#x51FA;&#x5B57;&#x5178;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;
+
+     print(item)
+
+(&apos;age&apos;, 37)
+
+(&apos;name&apos;, &apos;Dong&apos;)
+
+(&apos;sex&apos;, &apos;male&apos;)
+
+
+
+&gt;&gt;&gt; for key in aDict:                       #&#x4E0D;&#x52A0;&#x7279;&#x6B8A;&#x8BF4;&#x660E;&#xFF0C;&#x9ED8;&#x8BA4;&#x8F93;&#x51FA;&#x952E;
+
+  print(key)
+
+age
+
+name
+
+sex
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x5BF9;&#x8C61;&#x7684;keys()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5B57;&#x5178;&#x7684;&#x952E;&#x5217;&#x8868;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; aDict.keys()                                          #&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x952E;
+
+dict_keys([&apos;name&apos;, &apos;sex&apos;, &apos;age&apos;]
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x5BF9;&#x8C61;&#x7684;values()&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x5B57;&#x5178;&#x7684;&#x503C;&#x5217;&#x8868;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; aDict.values()                                       #&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x503C;
+
+dict_values([&apos;Dong&apos;, &apos;male&apos;, 37])
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x5BF9;&#x8C61;&#x7684;setdefault()&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x201C;&#x952E;&#x201D;&#x5BF9;&#x5E94;&#x7684;&#x201C;&#x503C;&#x201D;&#xFF0C;&#x5982;&#x679C;&#x5B57;&#x5178;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x8BE5;&#x201C;&#x952E;&#x201D;&#xFF0C;&#x5C31;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x65B0;&#x5143;&#x7D20;&#x5E76;&#x8BBE;&#x7F6E;&#x8BE5;&#x201C;&#x952E;&#x201D;&#x5BF9;&#x5E94;&#x7684;&#x201C;&#x503C;&#x201D;&#x3002;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;aDict ={&apos;name&apos; : &apos;Wang&apos;,&apos;sex&apos; : &apos;male&apos;}
+
+&gt;&gt;&gt;aDict.setdefault(&apos;age&apos;,&apos;28&apos;)     #&#x589E;&#x52A0;&#x65B0;&#x5143;&#x7D20;
+
+&apos;28&apos;
+
+&gt;&gt;&gt;aDic
+
+{&apos;name&apos; : &apos;Wang&apos;,&apos;sex&apos; : &apos;male&apos;,&apos;age&apos;:&apos;28&apos;}
+</code></pre><h3 id="&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;"><a name="&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x5B57;&#x5178;&#x5143;&#x7D20;&#x7684;&#x6DFB;&#x52A0;</h3>
+<ul>
+<li>&#x5F53;&#x4EE5;&#x6307;&#x5B9A;&#x952E;&#x4E3A;&#x4E0B;&#x6807;&#x4E3A;&#x5B57;&#x5178;&#x8D4B;&#x503C;&#x65F6;&#xFF0C;&#x82E5;&#x952E;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x8BE5;&#x952E;&#x7684;&#x503C;&#xFF1B;&#x82E5;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x5219;&#x8868;&#x793A;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x952E;&#x3001;&#x503C;&#x5BF9;&#x3002;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; aDict[&apos;age&apos;] = 38                      #&#x4FEE;&#x6539;&#x5143;&#x7D20;&#x503C;
+
+&gt;&gt;&gt; aDict
+
+{&apos;age&apos;: 38, &apos;name&apos;: &apos;Dong&apos;, &apos;sex&apos;: &apos;male&apos;}
+
+&gt;&gt;&gt; aDict[&apos;address&apos;] = &apos;SDIBT&apos;        #&#x589E;&#x52A0;&#x65B0;&#x5143;&#x7D20;
+
+&gt;&gt;&gt; aDict
+
+{&apos;age&apos;: 38, &apos;address&apos;: &apos;SDIBT&apos;, &apos;name&apos;: &apos;Dong&apos;, &apos;sex&apos;: &apos;male&apos;}
+</code></pre><ul>
+<li>&#x4F7F;&#x7528;&#x5B57;&#x5178;&#x5BF9;&#x8C61;&#x7684;update&#x65B9;&#x6CD5;&#x5C06;&#x53E6;&#x4E00;&#x4E2A;&#x5B57;&#x5178;&#x7684;&#x952E;&#x3001;&#x503C;&#x5BF9;&#x6DFB;&#x52A0;&#x5230;&#x5F53;&#x524D;&#x5B57;&#x5178;&#x5BF9;&#x8C61;</li>
+</ul>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; aDict
+
+{&apos;age&apos;: 37, &apos;score&apos;: [98, 97], &apos;name&apos;: &apos;Dong&apos;, &apos;sex&apos;: &apos;male&apos;}
+
+&gt;&gt;&gt; aDict.items()
+
+dict_items([(&apos;age&apos;, 37), (&apos;score&apos;, [98, 97]), (&apos;name&apos;, &apos;Dong&apos;), (&apos;sex&apos;, &apos;male&apos;)])
+
+&gt;&gt;&gt; aDict.update({&apos;a&apos;:&apos;a&apos;,&apos;b&apos;:&apos;b&apos;})
+
+&gt;&gt;&gt; aDict
+
+{&apos;a&apos;: &apos;a&apos;, &apos;score&apos;: [98, 97], &apos;name&apos;: &apos;Dong&apos;, &apos;age&apos;: 37, &apos;b&apos;: &apos;b&apos;, &apos;sex&apos;: &apos;male&apos;}
+</code></pre><h3 id="&#x5B57;&#x5178;&#x5220;&#x9664;"><a name="&#x5B57;&#x5178;&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.5. &#x5B57;&#x5178;&#x5220;&#x9664;</h3>
+<ul>
+<li><p>&#x4F7F;&#x7528;del&#x5220;&#x9664;&#x6574;&#x4E2A;&#x5B57;&#x5178;&#xFF0C;&#x6216;&#x8005;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x6307;&#x5B9A;&#x5143;&#x7D20;</p>
+</li>
+<li><p>&#x4F7F;&#x7528;pop()&#x548C;popitem()&#x65B9;&#x6CD5;&#x5F39;&#x51FA;&#x5E76;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5143;&#x7D20;</p>
+<ul>
+<li>&#x4F7F;&#x7528;clear()&#x65B9;&#x6CD5;&#x6E05;&#x7A7A;&#x5B57;&#x5178;&#x4E2D;&#x6240;&#x6709;&#x5143;&#x7D20;</li>
+</ul>
+</li>
+</ul>
+<h4 id="&#x5B57;&#x5178;clear&#x65B9;&#x6CD5;"><a name="&#x5B57;&#x5178;clear&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;clear&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x5178;clear()&#x65B9;&#x6CD5;</h4>
+<p>clear()&#x65B9;&#x6CD5;&#x662F;&#x7528;&#x6765;&#x6E05;&#x9664;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x539F;&#x5730;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x8FD4;&#x56DE;None&#xFF08;&#x4E5F;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x6CA1;&#x6709;&#x8FD4;&#x56DE;&#x503C;&#xFF09;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x[&apos;name&apos;] = &apos;lili&apos;
+&gt;&gt;&gt; x[&apos;age&apos;] = 20
+&gt;&gt;&gt; x
+{&apos;age&apos;: 20, &apos;name&apos;: &apos;lili&apos;}
+&gt;&gt;&gt; x.clear()
+&gt;&gt;&gt; x
+{ }
+</code></pre><h4 id="&#x5B57;&#x5178;pop&#x65B9;&#x6CD5;"><a name="&#x5B57;&#x5178;pop&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;pop&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x5178;pop()&#x65B9;&#x6CD5;</h4>
+<p>&#x79FB;&#x9664;&#x5B57;&#x5178;&#x6570;&#x636E;pop()&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#x662F;&#xFF1A;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7ED9;&#x5B9A;&#x952E;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x503C;&#xFF0C;&#x8FD4;&#x56DE;&#x8FD9;&#x4E2A;&#x503C;&#x5E76;&#x4ECE;&#x5B57;&#x5178;&#x4E2D;&#x628A;&#x5B83;&#x79FB;&#x9664;&#x3002;&#x6CE8;&#x610F;&#x5B57;&#x5178;pop()&#x65B9;&#x6CD5;&#x4E0E;<a href="http://www.iplaypython.com/jinjie/list-pop.html" target="_blank">&#x5217;&#x8868;pop()&#x65B9;&#x6CD5;</a>&#x4F5C;&#x7528;&#x5B8C;&#x5168;&#x4E0D;&#x540C;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = {&apos;a&apos;:1,&apos;b&apos;:2}
+&gt;&gt;&gt; x.pop(&apos;a&apos;)
+1
+&gt;&gt;&gt; x
+{&apos;b&apos;: 2}
+</code></pre><h4 id="&#x5B57;&#x5178;popitem&#x65B9;&#x6CD5;"><a name="&#x5B57;&#x5178;popitem&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;popitem&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x5178;popitem()&#x65B9;&#x6CD5;</h4>
+<p>&#x5B57;&#x5178;popitem()&#x65B9;&#x6CD5;&#x4F5C;&#x7528;&#x662F;&#xFF1A;&#x968F;&#x673A;&#x8FD4;&#x56DE;&#x5E76;&#x5220;&#x9664;&#x5B57;&#x5178;&#x4E2D;&#x7684;&#x4E00;&#x5BF9;&#x952E;&#x548C;&#x503C;&#xFF08;&#x9879;&#xFF09;&#x3002;&#x4E3A;&#x4EC0;&#x4E48;&#x662F;&#x968F;&#x673A;&#x5220;&#x9664;&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x5B57;&#x5178;&#x662F;&#x65E0;&#x5E8F;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x6240;&#x8C13;&#x7684;&#x201C;&#x6700;&#x540E;&#x4E00;&#x9879;&#x201D;&#x6216;&#x662F;&#x5176;&#x5B83;&#x987A;&#x5E8F;&#x3002;&#x5728;&#x5DE5;&#x4F5C;&#x65F6;&#x5982;&#x679C;&#x9047;&#x5230;&#x9700;&#x8981;&#x9010;&#x4E00;&#x5220;&#x9664;&#x9879;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x7528;popitem()&#x65B9;&#x6CD5;&#x6548;&#x7387;&#x5F88;&#x9AD8;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x
+{&apos;url&apos;: &apos;www.neuedu.com&apos;, &apos;title&apos;: &apos;python web site&apos;}
+&gt;&gt;&gt; x.popitem()
+(&apos;url&apos;, &apos;www.neuedu.com&apos;)
+&gt;&gt;&gt; x
+{&apos;title&apos;: &apos;python web site&apos;}
+</code></pre><h3 id="&#x5224;&#x65AD;&#x4E00;&#x4E2A;key&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;"><a name="&#x5224;&#x65AD;&#x4E00;&#x4E2A;key&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;" class="anchor-navigation-ex-anchor" href="#&#x5224;&#x65AD;&#x4E00;&#x4E2A;key&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.6. &#x5224;&#x65AD;&#x4E00;&#x4E2A;key&#x662F;&#x5426;&#x5728;&#x5B57;&#x5178;&#x4E2D;</h3>
+<h4 id="&#x4F7F;&#x7528;in&#x65B9;&#x6CD5;"><a name="&#x4F7F;&#x7528;in&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;in&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;in&#x65B9;&#x6CD5;:</h4>
+<pre class="language-"><code>#&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x5B57;&#x5178;
+d = {&apos;name&apos;:&apos;tom&apos;, &apos;age&apos;:10, &apos;Tel&apos;:110}
+#&#x6253;&#x5370;&#x8FD4;&#x56DE;&#x503C;&#xFF0C;&#x5176;&#x4E2D;d.keys()&#x662F;&#x5217;&#x51FA;&#x5B57;&#x5178;&#x6240;&#x6709;&#x7684;key
+print (&apos;name&apos;  in d.keys())
+print (&apos;name&apos; in d)
+#&#x4E24;&#x4E2A;&#x7684;&#x7ED3;&#x679C;&#x90FD;&#x662F;&#x8FD4;&#x56DE;True
+</code></pre><p>&#x9664;&#x4E86;&#x4F7F;&#x7528;in&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;not in&#xFF0C;&#x5224;&#x5B9A;&#x8FD9;&#x4E2A;key&#x4E0D;&#x5B58;&#x5728;&#x3002;</p>
+<h3 id="&#x904D;&#x5386;&#x5B57;&#x5178;"><a name="&#x904D;&#x5386;&#x5B57;&#x5178;" class="anchor-navigation-ex-anchor" href="#&#x904D;&#x5386;&#x5B57;&#x5178;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.7. &#x904D;&#x5386;&#x5B57;&#x5178;</h3>
+<p>&#xFF08;1&#xFF09;&#x904D;&#x5386;key&#x503C;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a
+{&apos;a&apos;: &apos;1&apos;, &apos;b&apos;: &apos;2&apos;, &apos;c&apos;: &apos;3&apos;}
+&gt;&gt;&gt; for key in a:
+       print(key+&apos;:&apos;+a[key])
+
+a:1
+b:2
+c:3
+&gt;&gt;&gt; for key in a.keys():
+       print(key+&apos;:&apos;+a[key])
+
+a:1
+b:2
+c:3
+</code></pre><p>&#x5728;&#x4F7F;&#x7528;&#x4E0A;&#xFF0C;for key in a&#x548C; for key in a.keys():&#x5B8C;&#x5168;&#x7B49;&#x4EF7;&#x3002;</p>
+<p>&#xFF08;2&#xFF09;&#x904D;&#x5386;value&#x503C;</p>
+<pre class="language-"><code>&gt;&gt;&gt; for value in a.values():
+       print(value)
+</code></pre><p>&#xFF08;3&#xFF09;&#x904D;&#x5386;&#x5B57;&#x5178;&#x9879;</p>
+<pre class="language-"><code>&gt;&gt;&gt; for kv in a.items():
+       print(kv)
+
+(&apos;a&apos;, &apos;1&apos;)
+(&apos;b&apos;, &apos;2&apos;)
+(&apos;c&apos;, &apos;3&apos;)
+</code></pre><p>&#xFF08;4&#xFF09;&#x904D;&#x5386;&#x5B57;&#x5178;&#x5065;&#x503C;</p>
+<pre class="language-"><code>&gt;&gt;&gt; for key,value in a.items():
+       print(key+&apos;:&apos;+value)
+
+a:1
+b:2
+c:3
+&gt;&gt;&gt; for (key,value) in a.items():
+       print(key+&apos;:&apos;+value)
+
+a:1
+b:2
+c:3
+</code></pre><p>&#x5728;&#x4F7F;&#x7528;&#x4E0A;for key,value in a.items()&#x4E0E;for (key,value) in a.items()&#x5B8C;&#x5168;&#x7B49;&#x4EF7;</p>
+<h3 id="&#x6709;&#x5E8F;&#x5B57;&#x5178;"><a name="&#x6709;&#x5E8F;&#x5B57;&#x5178;" class="anchor-navigation-ex-anchor" href="#&#x6709;&#x5E8F;&#x5B57;&#x5178;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.8. &#x6709;&#x5E8F;&#x5B57;&#x5178;</h3>
+<p>Python&#x5185;&#x7F6E;&#x5B57;&#x5178;&#x662F;&#x65E0;&#x5E8F;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x8BB0;&#x4F4F;&#x5143;&#x7D20;&#x63D2;&#x5165;&#x987A;&#x5E8F;&#x7684;&#x5B57;&#x5178;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;collections.OrderedDict&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; x = dict()                   #&#x65E0;&#x5E8F;&#x5B57;&#x5178;
+
+&gt;&gt;&gt; x[&apos;a&apos;] = 3
+
+&gt;&gt;&gt; x[&apos;b&apos;] = 5
+
+&gt;&gt;&gt; x[&apos;c&apos;] = 8
+
+&gt;&gt;&gt; x
+
+{&apos;b&apos;: 5, &apos;c&apos;: 8, &apos;a&apos;: 3}
+
+&gt;&gt;&gt; import collections
+
+&gt;&gt;&gt; x = collections.OrderedDict() #&#x6709;&#x5E8F;&#x5B57;&#x5178;
+
+&gt;&gt;&gt; x[&apos;a&apos;] = 3
+
+&gt;&gt;&gt; x[&apos;b&apos;] = 5
+
+&gt;&gt;&gt; x[&apos;c&apos;] = 8
+
+&gt;&gt;&gt; x
+
+OrderedDict([(&apos;a&apos;, 3), (&apos;b&apos;, 5), (&apos;c&apos;, 8)])
+</code></pre><h3 id="&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;"><a name="&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.9. &#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;</h3>
+<p>1.&#x524D;&#x8A00;     </p>
+<p>&#x53EF;&#x4EE5;&#x5BF9;&#x6BD4;&#x5217;&#x8868;&#x63A8;&#x5BFC;&#x5F0F;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x4E0E;&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;&#x7684;&#x8FDB;&#x884C;&#x5BF9;&#x6BD4;&#xFF0C;&#x8BAD;&#x7EC3;&#x81EA;&#x5DF1;&#x7684;&#x5B66;&#x4E60;&#x8FC1;&#x79FB;&#x80FD;&#x529B;&#x3002;</p>
+<p>2.&#x8868;&#x8FBE;&#x5F0F;</p>
+<pre class="language-"><code>{ key_expr: value_expr for value in collection if condition }
+</code></pre><p>3.&#x5B9E;&#x4F8B;</p>
+<p>&#x4F8B;1: </p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x7528;&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x4EE5;&#x53CA;&#x5176;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;&#x5EFA;&#x5B57;&#x5178;</span>
+<span class="token comment"># &#x4EE3;&#x7801;&#x5982;&#x4E0B;:</span>
+strings <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">&apos;import&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;is&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;with&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;if&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;file&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;exception&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;liuhu&apos;</span><span class="token punctuation">]</span>
+d <span class="token operator">=</span> <span class="token punctuation">{</span>key<span class="token punctuation">:</span> val <span class="token keyword">for</span> val<span class="token punctuation">,</span>key <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>strings<span class="token punctuation">)</span><span class="token punctuation">}</span>
+<span class="token comment"># &#x7528;&#x5B57;&#x5178;&#x63A8;&#x5BFC;&#x5F0F;&#x4EE5;&#x5B57;&#x7B26;&#x4E32;&#x4EE5;&#x53CA;&#x5176;&#x957F;&#x5EA6;&#x4F4D;&#x7F6E;&#x5EFA;&#x5B57;&#x5178;</span>
+s <span class="token operator">=</span> <span class="token punctuation">{</span>strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">len</span><span class="token punctuation">(</span>strings<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>strings<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+k <span class="token operator">=</span> <span class="token punctuation">{</span>k<span class="token punctuation">:</span><span class="token builtin">len</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token keyword">for</span> k <span class="token keyword">in</span> strings<span class="token punctuation">}</span>  <span class="token comment">#&#x76F8;&#x6BD4;&#x4E0A;&#x4E00;&#x4E2A;&#x5199;&#x6CD5;&#x7B80;&#x5355;&#x5F88;&#x591A;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+<span class="token comment"># {&apos;import&apos;: 0, &apos;is&apos;: 1, &apos;with&apos;: 2, &apos;if&apos;: 3, &apos;file&apos;: 4, &apos;exception&apos;: 5, &apos;liuhu&apos;: 6}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
+<span class="token comment"># {&apos;import&apos;: 6, &apos;is&apos;: 2, &apos;with&apos;: 4, &apos;if&apos;: 2, &apos;file&apos;: 4, &apos;exception&apos;: 9, &apos;liuhu&apos;: 5}</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span>
+<span class="token comment"># {&apos;import&apos;: 6, &apos;is&apos;: 2, &apos;with&apos;: 4, &apos;if&apos;: 2, &apos;file&apos;: 4, &apos;exception&apos;: 9, &apos;liuhu&apos;: 5}</span>
+</code></pre>
+<p>&#x793A;&#x4F8B;2&#xFF1A;&#x540C;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x4F46;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x5199;&#x7684;&#x503C;&#x5408;&#x5E76;&#x8D77;&#x6765;&#x4E86;&#x3002;</p>
+<pre class="language-"><code class="lang-python">mc <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&apos;a&apos;</span><span class="token punctuation">:</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token string">&apos;b&apos;</span><span class="token punctuation">:</span> <span class="token number">34</span><span class="token punctuation">,</span> <span class="token string">&apos;A&apos;</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">&apos;Z&apos;</span><span class="token punctuation">:</span> <span class="token number">3</span><span class="token punctuation">}</span>
+mca <span class="token operator">=</span> <span class="token punctuation">{</span>k<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> mc<span class="token punctuation">.</span>get<span class="token punctuation">(</span>k<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> mc<span class="token punctuation">.</span>get<span class="token punctuation">(</span>k<span class="token punctuation">.</span>upper<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">for</span> k <span class="token keyword">in</span> mc<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
+
+<span class="token comment"># mcase_frequency == {&apos;a&apos;: 17, &apos;z&apos;: 3, &apos;b&apos;: 34} she</span>
+</code></pre>
+<h2 id="&#x96C6;&#x5408;"><a name="&#x96C6;&#x5408;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x96C6;&#x5408;</h2>
+<h3 id="&#x96C6;&#x5408;&#x5B9A;&#x4E49;"><a name="&#x96C6;&#x5408;&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. &#x96C6;&#x5408;&#x5B9A;&#x4E49;</h3>
+<p>&#x96C6;&#x5408;&#x662F;&#x65E0;&#x5E8F;&#x53EF;&#x53D8;&#x5E8F;&#x5217;&#xFF0C;&#x4F7F;&#x7528;&#x4E00;&#x5BF9;&#x5927;&#x62EC;&#x53F7;&#x754C;&#x5B9A;&#xFF0C;&#x5143;&#x7D20;&#x4E0D;&#x53EF;&#x91CD;&#x590D;&#xFF0C;&#x540C;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x6BCF;&#x4E2A;&#x5143;&#x7D20;&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;&#x96C6;&#x5408;&#x4E2D;&#x53EA;&#x80FD;&#x5305;&#x542B;&#x6570;&#x5B57;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x3001;&#x5143;&#x7EC4;&#x7B49;&#x4E0D;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x800C;&#x4E0D;&#x80FD;&#x5305;&#x542B;&#x5217;&#x8868;&#x3001;&#x5B57;&#x5178;&#x3001;&#x96C6;&#x5408;&#x7B49;&#x53EF;&#x53D8;&#x7C7B;&#x578B;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h3 id="&#x96C6;&#x5408;&#x7684;&#x521B;&#x5EFA;"><a name="&#x96C6;&#x5408;&#x7684;&#x521B;&#x5EFA;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x7684;&#x521B;&#x5EFA;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. &#x96C6;&#x5408;&#x7684;&#x521B;&#x5EFA;</h3>
+<p>&#x76F4;&#x63A5;&#x5C06;&#x96C6;&#x5408;&#x8D4B;&#x503C;&#x7ED9;&#x53D8;&#x91CF;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a = {3, 5}
+
+&gt;&gt;&gt; a.add(7)                  #&#x5411;&#x96C6;&#x5408;&#x4E2D;&#x6DFB;&#x52A0;&#x5143;&#x7D20;
+
+&gt;&gt;&gt; a
+
+{3, 5, 7}
+</code></pre><p>&#x4F7F;&#x7528;set&#x5C06;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x8F6C;&#x6362;&#x4E3A;&#x96C6;&#x5408;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a_set = set(range(8,14))
+
+&gt;&gt;&gt; a_set
+
+{8, 9, 10, 11, 12, 13}
+
+&gt;&gt;&gt; b_set = set([0, 1, 2, 3, 0, 1, 2, 3, 7, 8])     #&#x81EA;&#x52A8;&#x53BB;&#x9664;&#x91CD;&#x590D;
+
+&gt;&gt;&gt; b_set
+
+{0, 1, 2, 3, 7, 8}
+
+&gt;&gt;&gt; c_set = set()                                              #&#x7A7A;&#x96C6;&#x5408;
+
+&gt;&gt;&gt; c_set
+
+set()
+</code></pre><h3 id="&#x96C6;&#x5408;&#x7684;&#x5220;&#x9664;"><a name="&#x96C6;&#x5408;&#x7684;&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x7684;&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. &#x96C6;&#x5408;&#x7684;&#x5220;&#x9664;</h3>
+<p>&#x4F7F;&#x7528;del&#x5220;&#x9664;&#x6574;&#x4E2A;&#x96C6;&#x5408;</p>
+<h3 id="&#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x589E;&#x52A0;&#x4E0E;&#x5220;&#x9664;"><a name="&#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x589E;&#x52A0;&#x4E0E;&#x5220;&#x9664;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x589E;&#x52A0;&#x4E0E;&#x5220;&#x9664;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. &#x96C6;&#x5408;&#x5143;&#x7D20;&#x7684;&#x589E;&#x52A0;&#x4E0E;&#x5220;&#x9664;</h3>
+<p><strong>&#x589E;&#x52A0;&#x5143;&#x7D20;</strong>
+&#x4F7F;&#x7528;add()&#x65B9;&#x6CD5;&#x4E3A;&#x96C6;&#x5408;&#x6DFB;&#x52A0;&#x65B0;&#x5143;&#x7D20;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x5143;&#x7D20;&#x5DF2;&#x5B58;&#x5728;&#x4E8E;&#x96C6;&#x5408;&#x4E2D;&#x5219;&#x5FFD;&#x7565;&#x8BE5;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt;s = {1,2,3}
+
+&gt;&gt;&gt;s.add(3)
+
+&gt;&gt;&gt;s
+
+{1,2,3}
+</code></pre><p>&#x4F7F;&#x7528;update()&#x65B9;&#x6CD5;&#x5408;&#x5E76;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x5230;&#x5F53;&#x524D;&#x96C6;&#x5408;&#x4E2D;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt;s = {1,2,3}
+
+&gt;&gt;&gt;s.update({3,4,5})
+
+&gt;&gt;&gt;s
+
+{1,2,3,4,5}
+</code></pre><p><strong>&#x5220;&#x9664;&#x5143;&#x7D20;</strong>
+&#x5F53;&#x4E0D;&#x518D;&#x4F7F;&#x7528;&#x67D0;&#x4E2A;&#x96C6;&#x5408;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;del&#x547D;&#x4EE4;&#x5220;&#x9664;&#x6574;&#x4E2A;&#x96C6;&#x5408;&#x3002;&#x96C6;&#x5408;&#x5BF9;&#x8C61;&#x7684;pop()&#x65B9;&#x6CD5;&#x5F39;&#x51FA;&#x5E76;&#x5220;&#x9664;&#x5176;&#x4E2D;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;remove()&#x65B9;&#x6CD5;&#x76F4;&#x63A5;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x5143;&#x7D20;&#xFF0C;clear()&#x65B9;&#x6CD5;&#x6E05;&#x7A7A;&#x96C6;&#x5408;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a = {1, 4, 2, 3}
+
+&gt;&gt;&gt; a.pop()
+
+1
+
+&gt;&gt;&gt; a.pop()
+
+2
+
+&gt;&gt;&gt; a
+
+{3, 4}
+
+&gt;&gt;&gt; a.add(2)
+
+&gt;&gt;&gt; a
+
+{2, 3, 4}
+
+&gt;&gt;&gt; a.remove(3)
+
+&gt;&gt;&gt; a
+
+{2, 4}
+</code></pre><h3 id="&#x96C6;&#x5408;&#x64CD;&#x4F5C;"><a name="&#x96C6;&#x5408;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.5. &#x96C6;&#x5408;&#x64CD;&#x4F5C;</h3>
+<p>Python&#x96C6;&#x5408;&#x652F;&#x6301;&#x4EA4;&#x96C6;&#x3001;&#x5E76;&#x96C6;&#x3001;&#x5DEE;&#x96C6;&#x7B49;&#x8FD0;&#x7B97;
+&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre class="language-"><code>&gt;&gt;&gt; a_set = set([8, 9, 10, 11, 12, 13])
+
+&gt;&gt;&gt; b_set = {0, 1, 2, 3, 7, 8}
+
+&gt;&gt;&gt; a_set | b_set                             #&#x5E76;&#x96C6;
+
+{0, 1, 2, 3, 7, 8, 9, 10, 11, 12, 13}
+
+&gt;&gt;&gt; a_set.union(b_set)                   #&#x5E76;&#x96C6;
+
+{0, 1, 2, 3, 7, 8, 9, 10, 11, 12, 13}
+
+&gt;&gt;&gt; a_set &amp; b_set                           #&#x4EA4;&#x96C6;
+
+{8}
+
+&gt;&gt;&gt; a_set.intersection(b_set)          #&#x4EA4;&#x96C6;
+
+{8}
+
+&gt;&gt;&gt; a_set.difference(b_set)             #&#x5DEE;&#x96C6;
+
+{9, 10, 11, 12, 13}
+
+&gt;&gt;&gt; a_set - b_set
+
+      {9, 10, 11, 12, 13}
+
+
+
+&gt;&gt;&gt; x = {1, 2, 3}
+
+&gt;&gt;&gt; y = {1, 2, 5}
+
+&gt;&gt;&gt; z = {1, 2, 3, 4}
+
+&gt;&gt;&gt; x.issubset(y)                                     #&#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x4E3A;&#x5B50;&#x96C6;
+
+False
+
+&gt;&gt;&gt; x &lt; y                                        #&#x6BD4;&#x8F83;&#x96C6;&#x5408;&#x5927;&#x5C0F;/&#x5305;&#x542B;&#x5173;&#x7CFB;
+
+False
+
+&gt;&gt;&gt; x.issubset(z)
+
+True
+
+
+&gt;&gt;&gt; x &lt; z                                         #&#x771F;&#x5B50;&#x96C6;
+
+True
+</code></pre><p> &#x4F7F;&#x7528;&#x96C6;&#x5408;&#x5FEB;&#x901F;&#x63D0;&#x53D6;&#x5E8F;&#x5217;&#x4E2D;&#x5355;&#x4E00;&#x5143;&#x7D20;</p>
+<pre class="language-"><code>&gt;&gt;&gt; import random
+
+&gt;&gt;&gt; listRandom = [random.choice(range(500)) for i in range(100)]
+
+&gt;&gt;&gt; noRepeat = []
+
+&gt;&gt;&gt; for i in listRandom :
+
+    if i not in noRepeat :
+
+   noRepeat.append(i)
+
+&gt;&gt;&gt; len(listRandom)
+
+&gt;&gt;&gt; len(noRepeat)
+
+&gt;&gt;&gt; newSet = set(listRandom)
+</code></pre><h3 id="&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;"><a name="&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.6. &#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;</h3>
+<p>Python&#x4E5F;&#x652F;&#x6301;&#x96C6;&#x5408;&#x63A8;&#x5BFC;&#x5F0F;&#x3002;</p>
+<pre class="language-"><code>&gt;&gt;&gt; s = {x.strip() for x in (&apos;  he  &apos;, &apos;she    &apos;, &apos;    I&apos;)}
+
+&gt;&gt;&gt; s
+
+{&apos;I&apos;, &apos;she&apos;, &apos;he&apos;}
+</code></pre><h2 id="&#x7EFC;&#x5408;&#x7EC3;&#x4E60;"><a name="&#x7EFC;&#x5408;&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x7EFC;&#x5408;&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x7EFC;&#x5408;&#x7EC3;&#x4E60;</h2>
+<h3 id="&#x7EDF;&#x8BA1;&#x5355;&#x8BCD;&#x51FA;&#x73B0;&#x6B21;&#x6570;"><a name="&#x7EDF;&#x8BA1;&#x5355;&#x8BCD;&#x51FA;&#x73B0;&#x6B21;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x7EDF;&#x8BA1;&#x5355;&#x8BCD;&#x51FA;&#x73B0;&#x6B21;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x7EDF;&#x8BA1;&#x5355;&#x8BCD;&#x51FA;&#x73B0;&#x6B21;&#x6570;</h3>
+<pre class="language-"><code class="lang-python">word<span class="token operator">=</span><span class="token string">&quot;I&apos;m a boby, I&apos;m a girl. When it is true, it is ture. that are cats, the red is red.&quot;</span>
+word<span class="token operator">=</span>word<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">&apos;,&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">&apos;.&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;&apos;</span><span class="token punctuation">)</span>
+word<span class="token operator">=</span>word<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x7B2C;1&#x79CD;&#x65B9;&#x6CD5;&apos;</span><span class="token punctuation">)</span>
+setword<span class="token operator">=</span><span class="token builtin">set</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> setword<span class="token punctuation">:</span>
+    count<span class="token operator">=</span>word<span class="token punctuation">.</span>count<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span><span class="token string">&apos;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#xFF1A;&apos;</span><span class="token punctuation">,</span>count<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x7B2C;2&#x79CD;&#x65B9;&#x6CD5;&apos;</span><span class="token punctuation">)</span>
+<span class="token builtin">dict</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">for</span> key <span class="token keyword">in</span> word<span class="token punctuation">:</span>
+    <span class="token builtin">dict</span><span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">.</span>get<span class="token punctuation">(</span>key<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">dict</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x7B2C;3&#x79CD;&#x65B9;&#x6CD5;&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">from</span> collections <span class="token keyword">import</span> Counter
+
+result <span class="token operator">=</span> Counter<span class="token punctuation">(</span><span class="token builtin">dict</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>result<span class="token punctuation">.</span>most_common<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<h3 id="&#x5965;&#x8FD0;&#x4F1A;&#x8DB3;&#x7403;&#x5206;&#x7EC4;"><a name="&#x5965;&#x8FD0;&#x4F1A;&#x8DB3;&#x7403;&#x5206;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x5965;&#x8FD0;&#x4F1A;&#x8DB3;&#x7403;&#x5206;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x5965;&#x8FD0;&#x4F1A;&#x8DB3;&#x7403;&#x5206;&#x7EC4;</h3>
+<p> &#x5DF2;&#x77E5;&#x6709;&#x5341;&#x516D;&#x652F;&#x7537;&#x5B50;&#x8DB3;&#x7403;&#x961F;&#x53C2;&#x52A0;2008 &#x5317;&#x4EAC;&#x5965;&#x8FD0;&#x4F1A;&#x3002;&#x5199;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x628A;&#x8FD9;16 &#x652F;&#x7403;&#x961F;&#x968F;&#x673A;&#x5206;&#x4E3A;4 &#x4E2A;&#x7EC4;&#x3002;&#x91C7;&#x7528;List&#x96C6;&#x5408;&#x548C;&#x968F;&#x673A;&#x6570;</p>
+<p>2008 &#x5317;&#x4EAC;&#x5965;&#x8FD0;&#x4F1A;&#x7537;&#x8DB3;&#x53C2;&#x8D5B;&#x56FD;&#x5BB6;&#xFF1A;</p>
+<p>&#x79D1;&#x7279;&#x8FEA;&#x74E6;&#xFF0C;&#x963F;&#x6839;&#x5EF7;&#xFF0C;&#x6FB3;&#x5927;&#x5229;&#x4E9A;&#xFF0C;&#x585E;&#x5C14;&#x7EF4;&#x4E9A;&#xFF0C;&#x8377;&#x5170;&#xFF0C;&#x5C3C;&#x65E5;&#x5229;&#x4E9A;&#xFF0C;&#x65E5;&#x672C;&#xFF0C;&#x7F8E;&#x56FD;&#xFF0C;&#x4E2D;&#x56FD;&#xFF0C;&#x65B0;&#x897F;&#x5170;&#xFF0C;&#x5DF4;&#x897F;&#xFF0C;&#x6BD4;&#x5229;&#x65F6;&#xFF0C;&#x97E9;&#x56FD;&#xFF0C;&#x5580;&#x9EA6;&#x9686;&#xFF0C;&#x6D2A;&#x90FD;&#x62C9;&#x65AF;&#xFF0C;&#x610F;&#x5927;&#x5229;</p>
+<p>&#x63D0;&#x793A;&#xFF1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#xFF0C;&#x5220;&#x9664;&#x4E00;&#x4E2A;</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/468490-3355a278fb9ca16e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/201/format/webp" alt="image"></p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># // map&#xFF0C;&#x4FDD;&#x5B58;&#x6700;&#x7EC8;&#x5206;&#x7EC4;&#x7ED3;&#x679C;</span>
+<span class="token comment"># // key&#x4FDD;&#x5B58;&#x7684;&#x662F;&#x7B2C;&#x51E0;&#x7EC4;&#xFF0C;value&#x662F;&#x8BE5;&#x7EC4;&#x5BF9;&#x5E94;&#x7684;&#x56FD;&#x5BB6;&#x96C6;&#x5408;</span>
+<span class="token keyword">import</span> random
+groupNum2Countrys <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+
+strCountrys <span class="token operator">=</span> <span class="token string">&quot;&#x79D1;&#x7279;&#x8FEA;&#x74E6;&#xFF0C;&#x963F;&#x6839;&#x5EF7;&#xFF0C;&#x6FB3;&#x5927;&#x5229;&#x4E9A;&#xFF0C;&#x585E;&#x5C14;&#x7EF4;&#x4E9A;&#xFF0C;&#x8377;&#x5170;&#xFF0C;&#x5C3C;&#x65E5;&#x5229;&#x4E9A;&#xFF0C;&#x65E5;&#x672C;&#xFF0C;&#x7F8E;&#x56FD;&#xFF0C;&#x4E2D;&#x56FD;&#xFF0C;&#x65B0;&#x897F;&#x5170;&#xFF0C;&#x5DF4;&#x897F;&#xFF0C;&#x6BD4;&#x5229;&#x65F6;&#xFF0C;&#x97E9;&#x56FD;&#xFF0C;&#x5580;&#x9EA6;&#x9686;&#xFF0C;&#x6D2A;&#x90FD;&#x62C9;&#x65AF;&#xFF0C;&#x610F;&#x5927;&#x5229;&quot;</span><span class="token punctuation">;</span>
+countryList <span class="token operator">=</span> strCountrys<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token string">&quot;&#xFF0C;&quot;</span><span class="token punctuation">)</span>
+
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    lstGroup <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token comment"># // &#x5206;&#x7B2C;1&#x7EC4;</span>
+    <span class="token comment"># // &#x968F;&#x673A;&#x4ECE;&#x96C6;&#x5408;&#x4E2D;&#x9009;&#x51FA;&#x4E00;&#x4E2A;&#x56FD;&#x5BB6;&#xFF0C;&#x653E;&#x5230;&#x7B2C;1&#x7EC4;&#x91CC;&#xFF1B;&#x7136;&#x540E;&#x5C06;&#x8FD9;&#x4E2A;&#x9009;&#x51FA;&#x7684;&#x56FD;&#x5BB6;&#xFF0C;&#x4ECE;&#x539F;&#x6765;&#x96C6;&#x5408;&#x4E2D;&#x5E72;&#x6389;&#xFF08;&#x5220;&#x9664;&#xFF09;</span>
+    <span class="token comment"># // &#x91CD;&#x590D;&#x4EE5;&#x4E0A;&#x6B65;&#x9AA4;4&#x6B21;</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        selectIndex <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>countryList<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+        lstGroup<span class="token punctuation">.</span>append<span class="token punctuation">(</span>countryList<span class="token punctuation">[</span>selectIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        countryList<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>countryList<span class="token punctuation">[</span>selectIndex<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    groupNum2Countrys<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> lstGroup
+
+<span class="token keyword">for</span> key<span class="token punctuation">,</span>value <span class="token keyword">in</span> groupNum2Countrys<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&apos;&#x7B2C;&apos;</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos;&#x7EC4;&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="06-Python字符串（建议2课时）.html" class="navigation navigation-prev " aria-label="Previous page: 06-Python字符串（建议2课时）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="08-Python之对变量的再认识（建议1课时）.html" class="navigation navigation-next " aria-label="Next page: 08-Python之对变量的再认识（建议1课时）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"07-Python字典和集合（建议3课时）","level":"1.8","depth":1,"next":{"title":"08-Python之对变量的再认识（建议1课时）","level":"1.9","depth":1,"path":"08-Python之对变量的再认识（建议1课时）.md","ref":"08-Python之对变量的再认识（建议1课时）.md","articles":[]},"previous":{"title":"06-Python字符串（建议2课时）","level":"1.7","depth":1,"path":"06-Python字符串（建议2课时）.md","ref":"06-Python字符串（建议2课时）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","anchor-navigation-ex","-sharing","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"pageTop","multipleH1":true,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"fontsettings":{"theme":"white","family":"serif","size":2},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false}},"theme":"default","author":"neuedu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python_neuedu","language":"zh-hans","links":{"sidebar":{"东软睿道":"http://www.neuedu.com/"}},"gitbook":"3.2.3","description":"http://www.neuedu.com/"},"file":{"path":"07-Python字典和集合（建议3课时）.md","mtime":"2019-05-22T02:32:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T07:05:03.760Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

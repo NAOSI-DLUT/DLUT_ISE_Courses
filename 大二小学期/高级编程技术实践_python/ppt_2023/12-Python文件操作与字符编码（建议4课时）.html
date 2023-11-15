@@ -1,0 +1,906 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>12-Python文件操作与字符编码（建议4课时） · python_neuedu</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="neuedu">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-tomorrow.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="13-Python模块与包（建议1课时）.html" />
+    
+    
+    <link rel="prev" href="11-Python异常处理（建议2课时）.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://www.neuedu.com/" target="_blank" class="custom-link">东软睿道</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Python基础教学目标
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                <a href="01-Python简介及开发环境搭建（建议1课时）.html">
+            
+                    
+                    01-Python简介及开发环境搭建（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                <a href="02-Python变量_标识符_关键字-（建议2课时）.html">
+            
+                    
+                    02-Python变量标识符关键字-（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="03-Python-运算符（建议1课时）.html">
+            
+                <a href="03-Python-运算符（建议1课时）.html">
+            
+                    
+                    03-Python-运算符（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="04-Python分支与循环（建议2课时）.html">
+            
+                <a href="04-Python分支与循环（建议2课时）.html">
+            
+                    
+                    04-Python分支与循环（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="05-Python列表和元组（建议3课时）.html">
+            
+                <a href="05-Python列表和元组（建议3课时）.html">
+            
+                    
+                    05-Python列表和元组（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="06-Python字符串（建议2课时）.html">
+            
+                <a href="06-Python字符串（建议2课时）.html">
+            
+                    
+                    06-Python字符串（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="07-Python字典和集合（建议3课时）.html">
+            
+                <a href="07-Python字典和集合（建议3课时）.html">
+            
+                    
+                    07-Python字典和集合（建议3课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="08-Python之对变量的再认识（建议1课时）.html">
+            
+                <a href="08-Python之对变量的再认识（建议1课时）.html">
+            
+                    
+                    08-Python之对变量的再认识（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="09-Python之函数（建议9课时）.html">
+            
+                <a href="09-Python之函数（建议9课时）.html">
+            
+                    
+                    09-Python之函数（建议9课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="10-Python面向对象编程（建议12课时）.html">
+            
+                <a href="10-Python面向对象编程（建议12课时）.html">
+            
+                    
+                    10-Python面向对象编程（建议12课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="11-Python异常处理（建议2课时）.html">
+            
+                <a href="11-Python异常处理（建议2课时）.html">
+            
+                    
+                    11-Python异常处理（建议2课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                <a href="12-Python文件操作与字符编码（建议4课时）.html">
+            
+                    
+                    12-Python文件操作与字符编码（建议4课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="13-Python模块与包（建议1课时）.html">
+            
+                <a href="13-Python模块与包（建议1课时）.html">
+            
+                    
+                    13-Python模块与包（建议1课时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="14-Python常用模块（建议5学时）.html">
+            
+                <a href="14-Python常用模块（建议5学时）.html">
+            
+                    
+                    14-Python常用模块（建议5学时）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >12-Python文件操作与字符编码（建议4课时）</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-pagetop-navbar"><ul><ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x7F16;&#x7801;"><b>1.1. </b>&#x5B57;&#x7B26;&#x7F16;&#x7801;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x4F5C;&#x7528;"><b>1.1.1. </b>&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x4F5C;&#x7528;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x7B80;&#x5355;&#x53D1;&#x5C55;&#x5386;&#x53F2;"><b>1.2. </b>&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x7B80;&#x5355;&#x53D1;&#x5C55;&#x5386;&#x53F2;</a></li><ul><li><span class="title-icon "></span><a href="#ascii&#x7801;&#x8BDE;&#x751F;"><b>1.2.1. </b>ASCII&#x7801;&#x8BDE;&#x751F;</a></li><li><span class="title-icon "></span><a href="#gbk&#x7B49;&#x5404;&#x56FD;&#x7F16;&#x7801;&#x8BDE;&#x751F;"><b>1.2.2. </b>GBK&#x7B49;&#x5404;&#x56FD;&#x7F16;&#x7801;&#x8BDE;&#x751F;</a></li><li><span class="title-icon "></span><a href="#unicode&#x8BDE;&#x751F;&#xFF08;&#x4E07;&#x56FD;&#x7801;&#xFF09;"><b>1.2.3. </b>Unicode&#x8BDE;&#x751F;&#xFF08;&#x4E07;&#x56FD;&#x7801;&#xFF09;</a></li><li><span class="title-icon "></span><a href="#utf-8&#x8BDE;&#x751F;"><b>1.2.4. </b>UTF-8&#x8BDE;&#x751F;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x7684;&#x8F6C;&#x6362;"><b>1.3. </b>&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x7684;&#x8F6C;&#x6362;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x8282;&#x5E8F;&#x5217;"><b>1.3.1. </b>&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x8282;&#x5E8F;&#x5217;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;"><b>1.3.2. </b>&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x7684;&#x6982;&#x5FF5;&#x548C;&#x4F5C;&#x7528;"><b>1.4. </b>&#x6587;&#x4EF6;&#x7684;&#x6982;&#x5FF5;&#x548C;&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"><b>1.5. </b>&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;"><b>1.5.1. </b>&#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;"><b>1.6. </b>&#x6587;&#x4EF6;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;</a></li><ul><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x5957;&#x8DEF;"><b>1.6.1. </b>&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x5957;&#x8DEF;</a></li><li><span class="title-icon "></span><a href="#&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x65B9;&#x6CD5;"><b>1.6.2. </b>&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;/&#x65B9;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#read-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x8BFB;&#x53D6;&#x6587;&#x4EF6;"><b>1.6.3. </b>read &#x65B9;&#x6CD5; &#x2014;&#x2014; &#x8BFB;&#x53D6;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#write-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x5199;&#x5165;&#x6587;&#x4EF6;"><b>1.6.4. </b>write &#x65B9;&#x6CD5; &#x2014;&#x2014; &#x5199;&#x5165;&#x6587;&#x4EF6;</a></li></ul><li><span class="title-icon "></span><a href="#readreadlinereadlines&#x533A;&#x522B;&#x4E0E;&#x7528;&#x6CD5;"><b>1.7. </b>read(),readline(),readlines()&#x533A;&#x522B;&#x4E0E;&#x7528;&#x6CD5;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;-with-open&#xFF08;&#xFF09;-as-&#x8BFB;&#x5199;&#x6587;&#x4EF6;"><b>1.8. </b>&#x4F7F;&#x7528; with open&#xFF08;&#xFF09; as &#x8BFB;&#x5199;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x6307;&#x9488;"><b>1.9. </b>&#x6587;&#x4EF6;&#x6307;&#x9488;</a></li><li><span class="title-icon "></span><a href="#&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x603B;&#x7ED3;"><b>1.10. </b>&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x603B;&#x7ED3;</a></li><li><span class="title-icon "></span><a href="#&#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;"><b>1.11. </b>&#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><b>1.11.1. </b>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x884C;&#x53F7;"><b>1.11.2. </b>&#x6DFB;&#x52A0;&#x884C;&#x53F7;</a></li><li><span class="title-icon "></span><a href="#&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;"><b>1.11.3. </b>&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h2 id="&#x5B57;&#x7B26;&#x7F16;&#x7801;"><a name="&#x5B57;&#x7B26;&#x7F16;&#x7801;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x7F16;&#x7801;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1. &#x5B57;&#x7B26;&#x7F16;&#x7801;</h2>
+<h3 id="&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x4F5C;&#x7528;"><a name="&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x4F5C;&#x7528;</h3>
+<p>&#x8BA1;&#x7B97;&#x673A;&#x53EA;&#x8BA4;&#x8BC6;0&#x548C;1&#x7EC4;&#x6210;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5E8F;&#x5217;&#xFF0C;&#x56E0;&#x6B64;&#x4EFB;&#x4F55;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF08;&#x6BD4;&#x5982;&quot;hello neuedu&quot;&#xFF0C;&quot;&#x4F60;&#x597D;&#xFF0C;&#x4E1C;&#x8F6F;&#x777F;&#x9053;&quot;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#x8981;&#x60F3;&#x88AB;&#x8BA1;&#x7B97;&#x673A;&#x8BC6;&#x522B;&#x6216;&#x8005;&#x60F3;&#x5B58;&#x50A8;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x90FD;&#x9700;&#x8981;&#x8F6C;&#x6362;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x5E8F;&#x5217;&#x3002;&#x90A3;&#x4E48;&#x5B57;&#x7B26;&#x4E0E;&#x4E8C;&#x8FDB;&#x5236;&#x5E8F;&#x5217;&#x600E;&#x4E48;&#x8FDB;&#x884C;&#x76F8;&#x4E92;&#x8F6C;&#x6362;&#x5462;&#xFF1F;&#x4E8E;&#x662F;&#x4EBA;&#x4EEC;&#x5C1D;&#x8BD5;&#x5EFA;&#x7ACB;&#x4E00;&#x4E2A;&#x8868;&#x683C;&#x6765;<strong><em>&#x5B58;&#x50A8;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E0E;&#x4E00;&#x4E2A;&#x4E8C;&#x8FDB;&#x5236;&#x5E8F;&#x5217;&#x7684;&#x5BF9;&#x5E94;&#x5173;&#x7CFB;</em></strong>&#x3002;</p>
+<ul>
+<li><strong>&#x7F16;&#x7801;</strong> &#x5C06;&#x5B57;&#x7B26;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x5E8F;&#x5217;&#x7684;&#x8FC7;&#x7A0B;&#x53EB;&#x505A;&#x5B57;&#x7B26;&#x7F16;&#x7801;</li>
+<li><strong>&#x89E3;&#x7801;</strong> &#x5C06;&#x4E8C;&#x8FDB;&#x5236;&#x5E8F;&#x5217;&#x8F6C;&#x6362;&#x4E3A;&#x5BF9;&#x5E94;&#x7684;&#x5B57;&#x7B26;&#x7684;&#x8FC7;&#x7A0B;&#x53EB;&#x505A;&#x5B57;&#x7B26;&#x89E3;&#x7801;</li>
+</ul>
+<h2 id="&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x7B80;&#x5355;&#x53D1;&#x5C55;&#x5386;&#x53F2;"><a name="&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x7B80;&#x5355;&#x53D1;&#x5C55;&#x5386;&#x53F2;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x7B80;&#x5355;&#x53D1;&#x5C55;&#x5386;&#x53F2;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2. &#x5B57;&#x7B26;&#x7F16;&#x7801;&#x7684;&#x7B80;&#x5355;&#x53D1;&#x5C55;&#x5386;&#x53F2;</h2>
+<h3 id="ascii&#x7801;&#x8BDE;&#x751F;"><a name="ascii&#x7801;&#x8BDE;&#x751F;" class="anchor-navigation-ex-anchor" href="#ascii&#x7801;&#x8BDE;&#x751F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.1. ASCII&#x7801;&#x8BDE;&#x751F;</h3>
+<p>&#x6700;&#x65E9;&#x5EFA;&#x7ACB;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E0E;&#x5341;&#x8FDB;&#x5236;&#x6570;&#x5B57;&#x5BF9;&#x5E94;&#x7684;&#x5173;&#x7CFB;&#x7684;&#x662F;&#x7F8E;&#x56FD;&#xFF0C;&#x8FD9;&#x5F20;&#x8868;&#x88AB;&#x79F0;&#x4E3A;ASCII&#x7801;(American Standard Code for Information Interface, &#x7F8E;&#x56FD;&#x6807;&#x51C6;&#x4FE1;&#x606F;&#x4EA4;&#x6362;&#x4EE3;&#x7801;)&#x3002;ASCII&#x7801;&#x662F;&#x57FA;&#x4E8E;&#x62C9;&#x4E01;&#x5B57;&#x6BCD;&#x7684;&#x4E00;&#x5957;&#x7535;&#x8111;&#x7F16;&#x7A0B;&#x7CFB;&#x7EDF;&#xFF0C;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x73B0;&#x4EE3;&#x82F1;&#x8BED;&#x548C;&#x5176;&#x4ED6;&#x897F;&#x6B27;&#x8BED;&#x8A00;&#x3002;&#x5B83;&#x88AB;&#x8BBE;&#x8BA1;&#x4E3A;&#x7528;1&#x4E2A;&#x5B57;&#x8282;&#x6765;&#x8868;&#x793A;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x6240;&#x4EE5;ASCII&#x7801;&#x8868;&#x6700;&#x591A;&#x53EA;&#x80FD;&#x8868;&#x793A;2**8=256&#x4E2A;&#x5B57;&#x7B26;&#x3002;&#x5B9E;&#x9645;&#x4E0A;ASCII&#x7801;&#x8868;&#x4E2D;&#x53EA;&#x6709;128&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5269;&#x4F59;&#x7684;128&#x4E2A;&#x5B57;&#x7B26;&#x662F;&#x9884;&#x7559;&#x6269;&#x5C55;&#x7528;&#x7684;&#x3002;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/468490-579f72976a3c7c76.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<h3 id="gbk&#x7B49;&#x5404;&#x56FD;&#x7F16;&#x7801;&#x8BDE;&#x751F;"><a name="gbk&#x7B49;&#x5404;&#x56FD;&#x7F16;&#x7801;&#x8BDE;&#x751F;" class="anchor-navigation-ex-anchor" href="#gbk&#x7B49;&#x5404;&#x56FD;&#x7F16;&#x7801;&#x8BDE;&#x751F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.2. GBK&#x7B49;&#x5404;&#x56FD;&#x7F16;&#x7801;&#x8BDE;&#x751F;</h3>
+<p>&#x968F;&#x7740;&#x8BA1;&#x7B97;&#x673A;&#x7684;&#x666E;&#x53CA;&#x548C;&#x53D1;&#x5C55;&#xFF0C;&#x5F88;&#x8FC7;&#x56FD;&#x5BB6;&#x90FD;&#x5F00;&#x59CB;&#x4F7F;&#x7528;&#x8BA1;&#x7B97;&#x673A;&#x3002;&#x5927;&#x5BB6;&#x53D1;&#x73B0;ASCII&#x7801;&#x9884;&#x7559;&#x7684;128&#x4E2A;&#x4F4D;&#x7F6E;&#x6839;&#x672C;&#x65E0;&#x6CD5;&#x5B58;&#x50A8;&#x81EA;&#x5DF1;&#x56FD;&#x5BB6;&#x7684;&#x6587;&#x5B57;&#x548C;&#x5B57;&#x7B26;&#xFF0C;&#x56E0;&#x6B64;&#x5404;&#x4E2A;&#x56FD;&#x5BB6;&#x5F00;&#x59CB;&#x5236;&#x5B9A;&#x5404;&#x81EA;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x8868;&#xFF0C;&#x5176;&#x4E2D;&#x4E2D;&#x56FD;&#x7684;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x8868;&#x6709;GB2312&#x548C;GBK&#x3002;</p>
+<h3 id="unicode&#x8BDE;&#x751F;&#xFF08;&#x4E07;&#x56FD;&#x7801;&#xFF09;"><a name="unicode&#x8BDE;&#x751F;&#xFF08;&#x4E07;&#x56FD;&#x7801;&#xFF09;" class="anchor-navigation-ex-anchor" href="#unicode&#x8BDE;&#x751F;&#xFF08;&#x4E07;&#x56FD;&#x7801;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.3. Unicode&#x8BDE;&#x751F;&#xFF08;&#x4E07;&#x56FD;&#x7801;&#xFF09;</h3>
+<p>&#x540E;&#x6765;&#x968F;&#x7740;&#x4E16;&#x754C;&#x4E92;&#x8054;&#x7F51;&#x7684;&#x5F62;&#x6210;&#x548C;&#x53D1;&#x5C55;&#xFF0C;&#x5404;&#x56FD;&#x7684;&#x4EBA;&#x4EEC;&#x5F00;&#x59CB;&#x6709;&#x4E86;&#x4E92;&#x76F8;&#x4EA4;&#x6D41;&#x7684;&#x9700;&#x8981;&#x3002;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5C31;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x6BCF;&#x4E2A;&#x56FD;&#x5BB6;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x8868;&#x90FD;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x3002;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#xFF0C;&#x4EBA;&#x4EEC;&#x5E0C;&#x671B;&#x6709;&#x4E00;&#x4E2A;&#x4E16;&#x754C;&#x7EDF;&#x4E00;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x8868;&#x6765;&#x5B58;&#x653E;&#x6240;&#x6709;&#x56FD;&#x5BB6;&#x6240;&#x4F7F;&#x7528;&#x7684;&#x6587;&#x5B57;&#x548C;&#x7B26;&#x53F7;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;Unicode&#x3002;Unicode&#x53C8;&#x88AB;&#x79F0;&#x4E3A; &#x7EDF;&#x4E00;&#x7801;&#x3001;&#x4E07;&#x56FD;&#x7801;&#x3001;&#x5355;&#x4E00;&#x7801;&#xFF0C;&#x5B83;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4F20;&#x7EDF;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x65B9;&#x6848;&#x7684;&#x5C40;&#x9650;&#x6027;&#x800C;&#x4EA7;&#x751F;&#x7684;&#xFF0C;&#x5B83;&#x4E3A;&#x6BCF;&#x79CD;&#x8BED;&#x8A00;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x5B57;&#x7B26;&#x8BBE;&#x5B9A;&#x4E86;&#x7EDF;&#x4E00;&#x5E76;&#x4E14;&#x4E3A;&#x4E4B;&#x4E00;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x7F16;&#x7801;&#x3002;Unicode&#x89C4;&#x5B9A;&#x6240;&#x6709;&#x7684;&#x5B57;&#x7B26;&#x548C;&#x7B26;&#x53F7;&#x6700;&#x5C11;&#x7531;2&#x4E2A;&#x5B57;&#x8282;&#xFF08;16&#x4F4D;&#xFF09;&#x6765;&#x8868;&#x793A;&#xFF0C;&#x6240;&#x4EE5;Unicode&#x7801;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x7684;&#x6700;&#x5C11;&#x5B57;&#x7B26;&#x4E2A;&#x6570;&#x4E3A;2**16=65536&#x3002;</p>
+<h3 id="utf-8&#x8BDE;&#x751F;"><a name="utf-8&#x8BDE;&#x751F;" class="anchor-navigation-ex-anchor" href="#utf-8&#x8BDE;&#x751F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.2.4. UTF-8&#x8BDE;&#x751F;</h3>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;Unicode&#x8FD8;&#x8981;UTF-8&#x5462;&#xFF1F;&#x56E0;&#x4E3A;&#x7F8E;&#x56FD;&#x4EBA;&#x4E0D;&#x4E50;&#x610F;&#x4E86;&#xFF0C;&#x7531;&#x4E8E;&#x5F53;&#x65F6;&#x5B58;&#x50A8;&#x8BBE;&#x5907;&#x662F;&#x975E;&#x5E38;&#x6602;&#x8D35;&#x7684;&#xFF0C;&#x800C;Unicode&#x4E2D;&#x89C4;&#x5B9A;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x6700;&#x5C11;&#x8981;&#x7531;2&#x4E2A;&#x5B57;&#x8282;&#x8868;&#x793A;&#x3002;&#x7F8E;&#x56FD;&#x4EBA;&#x8BA4;&#x4E3A;&#x50CF;&#x539F;&#x6765;ASCII&#x7801;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x7528;1&#x4E2A;&#x5B57;&#x8282;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x56E0;&#x6B64;&#x51B3;&#x5B9A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x6765;&#x8282;&#x7701;&#x5B58;&#x50A8;&#x7A7A;&#x95F4;&#x3002;UTF-8&#x662F;&#x5BF9;Unicode&#x7F16;&#x7801;&#x7684;&#x538B;&#x7F29;&#x548C;&#x4F18;&#x5316;&#xFF0C;&#x5B83;&#x4E0D;&#x5728;&#x8981;&#x6C42;&#x6700;&#x5C11;&#x4F7F;&#x7528;2&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x548C;&#x7B26;&#x53F7;&#x8FDB;&#x884C;&#x5206;&#x7C7B;&#xFF1A;</p>
+<ul>
+<li>ascii&#x7801;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x7528;1&#x4E2A;&#x5B57;&#x8282;&#x4FDD;&#x5B58;</li>
+<li>&#x6B27;&#x6D32;&#x7684;&#x5B57;&#x7B26;&#x7528;2&#x4E2A;&#x5B57;&#x8282;&#x4FDD;&#x5B58;</li>
+<li>&#x4E1C;&#x4E9A;&#x7684;&#x5B57;&#x7B26;&#x7528;3&#x4E2A;&#x5B57;&#x8282;&#x4FDD;&#x5B58;</li>
+<li>...</li>
+</ul>
+<p>UTF-8&#x662F;&#x76EE;&#x524D;&#x6700;&#x5E38;&#x7528;&#xFF0C;&#x4E5F;&#x662F;&#x88AB;&#x63A8;&#x8350;&#x4F7F;&#x7528;&#x7684;&#x5B57;&#x7B26;&#x7F16;&#x7801;&#x3002;</p>
+<h2 id="&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x7684;&#x8F6C;&#x6362;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x7684;&#x8F6C;&#x6362;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x7684;&#x8F6C;&#x6362;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3. &#x5B57;&#x7B26;&#x4E32;&#x548C;&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x7684;&#x8F6C;&#x6362;</h2>
+<h3 id="&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x8282;&#x5E8F;&#x5217;"><a name="&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x8282;&#x5E8F;&#x5217;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x8282;&#x5E8F;&#x5217;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.1. &#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x5B57;&#x8282;&#x5E8F;&#x5217;</h3>
+<pre class="language-"><code class="lang-python"><span class="token builtin">bytes</span> <span class="token operator">=</span> <span class="token string">&apos;&#x5F20;&#x4E09;&apos;</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">bytes</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token builtin">bytes</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token builtin">bytes</span> <span class="token operator">=</span> <span class="token string">&apos;&#x5F20;&#x4E09;&apos;</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">bytes</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token builtin">bytes</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token builtin">bytes</span> <span class="token operator">=</span> <span class="token string">&apos;&#x5F20;&#x4E09;&apos;</span><span class="token punctuation">.</span>encode<span class="token punctuation">(</span><span class="token string">&apos;gbk&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">bytes</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span><span class="token builtin">bytes</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;</p>
+<pre class="language-"><code>b&apos;\xe5\xbc\xa0\xe4\xb8\x89&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;bytes&apos;</span><span class="token punctuation">&gt;</span></span>
+b&apos;\xe5\xbc\xa0\xe4\xb8\x89&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;bytes&apos;</span><span class="token punctuation">&gt;</span></span>
+b&apos;\xd5\xc5\xc8\xfd&apos;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;bytes&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p><code>encode&#x9ED8;&#x8BA4;&#x6309;utf-8&#x7F16;&#x7801;</code></p>
+<h3 id="&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;"><a name="&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x8282;&#x5E8F;&#x5217;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;"><i class="fa fa-link" aria-hidden="true"></i></a>1.3.2. &#x5B57;&#x8282;&#x5E8F;&#x5217;&#x8F6C;&#x5B57;&#x7B26;&#x4E32;</h3>
+<pre class="language-"><code class="lang-python">
+
+<span class="token builtin">bytes</span> <span class="token operator">=</span> <span class="token string">b&apos;\xe5\xbc\xa0\xe4\xb8\x89&apos;</span>
+msg1 <span class="token operator">=</span> <span class="token builtin">bytes</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>msg1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>msg1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+msg1 <span class="token operator">=</span> <span class="token builtin">bytes</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>msg1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>msg1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+msg1 <span class="token operator">=</span> <span class="token builtin">bytes</span><span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token string">&apos;gbk&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>msg1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>msg1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;</p>
+<pre class="language-"><code>&#x5F20;&#x4E09;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span>
+&#x5F20;&#x4E09;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span>
+&#x5BEE;&#x72B1;&#x7B01;
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>class</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h2 id="&#x6587;&#x4EF6;&#x7684;&#x6982;&#x5FF5;&#x548C;&#x4F5C;&#x7528;"><a name="&#x6587;&#x4EF6;&#x7684;&#x6982;&#x5FF5;&#x548C;&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x7684;&#x6982;&#x5FF5;&#x548C;&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>1.4. &#x6587;&#x4EF6;&#x7684;&#x6982;&#x5FF5;&#x548C;&#x4F5C;&#x7528;</h2>
+<ul>
+<li>&#x8BA1;&#x7B97;&#x673A;&#x7684; <strong>&#x6587;&#x4EF6;</strong>&#xFF0C;&#x5C31;&#x662F;&#x5B58;&#x50A8;&#x5728;&#x786C;&#x76D8;&#x4E0A;&#x7684; <strong>&#x6570;&#x636E;</strong></li>
+</ul>
+<h2 id="&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"><a name="&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5. &#x6587;&#x4EF6;&#x7684;&#x5B58;&#x50A8;&#x65B9;&#x5F0F;</h2>
+<ul>
+<li>&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#xFF0C;&#x6587;&#x4EF6;&#x662F;&#x4EE5; <strong>&#x4E8C;&#x8FDB;&#x5236;</strong> &#x7684;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x5728;&#x78C1;&#x76D8;&#x4E0A;&#x7684;</li>
+</ul>
+<h3 id="&#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;"><a name="&#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.5.1. &#x6587;&#x672C;&#x6587;&#x4EF6;&#x548C;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</h3>
+<ul>
+<li><p>&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF08;&#x5B57;&#x7B26;&#x4E32;&#xFF09;</p>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <strong>&#x6587;&#x672C;&#x7F16;&#x8F91;&#x8F6F;&#x4EF6;</strong> &#x67E5;&#x770B;</li>
+<li>&#x672C;&#x8D28;&#x4E0A;&#x8FD8;&#x662F;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</li>
+<li>&#x4F8B;&#x5982;&#xFF1A;python &#x7684;&#x6E90;&#x7A0B;&#x5E8F;</li>
+</ul>
+</li>
+<li><p>&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;</p>
+<ul>
+<li>&#x4FDD;&#x5B58;&#x7684;&#x5185;&#x5BB9; &#x4E0D;&#x662F;&#x7ED9;&#x4EBA;&#x76F4;&#x63A5;&#x9605;&#x8BFB;&#x7684;&#xFF0C;&#x800C;&#x662F; <strong>&#x63D0;&#x4F9B;&#x7ED9;&#x5176;&#x4ED6;&#x8F6F;&#x4EF6;&#x4F7F;&#x7528;&#x7684;</strong></li>
+<li>&#x4F8B;&#x5982;&#xFF1A;&#x56FE;&#x7247;&#x6587;&#x4EF6;&#x3001;&#x97F3;&#x9891;&#x6587;&#x4EF6;&#x3001;&#x89C6;&#x9891;&#x6587;&#x4EF6;&#x7B49;&#x7B49;</li>
+<li>&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x4E0D;&#x80FD;&#x4F7F;&#x7528; <strong>&#x6587;&#x672C;&#x7F16;&#x8F91;&#x8F6F;&#x4EF6;</strong> &#x67E5;&#x770B;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x6587;&#x4EF6;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;"><a name="&#x6587;&#x4EF6;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6. &#x6587;&#x4EF6;&#x7684;&#x57FA;&#x672C;&#x64CD;&#x4F5C;</h2>
+<h3 id="&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x5957;&#x8DEF;"><a name="&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x5957;&#x8DEF;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x5957;&#x8DEF;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.1. &#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x5957;&#x8DEF;</h3>
+<p>&#x5728; <strong>&#x8BA1;&#x7B97;&#x673A;</strong> &#x4E2D;&#x8981;&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x5957;&#x8DEF;&#x975E;&#x5E38;&#x56FA;&#x5B9A;&#xFF0C;&#x4E00;&#x5171;&#x5305;&#x542B;<strong>&#x4E09;&#x4E2A;&#x6B65;&#x9AA4;</strong>&#xFF1A;</p>
+<ol>
+<li>&#x6253;&#x5F00;&#x6587;&#x4EF6;</li>
+<li>&#x8BFB;&#x3001;&#x5199;&#x6587;&#x4EF6;<ul>
+<li><strong>&#x8BFB;</strong> &#x5C06;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8BFB;&#x5165;&#x5185;&#x5B58;</li>
+<li><strong>&#x5199;</strong> &#x5C06;&#x5185;&#x5B58;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x6587;&#x4EF6;</li>
+</ul>
+</li>
+<li>&#x5173;&#x95ED;&#x6587;&#x4EF6;</li>
+</ol>
+<h3 id="&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x65B9;&#x6CD5;"><a name="&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x65B9;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;&#x65B9;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.2. &#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x7684;&#x51FD;&#x6570;/&#x65B9;&#x6CD5;</h3>
+<ul>
+<li>&#x5728; <code>Python</code> &#x4E2D;&#x8981;&#x64CD;&#x4F5C;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x8BB0;&#x4F4F; 1 &#x4E2A;&#x51FD;&#x6570;&#x548C; 3 &#x4E2A;&#x65B9;&#x6CD5;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>&#x5E8F;&#x53F7;</th>
+<th>&#x51FD;&#x6570;/&#x65B9;&#x6CD5;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>open</td>
+<td>&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;</td>
+</tr>
+<tr>
+<td>02</td>
+<td>read</td>
+<td>&#x5C06;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x8BFB;&#x53D6;&#x5230;&#x5185;&#x5B58;</td>
+</tr>
+<tr>
+<td>03</td>
+<td>write</td>
+<td>&#x5C06;&#x6307;&#x5B9A;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>04</td>
+<td>close</td>
+<td>&#x5173;&#x95ED;&#x6587;&#x4EF6;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>open</code> &#x51FD;&#x6570;&#x8D1F;&#x8D23;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;</li>
+<li><code>read</code>/<code>write</code>/<code>close</code> &#x4E09;&#x4E2A;&#x65B9;&#x6CD5;&#x90FD;&#x9700;&#x8981;&#x901A;&#x8FC7; <strong>&#x6587;&#x4EF6;&#x5BF9;&#x8C61;</strong> &#x6765;&#x8C03;&#x7528;</li>
+</ul>
+<h3 id="read-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x8BFB;&#x53D6;&#x6587;&#x4EF6;"><a name="read-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x8BFB;&#x53D6;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#read-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x8BFB;&#x53D6;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.3. read &#x65B9;&#x6CD5; &#x2014;&#x2014; &#x8BFB;&#x53D6;&#x6587;&#x4EF6;</h3>
+<ul>
+<li><code>open</code> &#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x8981;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x540D;&#xFF08;&#x6587;&#x4EF6;&#x540D;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#xFF09;<ul>
+<li>&#x5982;&#x679C;&#x6587;&#x4EF6; <strong>&#x5B58;&#x5728;</strong>&#xFF0C;&#x8FD4;&#x56DE; <strong>&#x6587;&#x4EF6;&#x64CD;&#x4F5C;&#x5BF9;&#x8C61;</strong></li>
+<li>&#x5982;&#x679C;&#x6587;&#x4EF6; <strong>&#x4E0D;&#x5B58;&#x5728;</strong>&#xFF0C;&#x4F1A; <strong>&#x629B;&#x51FA;&#x5F02;&#x5E38;</strong></li>
+</ul>
+</li>
+<li><code>read</code> &#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x4E00;&#x6B21;&#x6027; <strong>&#x8BFB;&#x5165;</strong> &#x5E76; <strong>&#x8FD4;&#x56DE;</strong> &#x6587;&#x4EF6;&#x7684; <strong>&#x6240;&#x6709;&#x5185;&#x5BB9;</strong></li>
+<li><code>close</code> &#x65B9;&#x6CD5;&#x8D1F;&#x8D23; <strong>&#x5173;&#x95ED;&#x6587;&#x4EF6;</strong><ul>
+<li>&#x5982;&#x679C; <strong>&#x5FD8;&#x8BB0;&#x5173;&#x95ED;&#x6587;&#x4EF6;</strong>&#xFF0C;<strong>&#x4F1A;&#x9020;&#x6210;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x6D88;&#x8017;&#xFF0C;&#x800C;&#x4E14;&#x4F1A;&#x5F71;&#x54CD;&#x5230;&#x540E;&#x7EED;&#x5BF9;&#x6587;&#x4EF6;&#x7684;&#x8BBF;&#x95EE;</strong>
+&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;demo.txt&#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;neuedu&#xFF0C;&#x653E;&#x5230;&#x548C;readfile.py&#x540C;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;</li>
+</ul>
+</li>
+</ul>
+<p>readfile.py</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># 1\. &#x6253;&#x5F00; - &#x6587;&#x4EF6;&#x540D;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5927;&#x5C0F;&#x5199;</span>
+<span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;demo.txt&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+<span class="token comment"># 2\. &#x8BFB;&#x53D6;</span>
+text <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+
+<span class="token comment"># 3\. &#x5173;&#x95ED;</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>_io.TextIOWrapper</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>demo.txt<span class="token punctuation">&apos;</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>r<span class="token punctuation">&apos;</span></span> <span class="token attr-name">encoding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>cp936<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>
+neuedu
+</code></pre><hr>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;demo2.txt&#x6587;&#x4EF6;&#xFF0C;&#x8F93;&#x5165;<code>&#x4E1C;&#x8F6F;&#x777F;&#x9053;</code>&#xFF0C;&#x4FDD;&#x5B58;&#x4E3A;utf-8&#x6A21;&#x5F0F;&#xFF0C;&#x653E;&#x5230;&#x548C;readfile.py&#x540C;&#x7EA7;&#x76EE;&#x5F55;&#x4E0B;
+readfile.py</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># 1\. &#x6253;&#x5F00; - &#x6587;&#x4EF6;&#x540D;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5927;&#x5C0F;&#x5199;</span>
+<span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;demo2.txt&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+<span class="token comment"># 2\. &#x8BFB;&#x53D6;</span>
+text <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+
+<span class="token comment"># 3\. &#x5173;&#x95ED;</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>_io.TextIOWrapper</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>demo2.txt<span class="token punctuation">&apos;</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>r<span class="token punctuation">&apos;</span></span> <span class="token attr-name">encoding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>cp936<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>
+&#x6D93;&#x6EC6;&#x848B;&#x942B;&#x5757;&#x4EBE;
+</code></pre><p>&#x53EF;&#x89C1;&#x53D1;&#x751F;&#x4E86;&#x4E2D;&#x6587;&#x4E71;&#x7801;&#x95EE;&#x9898;&#x3002;</p>
+<p><code>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x53D1;&#x751F;&#x7684;&#x8FC7;&#x7A0B;&#x662F;&#x5C06;&#x5B58;&#x50A8;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x8BFB;&#x53D6;&#x5230;&#x53D8;&#x91CF;&#x4E2D;&#xFF08;&#x5185;&#x5B58;&#x4E2D;&#xFF09;&#xFF0C;&#x8FD9;&#x91CC;&#x6D89;&#x53CA;&#x7684;&#x4E8B;&#x60C5;&#x7684;&#x5148;&#x540E;&#x987A;&#x5E8F;&#x662F;&#x8FD9;&#x6837;&#x7684;&#xFF0C;&#x7406;&#x89E3;&#x8FD9;&#x4E9B;&#x975E;&#x5E38;&#x91CD;&#x8981;&#xFF1A;</code></p>
+<p>1.&#x6700;&#x5F00;&#x59CB;&#xFF0C;&#x6211;&#x4EEC;&#x7528;&#x67D0;&#x4E2A;&#x7F16;&#x8F91;&#x8F6F;&#x4EF6;&#xFF08;&#x8BB0;&#x4E8B;&#x672C;&#x7A0B;&#x5E8F;&#xFF09;&#xFF0C;&#x7F16;&#x8F91;&#x4E86;&quot;&#x4E1C;&#x8F6F;&#x777F;&#x9053;&quot;&#x56DB;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x6309;<code>utf-8</code>&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#xFF0C;&#x6B64;&#x5904;&#x653E;&#x751F;&#x4E86;&#x7F16;&#x7801;&#x8FC7;&#x7A0B;&#xFF08;&#x5B57;&#x7B26;&#x4E32;---&gt;&#x5B57;&#x8282;&#xFF09;&#x3002;
+2.&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;python&#x4EE3;&#x7801;&#xFF0C;&#x6253;&#x5F00;&#xFF08;open&#xFF09;&#x6587;&#x4EF6;&#xFF0C;&#x6B64;&#x65F6;&#x5C06;&#x5B58;&#x50A8;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF08;&#x5B57;&#x8282;&#xFF0C;&#x4E8C;&#x8FDB;&#x5236;&#xFF09;&#xFF0C;&#x8BFB;&#x53D6;&#x5230;&#x53D8;&#x91CF;&#x4E2D;&#xFF08;&#x5185;&#x5B58;&#x4E2D;&#xFF09;&#xFF0C;&#x8F6C;&#x6362;&#x6210;&#x5B57;&#x7B26;&#x4E32;&#x3002;&#x8FD9;&#x4F1A;&#x53D1;&#x751F;&#x4E00;&#x4E2A;&#x89E3;&#x7801;&#x8FC7;&#x7A0B;&#xFF08;&#x5B57;&#x8282;---&gt;&#x5B57;&#x7B26;&#x4E32;&#xFF09;&#x3002;Python&#x9ED8;&#x8BA4;&#x662F;&#x6309;&#x7167;&#x4EC0;&#x4E48;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x89E3;&#x7801;&#x7684;&#x5462;&#xFF0C;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x7ED9;&#x51FA;&#x4E86;&#x7B54;&#x6848;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>_io.TextIOWrapper</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>demo2.txt<span class="token punctuation">&apos;</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>r<span class="token punctuation">&apos;</span></span> <span class="token attr-name">encoding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>cp936<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>open&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x662F;TextIOWrapper&#x7C7B;&#x578B;&#x7684;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;&#xFF0C;cp936&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x6587;&#x672C;&#x7F16;&#x7801;&#x683C;&#x5F0F;&#xFF08;gb2312&#xFF09;
+&#x8BF4;&#x660E;&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x65F6;&#x9ED8;&#x8BA4;&#x6309;gb2312&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x89E3;&#x7801;&#x3002;&#x7F16;&#x7801;&#x548C;&#x89E3;&#x7801;&#x7684;&#x65B9;&#x5F0F;&#x4E0D;&#x540C;&#xFF0C;&#x6545;&#x800C;&#x53D1;&#x751F;&#x4E71;&#x7801;&#x3002;</p>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x6709;2&#x4E2A;&#xFF1A;
+1.&#x8BB0;&#x4E8B;&#x672C;&#x7F16;&#x8F91;&#x5B8C;&#x4FDD;&#x5B58;&#x65F6;&#xFF0C;&#x6309;&apos;gb2312&apos;&#x65B9;&#x5F0F;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#xFF08;ANSI&#xFF09;
+<img src="https://upload-images.jianshu.io/upload_images/468490-5c37b15309b33d68.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png">
+2.&#x6587;&#x4EF6;&#x6253;&#x5F00;&#x65F6;&#x6307;&#x5B9A;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x4E3A;utf-8&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># 1\. &#x6253;&#x5F00; - &#x6587;&#x4EF6;&#x540D;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x5927;&#x5C0F;&#x5199;</span>
+<span class="token builtin">file</span> <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;demo2.txt&quot;</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">file</span><span class="token punctuation">)</span>
+<span class="token comment"># 2\. &#x8BFB;&#x53D6;</span>
+text <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span>
+
+<span class="token comment"># 3\. &#x5173;&#x95ED;</span>
+<span class="token builtin">file</span><span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8F93;&#x51FA;</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>_io.TextIOWrapper</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>demo2.txt<span class="token punctuation">&apos;</span></span> <span class="token attr-name">mode</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>r<span class="token punctuation">&apos;</span></span> <span class="token attr-name">encoding</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&apos;</span>utf-8<span class="token punctuation">&apos;</span></span><span class="token punctuation">&gt;</span></span>
+&#x4E1C;&#x8F6F;&#x777F;&#x9053;
+</code></pre><h3 id="write-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x5199;&#x5165;&#x6587;&#x4EF6;"><a name="write-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x5199;&#x5165;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#write-&#x65B9;&#x6CD5;-&#x2014;&#x2014;-&#x5199;&#x5165;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.6.4. write &#x65B9;&#x6CD5; &#x2014;&#x2014; &#x5199;&#x5165;&#x6587;&#x4EF6;</h3>
+<p><strong>&#x5199;&#x5165;&#x6587;&#x4EF6;&#x793A;&#x4F8B;</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x6253;&#x5F00;&#x6587;&#x4EF6;</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;abc.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">&quot;hello neuedu&#xFF01;\n&quot;</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string">&quot;&#x4ECA;&#x5929;&#x5929;&#x6C14;&#x771F;&#x597D;&quot;</span><span class="token punctuation">)</span>
+
+<span class="token comment"># &#x5173;&#x95ED;&#x6587;&#x4EF6;</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x67E5;&#x770B;abc.txt</p>
+<pre class="language-"><code>hello neuedu&#xFF01;
+&#x4ECA;&#x5929;&#x5929;&#x6C14;&#x771F;&#x597D;
+</code></pre><p>&#x5982;&#x679C;&#x770B;&#x5230;&#x7684;&#x7684;&#x4E2D;&#x6587;&#x662F;&#x4E71;&#x7801;&#xFF0C;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x662F;&#x4EE5;&#x8BB0;&#x4E8B;&#x672C;&#x7A0B;&#x5E8F;&#x6253;&#x5F00;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x7528;pycharm&#x6253;&#x5F00;&#xFF0C;&#x770B;&#x5230;&#x7684;&#x662F;&#x4E71;&#x7801;&#xFF0C;&#x548C;&#x8BFB;&#x6587;&#x4EF6;&#x662F;&#x540C;&#x6837;&#x7684;&#x9053;&#x7406;&#xFF0C;python&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;gb2312&#x7684;&#x65B9;&#x5F0F;&#x5C06;&#x4E2D;&#x6587;&#x7F16;&#x7801;&#xFF0C;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;pycharm&#x9ED8;&#x8BA4;&#x4EE5;utf-8&#x683C;&#x5F0F;&#x89E3;&#x7801;&#x6253;&#x5F00;&#xFF0C;&#x6545;&#x800C;&#x770B;&#x5230;&#x662F;&#x4E71;&#x7801;&#xFF0C;&#x8981;&#x60F3;&#x4EE5;utf-8&#x65B9;&#x5F0F;&#x5C06;&#x4E2D;&#x6587;&#x7F16;&#x7801;&#xFF0C;&#x5199;&#x5165;&#x5230;&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x9700;&#x8981;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;abc.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">,</span>encoding<span class="token operator">=</span><span class="token string">&apos;utf-8&apos;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x8981;&#x60F3;&#x5411;&#x6587;&#x4EF6;&#x4E2D;&#x5199;&#x5165;&#x6570;&#x636E;&#xFF0C;open&#x65B9;&#x6CD5;&#x5FC5;&#x987B;&#x5199;&#x4E0A;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;w&#x3002;</p>
+<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;abc.txt&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;w&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>open&#x65B9;&#x6CD5;&#x9ED8;&#x8BA4;&#x4EE5;&#x8BFB;&#x7684;&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#xFF0C;&#x4EE5;&#x4E0B;2&#x884C;&#x4EE3;&#x7801;&#x662F;&#x7B49;&#x4EF7;&#x7684;&#x3002;</p>
+<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;abc.txt&quot;</span><span class="token punctuation">)</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;abc.txt&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;r&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6240;&#x4EE5;&#xFF0C;&#x8BFB;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;r&#xFF0C;&#x5199;&#x6587;&#x4EF6;&#x4E0D;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x3002;</p>
+<h2 id="readreadlinereadlines&#x533A;&#x522B;&#x4E0E;&#x7528;&#x6CD5;"><a name="readreadlinereadlines&#x533A;&#x522B;&#x4E0E;&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#readreadlinereadlines&#x533A;&#x522B;&#x4E0E;&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>1.7. read(),readline(),readlines()&#x533A;&#x522B;&#x4E0E;&#x7528;&#x6CD5;</h2>
+<p>0.&#x51C6;&#x5907;
+&#x5047;&#x8BBE;a.txt&#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre class="language-"><code>Hello
+Welcome
+What is the luck...
+</code></pre><ol>
+<li>read([size])&#x65B9;&#x6CD5;
+read([size])&#x65B9;&#x6CD5;&#x4ECE;&#x6587;&#x4EF6;&#x5F53;&#x524D;&#x4F4D;&#x7F6E;&#x8D77;&#x8BFB;&#x53D6;size&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x82E5;&#x65E0;&#x53C2;&#x6570;size&#xFF0C;&#x5219;&#x8868;&#x793A;&#x8BFB;&#x53D6;&#x81F3;&#x6587;&#x4EF6;&#x7ED3;&#x675F;&#x4E3A;&#x6B62;&#xFF0C;&#x5B83;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;a.txt&quot;</span><span class="token punctuation">)</span>
+lines <span class="token operator">=</span> f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;<pre class="language-"><code>Hello
+Welcome
+What is the luck...
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span> #&#x5B57;&#x7B26;&#x4E32;&#x7C7B;&#x578B;
+</code></pre>2.readline()&#x65B9;&#x6CD5;
+&#x4ECE;&#x5B57;&#x9762;&#x610F;&#x601D;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x6BCF;&#x6B21;&#x8BFB;&#x51FA;&#x4E00;&#x884C;&#x5185;&#x5BB9;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;&#x8BFB;&#x53D6;&#x65F6;&#x5360;&#x7528;&#x5185;&#x5B58;&#x5C0F;&#xFF0C;&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x5927;&#x6587;&#x4EF6;&#xFF0C;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x5BF9;&#x8C61;&#x3002;<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;a.txt&quot;</span><span class="token punctuation">)</span>
+line <span class="token operator">=</span> f<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">while</span> line<span class="token punctuation">:</span>
+ <span class="token keyword">print</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span>
+ line <span class="token operator">=</span> f<span class="token punctuation">.</span>readline<span class="token punctuation">(</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token attr-name">&apos;str&apos;</span><span class="token punctuation">&gt;</span></span>
+Hello
+Welcome
+What is the luck...
+</code></pre>3.readlines()&#x65B9;&#x6CD5;&#x8BFB;&#x53D6;&#x6574;&#x4E2A;&#x6587;&#x4EF6;&#x6240;&#x6709;&#x884C;&#xFF0C;&#x4FDD;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5217;&#x8868;(list)&#x53D8;&#x91CF;&#x4E2D;&#xFF0C;&#x6BCF;&#x884C;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#xFF0C;&#x4F46;&#x8BFB;&#x53D6;&#x5927;&#x6587;&#x4EF6;&#x4F1A;&#x6BD4;&#x8F83;&#x5360;&#x5185;&#x5B58;&#x3002;<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;a.txt&quot;</span><span class="token punctuation">)</span>
+lines <span class="token operator">=</span> f<span class="token punctuation">.</span>readlines<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">type</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> line <span class="token keyword">in</span> lines<span class="token punctuation">:</span>
+ <span class="token keyword">print</span><span class="token punctuation">(</span>lines<span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF1A;<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>type</span> <span class="token attr-name">&apos;list&apos;</span><span class="token punctuation">&gt;</span></span>
+Hello
+Welcome
+What is the luck...
+</code></pre>4.&#x6700;&#x7B80;&#x5355;&#x3001;&#x6700;&#x5FEB;&#x901F;&#x7684;&#x9010;&#x884C;&#x5904;&#x7406;&#x6587;&#x672C;&#x7684;&#x65B9;&#x6CD5;&#xFF1A;&#x76F4;&#x63A5;for&#x5FAA;&#x73AF;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;a.txt&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> line <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+ <span class="token keyword">print</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;-with-open&#xFF08;&#xFF09;-as-&#x8BFB;&#x5199;&#x6587;&#x4EF6;"><a name="&#x4F7F;&#x7528;-with-open&#xFF08;&#xFF09;-as-&#x8BFB;&#x5199;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;-with-open&#xFF08;&#xFF09;-as-&#x8BFB;&#x5199;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.8. &#x4F7F;&#x7528; with open&#xFF08;&#xFF09; as &#x8BFB;&#x5199;&#x6587;&#x4EF6;</h2>
+</li>
+</ol>
+<p>&#x7531;&#x4E8E;&#x6587;&#x4EF6;&#x8BFB;&#x5199;&#x65F6;&#x90FD;&#x6709;&#x53EF;&#x80FD;&#x4EA7;&#x751F;IOError&#xFF0C;&#x4E00;&#x65E6;&#x51FA;&#x9519;&#xFF0C;&#x540E;&#x9762;&#x7684;f.close()&#x5C31;&#x4E0D;&#x4F1A;&#x8C03;&#x7528;&#x3002;&#x6240;&#x4EE5;&#xFF0C;&#x4E3A;&#x4E86;&#x4FDD;&#x8BC1;&#x65E0;&#x8BBA;&#x662F;&#x5426;&#x51FA;&#x9519;&#x90FD;&#x80FD;&#x6B63;&#x786E;&#x5730;&#x5173;&#x95ED;&#x6587;&#x4EF6;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;try ... finally&#x6765;&#x5B9E;&#x73B0;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
+    f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;a.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;r&apos;</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">finally</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> f<span class="token punctuation">:</span>
+        f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6BCF;&#x6B21;&#x90FD;&#x8FD9;&#x4E48;&#x5199;&#x5B9E;&#x5728;&#x592A;&#x7E41;&#x7410;&#xFF0C;&#x6240;&#x4EE5;&#xFF0C;Python&#x5F15;&#x5165;&#x4E86;with&#x8BED;&#x53E5;&#x6765;&#x81EA;&#x52A8;&#x5E2E;&#x6211;&#x4EEC;&#x8C03;&#x7528;close()&#x65B9;&#x6CD5;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;a.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;r&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8FD9;&#x548C;&#x524D;&#x9762;&#x7684;try ... finally&#x662F;&#x4E00;&#x6837;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x4EE3;&#x7801;&#x66F4;&#x52A0;&#x7B80;&#x6D01;&#xFF0C;&#x5E76;&#x4E14;&#x4E0D;&#x5FC5;&#x8C03;&#x7528;f.close()&#x65B9;&#x6CD5;&#x3002;</p>
+<h2 id="&#x6587;&#x4EF6;&#x6307;&#x9488;"><a name="&#x6587;&#x4EF6;&#x6307;&#x9488;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x6307;&#x9488;"><i class="fa fa-link" aria-hidden="true"></i></a>1.9. &#x6587;&#x4EF6;&#x6307;&#x9488;</h2>
+<p><strong>&#x6587;&#x4EF6;&#x6307;&#x9488; &#x6807;&#x8BB0; &#x4ECE;&#x54EA;&#x4E2A;&#x4F4D;&#x7F6E;&#x5F00;&#x59CB;&#x8BFB;&#x53D6;&#x6570;&#x636E;</strong></p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x6B21;&#x6253;&#x5F00; &#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x901A;&#x5E38; &#x6587;&#x4EF6;&#x6307;&#x9488;&#x4F1A;&#x6307;&#x5411;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x59CB;&#x4F4D;&#x7F6E;</li>
+<li>&#x5F53;&#x6267;&#x884C;&#x4E86; read &#x65B9;&#x6CD5;&#x540E;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488; &#x4F1A;&#x79FB;&#x52A8;&#x5230; &#x8BFB;&#x53D6;&#x5185;&#x5BB9;&#x7684;&#x672B;&#x5C3E;</li>
+</ul>
+<p>&#x601D;&#x8003;
+&#x5982;&#x679C;&#x6267;&#x884C;&#x4E86;&#x4E00;&#x6B21; read &#x65B9;&#x6CD5;&#xFF0C;&#x8BFB;&#x53D6;&#x4E86;&#x6240;&#x6709;&#x5185;&#x5BB9;&#xFF0C;&#x90A3;&#x4E48;&#x518D;&#x6B21;&#x8C03;&#x7528; read &#x65B9;&#x6CD5;&#xFF0C;&#x8FD8;&#x80FD;&#x591F;&#x83B7;&#x5F97;&#x5230;&#x5185;&#x5BB9;&#x5417;&#xFF1F;</p>
+<p>&#x7B54;&#x6848;
+&#x4E0D;&#x80FD;
+&#x7B2C;&#x4E00;&#x6B21;&#x8BFB;&#x53D6;&#x4E4B;&#x540E;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x79FB;&#x52A8;&#x5230;&#x4E86;&#x6587;&#x4EF6;&#x672B;&#x5C3E;&#xFF0C;&#x518D;&#x6B21;&#x8C03;&#x7528;&#x4E0D;&#x4F1A;&#x8BFB;&#x53D6;&#x5230;&#x4EFB;&#x4F55;&#x7684;&#x5185;&#x5BB9;</p>
+<p><strong>&#x63A7;&#x5236;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x79FB;&#x52A8;</strong>
+&#x65B9;&#x6CD5;&#xFF1A;f.seek(offset,whence)
+offset&#x4EE3;&#x8868;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x7684;&#x504F;&#x79FB;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;&#x662F;&#x5B57;&#x8282;bytes
+whence&#x4EE3;&#x8868;&#x53C2;&#x7167;&#x7269;&#xFF0C;&#x6709;&#x4E09;&#x4E2A;&#x53D6;&#x503C;
+&#xFF08;1&#xFF09;0&#xFF1A;&#x53C2;&#x7167;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;
+&#xFF08;2&#xFF09;1&#xFF1A;&#x53C2;&#x7167;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x6240;&#x5728;&#x7684;&#x4F4D;&#x7F6E;
+&#xFF08;3&#xFF09;2&#xFF1A;&#x53C2;&#x7167;&#x6587;&#x4EF6;&#x672B;&#x5C3E;<br>PS&#xFF1A;&#x5FEB;&#x901F;&#x79FB;&#x52A8;&#x5230;&#x6587;&#x4EF6;&#x672B;&#x5C3E;f.seek&#xFF08;0&#xFF0C;2&#xFF09;
+&#x5F3A;&#x8C03;&#xFF1A;&#x5176;&#x4E2D;whence=1&#x548C;whence=2&#x53EA;&#x80FD;&#x5728;b &#x6A21;&#x5F0F;&#x4E0B;&#x4F7F;&#x7528;
+f.tell()&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5F53;&#x524D;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x7684;&#x4F4D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r&apos;rrf.txt&apos;</span><span class="token punctuation">,</span><span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span><span class="token keyword">as</span> f<span class="token punctuation">:</span>
+<span class="token comment">#     f.readlines()</span>
+<span class="token comment">#     f.seek(6,0)    #&#x4ECE;&#x5F00;&#x5934;&#x79FB;&#x52A8;6&#x4E2A;&#x5B57;&#x8282;</span>
+<span class="token comment">#     print(f.readline().decode()  )</span>
+<span class="token comment">#     print(f.tell() )</span>
+
+<span class="token comment"># with open(r&apos;rrf.txt&apos;, &apos;rb&apos;)as f:</span>
+<span class="token comment">#     f.readline()</span>
+<span class="token comment">#     f.seek(9,1)   #&#x4ECE;&#x5F53;&#x524D;&#x6307;&#x9488;&#x4F4D;&#x7F6E;&#x79FB;&#x52A8;9&#x4E2A;&#x5B57;&#x8282;</span>
+<span class="token comment">#     print(f.readline() .decode() )</span>
+
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">r&apos;rrf.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span><span class="token keyword">as</span> f<span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>                    <span class="token comment">#&#x6307;&#x9488;&#x5728;&#x672B;&#x5C3E;&#xFF0C;&#x5F80;&#x524D;&#x8BFB;5&#x4E2A;&#x5B57;&#x8282;</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">.</span>decode<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>tell<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>rrf.txt</p>
+<pre class="language-"><code>abcdefghijklmnopqrstuvwxyz
+</code></pre><h2 id="&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x603B;&#x7ED3;"><a name="&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x603B;&#x7ED3;" class="anchor-navigation-ex-anchor" href="#&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x603B;&#x7ED3;"><i class="fa fa-link" aria-hidden="true"></i></a>1.10. &#x6253;&#x5F00;&#x6587;&#x4EF6;&#x7684;&#x65B9;&#x5F0F;&#x603B;&#x7ED3;</h2>
+<ul>
+<li><code>open</code> &#x51FD;&#x6570;&#x9ED8;&#x8BA4;&#x4EE5; <strong>&#x53EA;&#x8BFB;&#x65B9;&#x5F0F;</strong> &#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4E14;&#x8FD4;&#x56DE;&#x6587;&#x4EF6;&#x5BF9;&#x8C61;</li>
+</ul>
+<p>&#x8BED;&#x6CD5;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;&#x6587;&#x4EF6;&#x540D;&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&quot;</span><span class="token punctuation">)</span>
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;</th>
+<th>&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>&#x4EE5;<strong>&#x53EA;&#x8BFB;</strong>&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;&#x6587;&#x4EF6;&#x7684;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#xFF0C;&#x8FD9;&#x662F;<strong>&#x9ED8;&#x8BA4;&#x6A21;&#x5F0F;</strong>&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x629B;&#x51FA;&#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td>w</td>
+<td>&#x4EE5;<strong>&#x53EA;&#x5199;</strong>&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>a</td>
+<td>&#x4EE5;<strong>&#x8FFD;&#x52A0;</strong>&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x5C3E;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5199;&#x5165;</td>
+</tr>
+<tr>
+<td>r+</td>
+<td>&#x4EE5;<strong>&#x8BFB;&#x5199;</strong>&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;&#x6587;&#x4EF6;&#x7684;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x5F00;&#x5934;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x629B;&#x51FA;&#x5F02;&#x5E38;</td>
+</tr>
+<tr>
+<td>w+</td>
+<td>&#x4EE5;<strong>&#x8BFB;&#x5199;</strong>&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x5B58;&#x5728;&#x4F1A;&#x88AB;&#x8986;&#x76D6;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;</td>
+</tr>
+<tr>
+<td>a+</td>
+<td>&#x4EE5;<strong>&#x8BFB;&#x5199;</strong>&#x65B9;&#x5F0F;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF0C;&#x6587;&#x4EF6;&#x6307;&#x9488;&#x5C06;&#x4F1A;&#x653E;&#x5728;&#x6587;&#x4EF6;&#x7684;&#x7ED3;&#x5C3E;&#x3002;&#x5982;&#x679C;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5199;&#x5165;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x601D;&#x8003;</strong>
+&#x5728;&#x4F7F;&#x7528;python&#x7684;open&#x51FD;&#x6570;&#x5BF9;&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x6253;&#x5F00;&#x65F6;&#xFF0C; </p>
+<ul>
+<li>&#x7528;&#x4EC0;&#x4E48;&#x6A21;&#x5F0F;&#x6253;&#x5F00;&#x624D;&#x6700;&#x5408;&#x9002;? </li>
+<li>&#x662F;&#x7528;r? &#x8FD8;&#x662F;w? &#x8FD8;&#x662F;a? &#xFF0C;&#x540E;&#x9762;&#x8FD8;&#x8981;&#x4E0D;&#x8981;&#x52A0;&#x4E2A;+??? </li>
+<li>&#x8BFB;&#x5199;&#x56FE;&#x7247;&#x7B49;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x600E;&#x4E48;&#x529E;&#xFF1F;</li>
+</ul>
+<pre class="language-"><code>    with open(&apos;test.txt&apos;,&apos;&#x6253;&#x5F00;&#x6A21;&#x5F0F;&#x9009;&#x5565;&#xFF1F;&#xFF1F;&#xFF1F;&#xFF1F;&#xFF1F;&apos;) as w:
+            w.write(&quot;&#x8981;&#x5199;&#x5165;&#x7684;&#x5185;&#x5BB9;&quot;)
+</code></pre><p><code>&#x603B;&#x7ED3;</code></p>
+<ol>
+<li><strong>&#x5DF2;&#x7ECF;&#x786E;&#x5B9A;&#x8981;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#xFF08;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x4F1A;&#x62A5;&#x9519;&#xFF09;&#x3002;</strong><ul>
+<li>&#x53EA;&#x8BFB;&#x6587;&#x672C;&#x6587;&#x4EF6; &#xFF1F; &#x7528;<strong>r</strong></li>
+<li>&#x53EA;&#x8BFB;&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF08;&#x56FE;&#x7247;&#x7B49;&#xFF09;&#xFF1F; &#x7528;<strong>rb</strong></li>
+<li>&#x8981;&#x65E2;&#x8BFB;&#x53C8;&#x5199;&#xFF1F; &#x5728;&#x540E;&#x8FB9;&#x6DFB;&#x4E2A;<strong>+</strong>&#x53F7;&#x589E;&#x52A0;&#x6743;&#x9650;&#xFF0C; &#x7528;<strong>r+</strong> &#x6216;&#x8005; <strong>rb+</strong></li>
+</ul>
+</li>
+<li><p><strong>&#x4E0D;&#x786E;&#x5B9A;&#x8981;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x5DF2;&#x5B58;&#x5728;&#x5219;&#x6253;&#x5F00;&#x6587;&#x4EF6;&#xFF0C;&#x5E76;&#x4ECE;&#x5F00;&#x5934;&#x5F00;&#x59CB;&#x7F16;&#x8F91;&#xFF0C;&#x5373;&#x539F;&#x6709;&#x5185;&#x5BB9;&#x4F1A;&#x88AB;&#x66FF;&#x6362;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x3002;</strong></p>
+<ul>
+<li>&#x53EA;&#x5199;&#x6587;&#x672C;&#x6587;&#x4EF6; &#xFF1F; &#x7528;<strong>w</strong></li>
+<li>&#x53EA;&#x5199;&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF08;&#x56FE;&#x7247;&#x7B49;&#xFF09;&#xFF1F; &#x7528;<strong>wb</strong></li>
+<li>&#x8981;&#x65E2;&#x8BFB;&#x53C8;&#x5199;&#xFF1F; &#x5728;&#x540E;&#x8FB9;&#x6DFB;&#x4E2A;<strong>+</strong>&#x53F7;&#x589E;&#x52A0;&#x6743;&#x9650;&#xFF0C; &#x7528;<strong>w+</strong> &#x6216;&#x8005; <strong>wb+</strong></li>
+</ul>
+</li>
+<li><p><strong>&#x4E0D;&#x786E;&#x5B9A;&#x8981;&#x6253;&#x5F00;&#x7684;&#x6587;&#x4EF6;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x800C;&#x4E14;&#x60F3;&#x8981;&#x8FFD;&#x52A0;&#x5199;&#x5165;&#xFF08;&#x4E0D;&#x66FF;&#x6362;&#x539F;&#x6709;&#x5185;&#x5BB9;&#xFF0C;&#x65B0;&#x5185;&#x5BB9;&#x5199;&#x5165;&#x5230;&#x5DF2;&#x6709;&#x5185;&#x5BB9;&#x540E;&#xFF09;&#x3002;&#x5982;&#x679C;&#x8BE5;&#x6587;&#x4EF6;&#x4E0D;&#x5B58;&#x5728;&#xFF0C;&#x521B;&#x5EFA;&#x65B0;&#x6587;&#x4EF6;&#x3002;</strong></p>
+<ul>
+<li>&#x53EA;&#x5199;&#x6587;&#x672C;&#x6587;&#x4EF6; &#xFF1F; &#x7528;<strong>a</strong></li>
+<li>&#x53EA;&#x5199;&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF08;&#x56FE;&#x7247;&#x7B49;&#xFF09;&#xFF1F; &#x7528;<strong>ab</strong></li>
+<li>&#x8981;&#x65E2;&#x8BFB;&#x53C8;&#x5199;&#xFF1F; &#x5728;&#x540E;&#x8FB9;&#x6DFB;&#x4E2A;<strong>+</strong>&#x53F7;&#x589E;&#x52A0;&#x6743;&#x9650;&#xFF0C; &#x7528;<strong>a+</strong> &#x6216;&#x8005; <strong>ab+</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="&#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;"><a name="&#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;" class="anchor-navigation-ex-anchor" href="#&#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11. &#x8BFE;&#x4E0A;&#x7EC3;&#x4E60;</h2>
+<h3 id="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><a name="&#x6587;&#x4EF6;&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#&#x6587;&#x4EF6;&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11.1. &#x6587;&#x4EF6;&#x64CD;&#x4F5C;</h3>
+<p> 1). &#x521B;&#x5EFA;&#x6587;&#x4EF6;data.txt, &#x6587;&#x4EF6;&#x5171;100000&#x884C;, &#x6BCF;&#x884C;&#x5B58;&#x653E;&#x4E00;&#x4E2A;1&#xFF5E;100&#x4E4B;&#x95F4;&#x7684;&#x6574;&#x6570;.
+ 2). &#x627E;&#x51FA;&#x6587;&#x4EF6;&#x4E2D;&#x6570;&#x5B57;&#x51FA;&#x73B0;&#x6B21;&#x6570;&#x6700;&#x591A;&#x7684;10&#x4E2A;&#x6570;&#x5B57;&#xFF0C; &#x5199;&#x5165;&#x6587;&#x4EF6;mostNum.txt;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> random
+
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;data.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;w+&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">100000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    f<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">&apos;\n&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>f<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> Counter
+<span class="token builtin">dict</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">}</span>
+f <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;data.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;r+&apos;</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> f<span class="token punctuation">:</span>
+    <span class="token keyword">if</span> i <span class="token keyword">not</span> <span class="token keyword">in</span> <span class="token builtin">dict</span><span class="token punctuation">:</span>
+        <span class="token builtin">dict</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        <span class="token builtin">dict</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span>
+d <span class="token operator">=</span> Counter<span class="token punctuation">(</span><span class="token builtin">dict</span><span class="token punctuation">)</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;mostNum.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;w+&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> k<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> d<span class="token punctuation">.</span>most_common<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        k<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token string-interpolation"><span class="token string">f&apos;</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span></span><span class="token string">--------</span><span class="token interpolation"><span class="token punctuation">{</span>i<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span><span class="token string">\n&apos;</span></span><span class="token punctuation">)</span>
+    k<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>k<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+f<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x5229;&#x7528;Counter&#x7C7B;&#x91CC;&#x7684;most_common&#x65B9;&#x6CD5;&#x6765;&#x76F4;&#x63A5;&#x6BD4;&#x8F83;&#x5B57;&#x5178;&#x7684;value&#x503C;&#x53D6;value&#x503C;&#x6700;&#x5927;&#x7684;&#x524D;&#x5341;&#x4E2A;&#x5143;&#x7D20;&#x3002;</p>
+<h3 id="&#x6DFB;&#x52A0;&#x884C;&#x53F7;"><a name="&#x6DFB;&#x52A0;&#x884C;&#x53F7;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x884C;&#x53F7;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11.2. &#x6DFB;&#x52A0;&#x884C;&#x53F7;</h3>
+<p> 1). &#x7F16;&#x5199;&#x7A0B;&#x5E8F;&#xFF0C; &#x5C06;a.txt&#x64CD;&#x4F5C;&#x751F;&#x6210;&#x6587;&#x4EF6;a_num.txt&#x6587;&#x4EF6;&#xFF0C;
+ 2). &#x5176;&#x4E2D;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#x4E0E;a.txt&#x4E00;&#x81F4;&#xFF0C; &#x4F46;&#x662F;&#x5728;&#x6BCF;&#x884C;&#x7684;&#x884C;&#x9996;&#x52A0;&#x4E0A;&#x884C;&#x53F7;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;a.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;r+&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f1<span class="token punctuation">,</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;a_num.txt&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;w+&apos;</span><span class="token punctuation">)</span> <span class="token keyword">as</span> f2<span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i<span class="token punctuation">,</span> j <span class="token keyword">in</span> <span class="token builtin">enumerate</span><span class="token punctuation">(</span>f1<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        f2<span class="token punctuation">.</span>write<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&apos;  &apos;</span><span class="token operator">+</span>j<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token string">&apos;\n&apos;</span><span class="token punctuation">)</span>
+    f2<span class="token punctuation">.</span>seek<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>f2<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>a.txt</p>
+<pre class="language-"><code>Hello
+Welcome
+What is the luck...
+</code></pre><p>a_num.txt</p>
+<pre class="language-"><code>0  Hello
+1  Welcome
+2  What is the luck...
+</code></pre><h3 id="&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;"><a name="&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;" class="anchor-navigation-ex-anchor" href="#&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;"><i class="fa fa-link" aria-hidden="true"></i></a>1.11.3. &#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;&#x7684;&#x8BFB;&#x53D6;</h3>
+<p> &#x5982;&#x679C;&#x8BFB;&#x53D6;&#x56FE;&#x7247;&#xFF0C; &#x97F3;&#x4E50;&#x6216;&#x8005;&#x89C6;&#x9891;(&#x975E;&#x6587;&#x672C;&#x6587;&#x4EF6;), &#x9700;&#x8981;&#x901A;&#x8FC7;&#x4E8C;&#x8FDB;&#x5236;&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;&#x8BFB;&#x53D6;&#x4E0E;&#x5199;&#x5165;;b</p>
+<ul>
+<li>&#x8BFB;&#x53D6;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;
+rb:rb+:wb:wb+:ab:ab+:</li>
+<li>&#x8BFB;&#x53D6;&#x6587;&#x672C;&#x6587;&#x4EF6;
+rt:rt+:wt:wt+:at:at+  &#x7B49;&#x4EF7;&#x4E8E;  r:r+:w:w+:a:a+</li>
+</ul>
+<p>&#x5148;&#x8BFB;&#x53D6;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x5185;&#x5BB9;&#xFF0C; &#x4FDD;&#x5B58;&#x5728;&#x53D8;&#x91CF;content&#x91CC;&#x9762;</p>
+<pre class="language-"><code class="lang-python">f1 <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&quot;a.png&quot;</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">&apos;rb&apos;</span><span class="token punctuation">)</span>
+content <span class="token operator">=</span> f1<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+f1<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># print(content)</span>
+
+f2 <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">&apos;b.png&apos;</span><span class="token punctuation">,</span> mode<span class="token operator">=</span><span class="token string">&apos;wb&apos;</span><span class="token punctuation">)</span>
+f2<span class="token punctuation">.</span>write<span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+f2<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="11-Python异常处理（建议2课时）.html" class="navigation navigation-prev " aria-label="Previous page: 11-Python异常处理（建议2课时）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="13-Python模块与包（建议1课时）.html" class="navigation navigation-next " aria-label="Next page: 13-Python模块与包（建议1课时）">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"12-Python文件操作与字符编码（建议4课时）","level":"1.13","depth":1,"next":{"title":"13-Python模块与包（建议1课时）","level":"1.14","depth":1,"path":"13-Python模块与包（建议1课时）.md","ref":"13-Python模块与包（建议1课时）.md","articles":[]},"previous":{"title":"11-Python异常处理（建议2课时）","level":"1.12","depth":1,"path":"11-Python异常处理（建议2课时）.md","ref":"11-Python异常处理（建议2课时）.md","articles":[]},"dir":"ltr"},"config":{"plugins":["splitter","anchor-navigation-ex","-sharing","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"anchor-navigation-ex":{"associatedWithSummary":false,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"pageTop","multipleH1":true,"pageTop":{"level1Icon":"fa fa-hand-o-right","level2Icon":"fa fa-hand-o-right","level3Icon":"fa fa-hand-o-right","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"fontsettings":{"theme":"white","family":"serif","size":2},"prism":{"css":["prismjs/themes/prism-tomorrow.css"]},"splitter":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false}},"theme":"default","author":"neuedu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python_neuedu","language":"zh-hans","links":{"sidebar":{"东软睿道":"http://www.neuedu.com/"}},"gitbook":"3.2.3","description":"http://www.neuedu.com/"},"file":{"path":"12-Python文件操作与字符编码（建议4课时）.md","mtime":"2019-05-22T02:32:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-22T07:05:03.760Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
